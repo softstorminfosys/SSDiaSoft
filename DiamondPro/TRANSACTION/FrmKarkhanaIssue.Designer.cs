@@ -209,7 +209,7 @@
             this.dtpIssueDate.Properties.CalendarTimeProperties.EditFormat.FormatType = DevExpress.Utils.FormatType.DateTime;
             this.dtpIssueDate.Properties.CalendarTimeProperties.Mask.EditMask = "d";
             this.dtpIssueDate.Size = new System.Drawing.Size(182, 26);
-            this.dtpIssueDate.TabIndex = 78;
+            this.dtpIssueDate.TabIndex = 3;
             // 
             // labelControl4
             // 
@@ -229,7 +229,7 @@
             this.txtKarkhanaName.Properties.Appearance.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtKarkhanaName.Properties.Appearance.Options.UseFont = true;
             this.txtKarkhanaName.Size = new System.Drawing.Size(182, 26);
-            this.txtKarkhanaName.TabIndex = 77;
+            this.txtKarkhanaName.TabIndex = 0;
             this.txtKarkhanaName.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtKarkhanaName_KeyPress);
             // 
             // labelControl13
@@ -259,6 +259,7 @@
             this.txtAmount.Properties.ReadOnly = true;
             this.txtAmount.Size = new System.Drawing.Size(182, 26);
             this.txtAmount.TabIndex = 5;
+            this.txtAmount.TabStop = false;
             // 
             // labelControl16
             // 
@@ -287,6 +288,7 @@
             this.txtRate.Properties.ReadOnly = true;
             this.txtRate.Size = new System.Drawing.Size(182, 26);
             this.txtRate.TabIndex = 4;
+            this.txtRate.TabStop = false;
             // 
             // labelControl15
             // 
@@ -315,6 +317,7 @@
             this.txtCts.Properties.ReadOnly = true;
             this.txtCts.Size = new System.Drawing.Size(182, 26);
             this.txtCts.TabIndex = 3;
+            this.txtCts.TabStop = false;
             // 
             // labelControl11
             // 
@@ -345,6 +348,7 @@
             this.dtpKharidiDate.Properties.ReadOnly = true;
             this.dtpKharidiDate.Size = new System.Drawing.Size(182, 26);
             this.dtpKharidiDate.TabIndex = 2;
+            this.dtpKharidiDate.TabStop = false;
             // 
             // labelControl3
             // 
@@ -364,7 +368,7 @@
             this.txtKatNo.Properties.Appearance.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtKatNo.Properties.Appearance.Options.UseFont = true;
             this.txtKatNo.Size = new System.Drawing.Size(182, 26);
-            this.txtKatNo.TabIndex = 1;
+            this.txtKatNo.TabIndex = 2;
             this.txtKatNo.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtKatNo_KeyPress);
             // 
             // labelControl2
@@ -385,7 +389,7 @@
             this.txtNotNo.Properties.Appearance.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtNotNo.Properties.Appearance.Options.UseFont = true;
             this.txtNotNo.Size = new System.Drawing.Size(182, 26);
-            this.txtNotNo.TabIndex = 0;
+            this.txtNotNo.TabIndex = 1;
             this.txtNotNo.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtNotNo_KeyPress);
             // 
             // labelControl1
