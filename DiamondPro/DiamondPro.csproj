@@ -1,0 +1,362 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">x86</Platform>
+    <ProductVersion>8.0.30703</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{C1A59959-0F41-4E4F-A438-709F2EFC49BA}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>DiamondPro</RootNamespace>
+    <AssemblyName>DiamondPro</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <PublishUrl>publish\</PublishUrl>
+    <Install>true</Install>
+    <InstallFrom>Disk</InstallFrom>
+    <UpdateEnabled>false</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>false</UpdateRequired>
+    <MapFileExtensions>true</MapFileExtensions>
+    <ApplicationRevision>0</ApplicationRevision>
+    <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
+    <IsWebBootstrapper>false</IsWebBootstrapper>
+    <UseApplicationTrust>false</UseApplicationTrust>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup>
+    <StartupObject>DiamondPro.Program</StartupObject>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="DevExpress.BonusSkins.v15.2, Version=15.2.7.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>bin\Debug\DevExpress.BonusSkins.v15.2.dll</HintPath>
+    </Reference>
+    <Reference Include="DevExpress.Data.v15.2, Version=15.2.7.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>bin\Debug\DevExpress.Data.v15.2.dll</HintPath>
+    </Reference>
+    <Reference Include="DevExpress.Office.v15.2.Core, Version=15.2.7.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>bin\Debug\DevExpress.Office.v15.2.Core.dll</HintPath>
+    </Reference>
+    <Reference Include="DevExpress.Pdf.v15.2.Core, Version=15.2.7.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>bin\Debug\DevExpress.Pdf.v15.2.Core.dll</HintPath>
+    </Reference>
+    <Reference Include="DevExpress.Printing.v15.2.Core, Version=15.2.7.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>bin\Debug\DevExpress.Printing.v15.2.Core.dll</HintPath>
+    </Reference>
+    <Reference Include="DevExpress.RichEdit.v15.2.Core, Version=15.2.7.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>bin\Debug\DevExpress.RichEdit.v15.2.Core.dll</HintPath>
+    </Reference>
+    <Reference Include="DevExpress.Sparkline.v15.2.Core, Version=15.2.7.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>bin\Debug\DevExpress.Sparkline.v15.2.Core.dll</HintPath>
+    </Reference>
+    <Reference Include="DevExpress.Utils.v15.2, Version=15.2.7.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>bin\Debug\DevExpress.Utils.v15.2.dll</HintPath>
+    </Reference>
+    <Reference Include="DevExpress.Utils.v15.2.UI, Version=15.2.7.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>bin\Debug\DevExpress.Utils.v15.2.UI.dll</HintPath>
+    </Reference>
+    <Reference Include="DevExpress.XtraBars.v15.2, Version=15.2.7.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>bin\Debug\DevExpress.XtraBars.v15.2.dll</HintPath>
+    </Reference>
+    <Reference Include="DevExpress.XtraEditors.v15.2, Version=15.2.7.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>bin\Debug\DevExpress.XtraEditors.v15.2.dll</HintPath>
+    </Reference>
+    <Reference Include="DevExpress.XtraGrid.v15.2, Version=15.2.7.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>bin\Debug\DevExpress.XtraGrid.v15.2.dll</HintPath>
+    </Reference>
+    <Reference Include="DevExpress.XtraLayout.v15.2, Version=15.2.7.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>bin\Debug\DevExpress.XtraLayout.v15.2.dll</HintPath>
+    </Reference>
+    <Reference Include="DevExpress.XtraPrinting.v15.2, Version=15.2.7.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>bin\Debug\DevExpress.XtraPrinting.v15.2.dll</HintPath>
+    </Reference>
+    <Reference Include="DevExpress.XtraRichEdit.v15.2, Version=15.2.7.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>bin\Debug\DevExpress.XtraRichEdit.v15.2.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Data.Linq" />
+    <Reference Include="System.Printing" />
+    <Reference Include="System.Runtime.Remoting" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="BLL\Function Class\BoxMerge_Function.cs" />
+    <Compile Include="BLL\Function Class\BoxNumbering_Function.cs" />
+    <Compile Include="BLL\Function Class\Karkhana_Issue_Function.cs" />
+    <Compile Include="BLL\Function Class\Karkhana_Return_Function.cs" />
+    <Compile Include="BLL\Function Class\MST_Karkhana_Function.cs" />
+    <Compile Include="BLL\Function Class\ParameterValue_Function.cs" />
+    <Compile Include="BLL\Function Class\MST_PolishKharidi_Function.cs" />
+    <Compile Include="BLL\Function Class\MST_Dalal_Function.cs" />
+    <Compile Include="BLL\Function Class\MST_Kharidi_Function.cs" />
+    <Compile Include="BLL\Function Class\MST_Party_Function.cs" />
+    <Compile Include="BLL\Function Class\ParameterType_Function.cs" />
+    <Compile Include="BLL\Function Class\StockTransfer_Function.cs" />
+    <Compile Include="BLL\Function Class\TRN_Payment_detail_Function.cs" />
+    <Compile Include="BLL\Property Class\BoxNumbering_Property.cs" />
+    <Compile Include="BLL\Property Class\Karkhana_Issue_Property.cs" />
+    <Compile Include="BLL\Property Class\Karkhana_Return_Property.cs" />
+    <Compile Include="BLL\Property Class\MST_Karkhana_Property.cs" />
+    <Compile Include="BLL\Property Class\MST_PolishKharidi_Property.cs" />
+    <Compile Include="BLL\Property Class\FrmSearchProperty.cs" />
+    <Compile Include="BLL\Property Class\MST_Dalal_Property.cs" />
+    <Compile Include="BLL\Property Class\MST_Kharidi_Property.cs" />
+    <Compile Include="BLL\Property Class\MST_Party_Property.cs" />
+    <Compile Include="BLL\Property Class\ParameterType_Property.cs" />
+    <Compile Include="BLL\Property Class\Parameter_Value_Property.cs" />
+    <Compile Include="BLL\Property Class\TRN_Payment_detail_Property.cs" />
+    <Compile Include="DLL\Operation.cs" />
+    <Compile Include="DLL\Request.cs" />
+    <Compile Include="DLL\Validation.cs" />
+    <Compile Include="FrmMDI.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmMDI.Designer.cs">
+      <DependentUpon>FrmMDI.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MASTER\FrmDalalMaster.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MASTER\FrmDalalMaster.Designer.cs">
+      <DependentUpon>FrmDalalMaster.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MASTER\FrmKarkhanaMaster.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MASTER\FrmKarkhanaMaster.Designer.cs">
+      <DependentUpon>FrmKarkhanaMaster.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MASTER\FrmKharidiMaster.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MASTER\FrmKharidiMaster.Designer.cs">
+      <DependentUpon>FrmKharidiMaster.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MASTER\FrmParameterType.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MASTER\FrmParameterType.Designer.cs">
+      <DependentUpon>FrmParameterType.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MASTER\FrmParameterValue.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MASTER\FrmParameterValue.Designer.cs">
+      <DependentUpon>FrmParameterValue.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MASTER\FrmPartyMaster.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MASTER\FrmPartyMaster.Designer.cs">
+      <DependentUpon>FrmPartyMaster.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MASTER\FrmPolishKharidi.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MASTER\FrmPolishKharidi.Designer.cs">
+      <DependentUpon>FrmPolishKharidi.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Search\FrmSearch.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Search\FrmSearch.Designer.cs">
+      <DependentUpon>FrmSearch.cs</DependentUpon>
+    </Compile>
+    <Compile Include="TRANSACTION\FrmBoxCreate.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="TRANSACTION\FrmBoxCreate.Designer.cs">
+      <DependentUpon>FrmBoxCreate.cs</DependentUpon>
+    </Compile>
+    <Compile Include="TRANSACTION\FrmBoxNumbering.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="TRANSACTION\FrmBoxNumbering.Designer.cs">
+      <DependentUpon>FrmBoxNumbering.cs</DependentUpon>
+    </Compile>
+    <Compile Include="TRANSACTION\FrmKarkhanaDetails.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="TRANSACTION\FrmKarkhanaDetails.Designer.cs">
+      <DependentUpon>FrmKarkhanaDetails.cs</DependentUpon>
+    </Compile>
+    <Compile Include="TRANSACTION\FrmKarkhanaIssue.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="TRANSACTION\FrmKarkhanaIssue.Designer.cs">
+      <DependentUpon>FrmKarkhanaIssue.cs</DependentUpon>
+    </Compile>
+    <Compile Include="TRANSACTION\FrmPaymentDetail.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="TRANSACTION\FrmPaymentDetail.Designer.cs">
+      <DependentUpon>FrmPaymentDetail.cs</DependentUpon>
+    </Compile>
+    <Compile Include="TRANSACTION\FrmPaymentRecieve.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="TRANSACTION\FrmPaymentRecieve.Designer.cs">
+      <DependentUpon>FrmPaymentRecieve.cs</DependentUpon>
+    </Compile>
+    <Compile Include="TRANSACTION\FrmStockTransfer.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="TRANSACTION\FrmStockTransfer.Designer.cs">
+      <DependentUpon>FrmStockTransfer.cs</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="FrmMDI.resx">
+      <DependentUpon>FrmMDI.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MASTER\FrmDalalMaster.resx">
+      <DependentUpon>FrmDalalMaster.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MASTER\FrmKarkhanaMaster.resx">
+      <DependentUpon>FrmKarkhanaMaster.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MASTER\FrmKharidiMaster.resx">
+      <DependentUpon>FrmKharidiMaster.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MASTER\FrmParameterType.resx">
+      <DependentUpon>FrmParameterType.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MASTER\FrmParameterValue.resx">
+      <DependentUpon>FrmParameterValue.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MASTER\FrmPartyMaster.resx">
+      <DependentUpon>FrmPartyMaster.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MASTER\FrmPolishKharidi.resx">
+      <DependentUpon>FrmPolishKharidi.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\licenses.licx" />
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <EmbeddedResource Include="Search\FrmSearch.resx">
+      <DependentUpon>FrmSearch.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="TRANSACTION\FrmBoxCreate.resx">
+      <DependentUpon>FrmBoxCreate.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="TRANSACTION\FrmBoxNumbering.resx">
+      <DependentUpon>FrmBoxNumbering.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="TRANSACTION\FrmKarkhanaDetails.resx">
+      <DependentUpon>FrmKarkhanaDetails.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="TRANSACTION\FrmKarkhanaIssue.resx">
+      <DependentUpon>FrmKarkhanaIssue.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="TRANSACTION\FrmPaymentDetail.resx">
+      <DependentUpon>FrmPaymentDetail.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="TRANSACTION\FrmPaymentRecieve.resx">
+      <DependentUpon>FrmPaymentRecieve.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="TRANSACTION\FrmStockTransfer.resx">
+      <DependentUpon>FrmStockTransfer.cs</DependentUpon>
+    </EmbeddedResource>
+    <None Include="app.config">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <BootstrapperPackage Include=".NETFramework,Version=v4.5">
+      <Visible>False</Visible>
+      <ProductName>Microsoft .NET Framework 4.5 %28x86 and x64%29</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Client.3.5">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1 Client Profile</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\MenuBack.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Uncheck1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Check1.png" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it.
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

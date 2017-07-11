@@ -1,0 +1,49 @@
+E:\Projects\DiamondPro\DiamondPro\bin\Debug\DiamondPro.exe.config
+E:\Projects\DiamondPro\DiamondPro\bin\Debug\DiamondPro.exe
+E:\Projects\DiamondPro\DiamondPro\bin\Debug\DiamondPro.pdb
+E:\Projects\DiamondPro\DiamondPro\obj\Debug\DiamondPro.FrmMDI.resources
+E:\Projects\DiamondPro\DiamondPro\obj\Debug\DiamondPro.FrmDalalMaster.resources
+E:\Projects\DiamondPro\DiamondPro\obj\Debug\DiamondPro.FrmKharidiMaster.resources
+E:\Projects\DiamondPro\DiamondPro\obj\Debug\DiamondPro.FrmPartyMaster.resources
+E:\Projects\DiamondPro\DiamondPro\obj\Debug\DiamondPro.FrmPolishKharidi.resources
+E:\Projects\DiamondPro\DiamondPro\obj\Debug\DiamondPro.Properties.Resources.resources
+E:\Projects\DiamondPro\DiamondPro\obj\Debug\DiamondPro.Search.FrmSearch.resources
+E:\Projects\DiamondPro\DiamondPro\obj\Debug\DiamondPro.FrmKarkhanaDetails.resources
+E:\Projects\DiamondPro\DiamondPro\obj\Debug\DiamondPro.TRANSACTION.FrmPaymentDetail.resources
+E:\Projects\DiamondPro\DiamondPro\obj\Debug\DiamondPro.csproj.GenerateResource.Cache
+E:\Projects\DiamondPro\DiamondPro\obj\Debug\DiamondPro.exe
+E:\Projects\DiamondPro\DiamondPro\obj\Debug\DiamondPro.pdb
+E:\Projects\DiamondPro\DiamondPro\obj\Debug\DiamondPro.FrmKarkhanaMaster.resources
+E:\Projects\DiamondPro\DiamondPro\obj\Debug\DiamondPro.FrmParameterType.resources
+E:\Projects\DiamondPro\DiamondPro\obj\Debug\DiamondPro.FrmParameterValue.resources
+E:\Projects\DiamondPro\DiamondPro\obj\Debug\DiamondPro.FrmKarkhanaIssue.resources
+E:\Projects\DiamondPro\DiamondPro\obj\Debug\DiamondPro.TRANSACTION.FrmBoxCreate.resources
+E:\Projects\DiamondPro\DiamondPro\obj\Debug\DiamondPro.TRANSACTION.FrmBoxNumbering.resources
+E:\Projects\DiamondPro\DiamondPro\obj\Debug\DiamondPro.TRANSACTION.FrmPaymentRecieve.resources
+E:\Projects\DiamondPro\DiamondPro\obj\Debug\DiamondPro.exe.licenses
+E:\Projects\DiamondPro\DiamondPro\obj\Debug\DiamondPro.TRANSACTION.FrmStockTransfer.resources
+E:\Sony Vaio VPCEH28FN\Diamond 10072017\DiamondPro\bin\Debug\DiamondPro.exe.config
+E:\Sony Vaio VPCEH28FN\Diamond 10072017\DiamondPro\obj\Debug\DiamondPro.exe
+E:\Sony Vaio VPCEH28FN\Diamond 10072017\DiamondPro\obj\Debug\DiamondPro.pdb
+E:\Sony Vaio VPCEH28FN\Diamond 10072017\DiamondPro\bin\Debug\DiamondPro.exe
+E:\Sony Vaio VPCEH28FN\Diamond 10072017\DiamondPro\bin\Debug\DiamondPro.pdb
+E:\Sony Vaio VPCEH28FN\Diamond 10072017\DiamondPro\obj\Debug\DiamondPro.csprojResolveAssemblyReference.cache
+E:\Sony Vaio VPCEH28FN\Diamond 10072017\DiamondPro\obj\Debug\DiamondPro.FrmMDI.resources
+E:\Sony Vaio VPCEH28FN\Diamond 10072017\DiamondPro\obj\Debug\DiamondPro.FrmDalalMaster.resources
+E:\Sony Vaio VPCEH28FN\Diamond 10072017\DiamondPro\obj\Debug\DiamondPro.FrmKarkhanaMaster.resources
+E:\Sony Vaio VPCEH28FN\Diamond 10072017\DiamondPro\obj\Debug\DiamondPro.FrmKharidiMaster.resources
+E:\Sony Vaio VPCEH28FN\Diamond 10072017\DiamondPro\obj\Debug\DiamondPro.FrmParameterType.resources
+E:\Sony Vaio VPCEH28FN\Diamond 10072017\DiamondPro\obj\Debug\DiamondPro.FrmParameterValue.resources
+E:\Sony Vaio VPCEH28FN\Diamond 10072017\DiamondPro\obj\Debug\DiamondPro.FrmPartyMaster.resources
+E:\Sony Vaio VPCEH28FN\Diamond 10072017\DiamondPro\obj\Debug\DiamondPro.FrmPolishKharidi.resources
+E:\Sony Vaio VPCEH28FN\Diamond 10072017\DiamondPro\obj\Debug\DiamondPro.Properties.Resources.resources
+E:\Sony Vaio VPCEH28FN\Diamond 10072017\DiamondPro\obj\Debug\DiamondPro.Search.FrmSearch.resources
+E:\Sony Vaio VPCEH28FN\Diamond 10072017\DiamondPro\obj\Debug\DiamondPro.TRANSACTION.FrmBoxCreate.resources
+E:\Sony Vaio VPCEH28FN\Diamond 10072017\DiamondPro\obj\Debug\DiamondPro.TRANSACTION.FrmBoxNumbering.resources
+E:\Sony Vaio VPCEH28FN\Diamond 10072017\DiamondPro\obj\Debug\DiamondPro.FrmKarkhanaDetails.resources
+E:\Sony Vaio VPCEH28FN\Diamond 10072017\DiamondPro\obj\Debug\DiamondPro.FrmKarkhanaIssue.resources
+E:\Sony Vaio VPCEH28FN\Diamond 10072017\DiamondPro\obj\Debug\DiamondPro.TRANSACTION.FrmPaymentDetail.resources
+E:\Sony Vaio VPCEH28FN\Diamond 10072017\DiamondPro\obj\Debug\DiamondPro.TRANSACTION.FrmPaymentRecieve.resources
+E:\Sony Vaio VPCEH28FN\Diamond 10072017\DiamondPro\obj\Debug\DiamondPro.TRANSACTION.FrmStockTransfer.resources
+E:\Sony Vaio VPCEH28FN\Diamond 10072017\DiamondPro\obj\Debug\DiamondPro.csproj.GenerateResource.Cache
+E:\Sony Vaio VPCEH28FN\Diamond 10072017\DiamondPro\obj\Debug\DiamondPro.exe.licenses
