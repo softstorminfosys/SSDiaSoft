@@ -44,7 +44,7 @@
             this.gridColumn10 = new DevExpress.XtraGrid.Columns.GridColumn();
             this.gridColumn11 = new DevExpress.XtraGrid.Columns.GridColumn();
             this.gridColumn12 = new DevExpress.XtraGrid.Columns.GridColumn();
-            this.gridColumn1 = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.btnselect = new DevExpress.XtraGrid.Columns.GridColumn();
             this.gridColumn3 = new DevExpress.XtraGrid.Columns.GridColumn();
             this.rtxtTTCarat = new DevExpress.XtraEditors.Repository.RepositoryItemTextEdit();
             this.repositoryItemTextEdit1 = new DevExpress.XtraEditors.Repository.RepositoryItemTextEdit();
@@ -215,7 +215,7 @@
             this.gridColumn10,
             this.gridColumn11,
             this.gridColumn12,
-            this.gridColumn1,
+            this.btnselect,
             this.gridColumn3});
             this.dgvTo.GridControl = this.grdTo;
             this.dgvTo.Name = "dgvTo";
@@ -304,11 +304,11 @@
             this.gridColumn12.VisibleIndex = 5;
             this.gridColumn12.Width = 109;
             // 
-            // gridColumn1
+            // btnselect
             // 
-            this.gridColumn1.Caption = "Sel";
-            this.gridColumn1.FieldName = "Sel";
-            this.gridColumn1.Name = "gridColumn1";
+            this.btnselect.Caption = "Sel";
+            this.btnselect.FieldName = "Sel";
+            this.btnselect.Name = "btnselect";
             // 
             // gridColumn3
             // 
@@ -354,6 +354,7 @@
             this.rchkSelect.AutoHeight = false;
             this.rchkSelect.Name = "rchkSelect";
             this.rchkSelect.NullStyle = DevExpress.XtraEditors.Controls.StyleIndeterminate.Unchecked;
+            this.rchkSelect.ValueChecked = ((short)(1));
             // 
             // panelControl3
             // 
@@ -361,7 +362,7 @@
             this.panelControl3.Controls.Add(this.panelControl4);
             this.panelControl3.Location = new System.Drawing.Point(354, 0);
             this.panelControl3.Name = "panelControl3";
-            this.panelControl3.Size = new System.Drawing.Size(907, 567);
+            this.panelControl3.Size = new System.Drawing.Size(684, 567);
             this.panelControl3.TabIndex = 84;
             this.panelControl3.Visible = false;
             // 
@@ -371,7 +372,7 @@
             this.xtraTabControl1.Location = new System.Drawing.Point(2, 2);
             this.xtraTabControl1.Name = "xtraTabControl1";
             this.xtraTabControl1.SelectedTabPage = this.Summary;
-            this.xtraTabControl1.Size = new System.Drawing.Size(903, 517);
+            this.xtraTabControl1.Size = new System.Drawing.Size(680, 517);
             this.xtraTabControl1.TabIndex = 9;
             this.xtraTabControl1.TabPages.AddRange(new DevExpress.XtraTab.XtraTabPage[] {
             this.Summary,
@@ -384,7 +385,7 @@
             this.Summary.Appearance.HeaderActive.Options.UseFont = true;
             this.Summary.Controls.Add(this.gridControl1);
             this.Summary.Name = "Summary";
-            this.Summary.Size = new System.Drawing.Size(897, 486);
+            this.Summary.Size = new System.Drawing.Size(674, 486);
             this.Summary.Text = "Summary";
             // 
             // gridControl1
@@ -393,7 +394,7 @@
             this.gridControl1.Location = new System.Drawing.Point(0, 0);
             this.gridControl1.MainView = this.gridView1;
             this.gridControl1.Name = "gridControl1";
-            this.gridControl1.Size = new System.Drawing.Size(897, 486);
+            this.gridControl1.Size = new System.Drawing.Size(674, 486);
             this.gridControl1.TabIndex = 9;
             this.gridControl1.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
             this.gridView1});
@@ -414,7 +415,7 @@
             this.Details.Appearance.HeaderActive.Options.UseFont = true;
             this.Details.Controls.Add(this.gridControl2);
             this.Details.Name = "Details";
-            this.Details.Size = new System.Drawing.Size(897, 486);
+            this.Details.Size = new System.Drawing.Size(674, 486);
             this.Details.Text = "Details";
             // 
             // gridControl2
@@ -423,7 +424,7 @@
             this.gridControl2.Location = new System.Drawing.Point(0, 0);
             this.gridControl2.MainView = this.gridView2;
             this.gridControl2.Name = "gridControl2";
-            this.gridControl2.Size = new System.Drawing.Size(897, 486);
+            this.gridControl2.Size = new System.Drawing.Size(674, 486);
             this.gridControl2.TabIndex = 10;
             this.gridControl2.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
             this.gridView2});
@@ -445,7 +446,7 @@
             this.panelControl4.Dock = System.Windows.Forms.DockStyle.Bottom;
             this.panelControl4.Location = new System.Drawing.Point(2, 519);
             this.panelControl4.Name = "panelControl4";
-            this.panelControl4.Size = new System.Drawing.Size(903, 46);
+            this.panelControl4.Size = new System.Drawing.Size(680, 46);
             this.panelControl4.TabIndex = 7;
             // 
             // SBtnClose
@@ -522,7 +523,7 @@
         private DevExpress.XtraGrid.Columns.GridColumn gridColumn10;
         private DevExpress.XtraGrid.Columns.GridColumn gridColumn11;
         private DevExpress.XtraGrid.Columns.GridColumn gridColumn12;
-        private DevExpress.XtraGrid.Columns.GridColumn gridColumn1;
+        private DevExpress.XtraGrid.Columns.GridColumn btnselect;
         private DevExpress.XtraEditors.SimpleButton SBtnShow;
         private DevExpress.XtraEditors.PanelControl panelControl3;
         private DevExpress.XtraEditors.PanelControl panelControl4;

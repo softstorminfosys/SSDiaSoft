@@ -222,8 +222,8 @@ namespace DiamondPro.TRANSACTION
                 //}
                 int BoxNo = new BoxMerge_Function().GetBoxNumber();
                 _dtSelect = (DataTable)grdTo.DataSource;
-                _dtSelect.Select("Sel = 1", "");
-
+                _dtSelect.Select("Sel=1");
+               
                 int Result = new BoxMerge_Function().BoxCreate(_dtSelect, BoxNo);
 
                 if (Result > 0)
