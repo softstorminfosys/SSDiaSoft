@@ -43,7 +43,7 @@
             this.BtnDelete = new DevExpress.XtraEditors.SimpleButton();
             this.BtnSave = new DevExpress.XtraEditors.SimpleButton();
             this.groupControl1 = new DevExpress.XtraEditors.GroupControl();
-            this.textEdit1 = new DevExpress.XtraEditors.TextEdit();
+            this.txtctmargin = new DevExpress.XtraEditors.TextEdit();
             this.labelControl34 = new DevExpress.XtraEditors.LabelControl();
             this.txtFinalPer = new DevExpress.XtraEditors.TextEdit();
             this.labelControl33 = new DevExpress.XtraEditors.LabelControl();
@@ -111,6 +111,11 @@
             this.labelControl2 = new DevExpress.XtraEditors.LabelControl();
             this.txtNotNo = new DevExpress.XtraEditors.TextEdit();
             this.labelControl1 = new DevExpress.XtraEditors.LabelControl();
+            this.labelControl36 = new DevExpress.XtraEditors.LabelControl();
+            this.labelControl35 = new DevExpress.XtraEditors.LabelControl();
+            this.labelControl37 = new DevExpress.XtraEditors.LabelControl();
+            this.labelControl38 = new DevExpress.XtraEditors.LabelControl();
+            this.txtrufmargin = new DevExpress.XtraEditors.TextEdit();
             ((System.ComponentModel.ISupportInitialize)(this.dockManager1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.panelControl3)).BeginInit();
             this.panelControl3.SuspendLayout();
@@ -124,7 +129,7 @@
             this.panelControl2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.groupControl1)).BeginInit();
             this.groupControl1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.textEdit1.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtctmargin.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtFinalPer.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtComissionMajuri.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtThanMajuri.Properties)).BeginInit();
@@ -161,6 +166,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.dtpKharidiDate.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtKatNo.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtNotNo.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtrufmargin.Properties)).BeginInit();
             this.SuspendLayout();
             // 
             // dockManager1
@@ -316,7 +322,12 @@
             // 
             this.groupControl1.AppearanceCaption.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Underline, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.groupControl1.AppearanceCaption.Options.UseFont = true;
-            this.groupControl1.Controls.Add(this.textEdit1);
+            this.groupControl1.Controls.Add(this.txtrufmargin);
+            this.groupControl1.Controls.Add(this.labelControl38);
+            this.groupControl1.Controls.Add(this.labelControl37);
+            this.groupControl1.Controls.Add(this.labelControl35);
+            this.groupControl1.Controls.Add(this.labelControl36);
+            this.groupControl1.Controls.Add(this.txtctmargin);
             this.groupControl1.Controls.Add(this.labelControl34);
             this.groupControl1.Controls.Add(this.txtFinalPer);
             this.groupControl1.Controls.Add(this.labelControl33);
@@ -391,29 +402,28 @@
             this.groupControl1.TabIndex = 0;
             this.groupControl1.Text = "કારખાના ની વિગત";
             // 
-            // textEdit1
+            // txtctmargin
             // 
-            this.textEdit1.EditValue = "0.000";
-            this.textEdit1.EnterMoveNextControl = true;
-            this.textEdit1.Location = new System.Drawing.Point(142, 435);
-            this.textEdit1.Name = "textEdit1";
-            this.textEdit1.Properties.Appearance.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textEdit1.Properties.Appearance.Options.UseFont = true;
-            this.textEdit1.Properties.DisplayFormat.FormatString = "f3";
-            this.textEdit1.Properties.DisplayFormat.FormatType = DevExpress.Utils.FormatType.Numeric;
-            this.textEdit1.Properties.EditFormat.FormatString = "f3";
-            this.textEdit1.Properties.EditFormat.FormatType = DevExpress.Utils.FormatType.Numeric;
-            this.textEdit1.Properties.Mask.EditMask = "f3";
-            this.textEdit1.Properties.Mask.MaskType = DevExpress.XtraEditors.Mask.MaskType.Numeric;
-            this.textEdit1.Size = new System.Drawing.Size(182, 26);
-            this.textEdit1.TabIndex = 18;
-            this.textEdit1.Visible = false;
+            this.txtctmargin.EditValue = "0.000";
+            this.txtctmargin.EnterMoveNextControl = true;
+            this.txtctmargin.Location = new System.Drawing.Point(806, 400);
+            this.txtctmargin.Name = "txtctmargin";
+            this.txtctmargin.Properties.Appearance.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtctmargin.Properties.Appearance.Options.UseFont = true;
+            this.txtctmargin.Properties.DisplayFormat.FormatString = "f3";
+            this.txtctmargin.Properties.DisplayFormat.FormatType = DevExpress.Utils.FormatType.Numeric;
+            this.txtctmargin.Properties.EditFormat.FormatString = "f3";
+            this.txtctmargin.Properties.EditFormat.FormatType = DevExpress.Utils.FormatType.Numeric;
+            this.txtctmargin.Properties.Mask.EditMask = "f3";
+            this.txtctmargin.Properties.Mask.MaskType = DevExpress.XtraEditors.Mask.MaskType.Numeric;
+            this.txtctmargin.Size = new System.Drawing.Size(182, 26);
+            this.txtctmargin.TabIndex = 18;
             // 
             // labelControl34
             // 
             this.labelControl34.Appearance.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.labelControl34.Appearance.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(21)))), ((int)(((byte)(66)))), ((int)(((byte)(139)))));
-            this.labelControl34.Location = new System.Drawing.Point(11, 435);
+            this.labelControl34.Location = new System.Drawing.Point(11, 518);
             this.labelControl34.Name = "labelControl34";
             this.labelControl34.Size = new System.Drawing.Size(125, 25);
             this.labelControl34.TabIndex = 87;
@@ -424,7 +434,7 @@
             // 
             this.txtFinalPer.EditValue = "0.000";
             this.txtFinalPer.EnterMoveNextControl = true;
-            this.txtFinalPer.Location = new System.Drawing.Point(806, 400);
+            this.txtFinalPer.Location = new System.Drawing.Point(806, 370);
             this.txtFinalPer.Name = "txtFinalPer";
             this.txtFinalPer.Properties.Appearance.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtFinalPer.Properties.Appearance.Options.UseFont = true;
@@ -436,22 +446,24 @@
             this.txtFinalPer.Properties.Mask.MaskType = DevExpress.XtraEditors.Mask.MaskType.Numeric;
             this.txtFinalPer.Size = new System.Drawing.Size(182, 26);
             this.txtFinalPer.TabIndex = 17;
+            this.txtFinalPer.TextChanged += new System.EventHandler(this.txtFinalPer_TextChanged);
             // 
             // labelControl33
             // 
             this.labelControl33.Appearance.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.labelControl33.Appearance.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(21)))), ((int)(((byte)(66)))), ((int)(((byte)(139)))));
-            this.labelControl33.Location = new System.Drawing.Point(669, 400);
+            this.labelControl33.Location = new System.Drawing.Point(916, 373);
             this.labelControl33.Name = "labelControl33";
             this.labelControl33.Size = new System.Drawing.Size(125, 25);
             this.labelControl33.TabIndex = 85;
             this.labelControl33.Text = "ફાઈનલ પડતર ટકા:";
+            this.labelControl33.Visible = false;
             // 
             // txtComissionMajuri
             // 
             this.txtComissionMajuri.EditValue = "0.000";
             this.txtComissionMajuri.EnterMoveNextControl = true;
-            this.txtComissionMajuri.Location = new System.Drawing.Point(471, 401);
+            this.txtComissionMajuri.Location = new System.Drawing.Point(141, 400);
             this.txtComissionMajuri.Name = "txtComissionMajuri";
             this.txtComissionMajuri.Properties.Appearance.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtComissionMajuri.Properties.Appearance.Options.UseFont = true;
@@ -463,12 +475,13 @@
             this.txtComissionMajuri.Properties.Mask.MaskType = DevExpress.XtraEditors.Mask.MaskType.Numeric;
             this.txtComissionMajuri.Size = new System.Drawing.Size(182, 26);
             this.txtComissionMajuri.TabIndex = 16;
+            this.txtComissionMajuri.TextChanged += new System.EventHandler(this.txtComissionMajuri_TextChanged);
             // 
             // labelControl32
             // 
             this.labelControl32.Appearance.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.labelControl32.Appearance.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(21)))), ((int)(((byte)(66)))), ((int)(((byte)(139)))));
-            this.labelControl32.Location = new System.Drawing.Point(334, 401);
+            this.labelControl32.Location = new System.Drawing.Point(11, 400);
             this.labelControl32.Name = "labelControl32";
             this.labelControl32.Size = new System.Drawing.Size(91, 25);
             this.labelControl32.TabIndex = 83;
@@ -478,7 +491,7 @@
             // 
             this.txtThanMajuri.EditValue = "0.000";
             this.txtThanMajuri.EnterMoveNextControl = true;
-            this.txtThanMajuri.Location = new System.Drawing.Point(142, 403);
+            this.txtThanMajuri.Location = new System.Drawing.Point(471, 340);
             this.txtThanMajuri.Name = "txtThanMajuri";
             this.txtThanMajuri.Properties.Appearance.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtThanMajuri.Properties.Appearance.Options.UseFont = true;
@@ -490,12 +503,13 @@
             this.txtThanMajuri.Properties.Mask.MaskType = DevExpress.XtraEditors.Mask.MaskType.Numeric;
             this.txtThanMajuri.Size = new System.Drawing.Size(182, 26);
             this.txtThanMajuri.TabIndex = 15;
+            this.txtThanMajuri.TextChanged += new System.EventHandler(this.txtThanMajuri_TextChanged);
             // 
             // labelControl31
             // 
             this.labelControl31.Appearance.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.labelControl31.Appearance.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(21)))), ((int)(((byte)(66)))), ((int)(((byte)(139)))));
-            this.labelControl31.Location = new System.Drawing.Point(11, 402);
+            this.labelControl31.Location = new System.Drawing.Point(334, 340);
             this.labelControl31.Name = "labelControl31";
             this.labelControl31.Size = new System.Drawing.Size(100, 25);
             this.labelControl31.TabIndex = 81;
@@ -587,7 +601,7 @@
             // 
             this.txtRafTaka.EditValue = "0.000";
             this.txtRafTaka.EnterMoveNextControl = true;
-            this.txtRafTaka.Location = new System.Drawing.Point(806, 368);
+            this.txtRafTaka.Location = new System.Drawing.Point(471, 430);
             this.txtRafTaka.Name = "txtRafTaka";
             this.txtRafTaka.Properties.Appearance.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtRafTaka.Properties.Appearance.Options.UseFont = true;
@@ -606,7 +620,7 @@
             // 
             this.labelControl9.Appearance.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.labelControl9.Appearance.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(21)))), ((int)(((byte)(66)))), ((int)(((byte)(139)))));
-            this.labelControl9.Location = new System.Drawing.Point(669, 369);
+            this.labelControl9.Location = new System.Drawing.Point(334, 430);
             this.labelControl9.Name = "labelControl9";
             this.labelControl9.Size = new System.Drawing.Size(68, 25);
             this.labelControl9.TabIndex = 73;
@@ -616,7 +630,7 @@
             // 
             this.txtSTaka.EditValue = "0.000";
             this.txtSTaka.EnterMoveNextControl = true;
-            this.txtSTaka.Location = new System.Drawing.Point(471, 369);
+            this.txtSTaka.Location = new System.Drawing.Point(142, 430);
             this.txtSTaka.Name = "txtSTaka";
             this.txtSTaka.Properties.Appearance.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtSTaka.Properties.Appearance.Options.UseFont = true;
@@ -635,7 +649,7 @@
             // 
             this.labelControl10.Appearance.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.labelControl10.Appearance.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(21)))), ((int)(((byte)(66)))), ((int)(((byte)(139)))));
-            this.labelControl10.Location = new System.Drawing.Point(332, 369);
+            this.labelControl10.Location = new System.Drawing.Point(11, 430);
             this.labelControl10.Name = "labelControl10";
             this.labelControl10.Size = new System.Drawing.Size(75, 25);
             this.labelControl10.TabIndex = 71;
@@ -645,7 +659,7 @@
             // 
             this.txtFinalPadatar.EditValue = "0.000";
             this.txtFinalPadatar.EnterMoveNextControl = true;
-            this.txtFinalPadatar.Location = new System.Drawing.Point(142, 371);
+            this.txtFinalPadatar.Location = new System.Drawing.Point(471, 460);
             this.txtFinalPadatar.Name = "txtFinalPadatar";
             this.txtFinalPadatar.Properties.Appearance.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtFinalPadatar.Properties.Appearance.Options.UseFont = true;
@@ -664,7 +678,7 @@
             // 
             this.labelControl12.Appearance.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.labelControl12.Appearance.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(21)))), ((int)(((byte)(66)))), ((int)(((byte)(139)))));
-            this.labelControl12.Location = new System.Drawing.Point(11, 370);
+            this.labelControl12.Location = new System.Drawing.Point(334, 460);
             this.labelControl12.Name = "labelControl12";
             this.labelControl12.Size = new System.Drawing.Size(103, 25);
             this.labelControl12.TabIndex = 69;
@@ -674,7 +688,7 @@
             // 
             this.txtComissionTaiyar.EditValue = "0.000";
             this.txtComissionTaiyar.EnterMoveNextControl = true;
-            this.txtComissionTaiyar.Location = new System.Drawing.Point(806, 337);
+            this.txtComissionTaiyar.Location = new System.Drawing.Point(471, 400);
             this.txtComissionTaiyar.Name = "txtComissionTaiyar";
             this.txtComissionTaiyar.Properties.Appearance.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtComissionTaiyar.Properties.Appearance.Options.UseFont = true;
@@ -693,7 +707,7 @@
             // 
             this.labelControl6.Appearance.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.labelControl6.Appearance.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(21)))), ((int)(((byte)(66)))), ((int)(((byte)(139)))));
-            this.labelControl6.Location = new System.Drawing.Point(669, 337);
+            this.labelControl6.Location = new System.Drawing.Point(334, 400);
             this.labelControl6.Name = "labelControl6";
             this.labelControl6.Size = new System.Drawing.Size(102, 25);
             this.labelControl6.TabIndex = 67;
@@ -703,7 +717,7 @@
             // 
             this.txtTaiyarPadatar.EditValue = "0.000";
             this.txtTaiyarPadatar.EnterMoveNextControl = true;
-            this.txtTaiyarPadatar.Location = new System.Drawing.Point(471, 338);
+            this.txtTaiyarPadatar.Location = new System.Drawing.Point(471, 370);
             this.txtTaiyarPadatar.Name = "txtTaiyarPadatar";
             this.txtTaiyarPadatar.Properties.Appearance.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtTaiyarPadatar.Properties.Appearance.Options.UseFont = true;
@@ -722,7 +736,7 @@
             // 
             this.labelControl7.Appearance.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.labelControl7.Appearance.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(21)))), ((int)(((byte)(66)))), ((int)(((byte)(139)))));
-            this.labelControl7.Location = new System.Drawing.Point(332, 337);
+            this.labelControl7.Location = new System.Drawing.Point(334, 370);
             this.labelControl7.Name = "labelControl7";
             this.labelControl7.Size = new System.Drawing.Size(91, 25);
             this.labelControl7.TabIndex = 65;
@@ -732,7 +746,7 @@
             // 
             this.txtTaiyarVajan.EditValue = "0.000";
             this.txtTaiyarVajan.EnterMoveNextControl = true;
-            this.txtTaiyarVajan.Location = new System.Drawing.Point(142, 340);
+            this.txtTaiyarVajan.Location = new System.Drawing.Point(142, 370);
             this.txtTaiyarVajan.Name = "txtTaiyarVajan";
             this.txtTaiyarVajan.Properties.Appearance.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtTaiyarVajan.Properties.Appearance.Options.UseFont = true;
@@ -750,7 +764,7 @@
             // 
             this.labelControl8.Appearance.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.labelControl8.Appearance.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(21)))), ((int)(((byte)(66)))), ((int)(((byte)(139)))));
-            this.labelControl8.Location = new System.Drawing.Point(11, 338);
+            this.labelControl8.Location = new System.Drawing.Point(11, 370);
             this.labelControl8.Name = "labelControl8";
             this.labelControl8.Size = new System.Drawing.Size(84, 25);
             this.labelControl8.TabIndex = 63;
@@ -760,7 +774,7 @@
             // 
             this.txtThanTotal.EditValue = "0.000";
             this.txtThanTotal.EnterMoveNextControl = true;
-            this.txtThanTotal.Location = new System.Drawing.Point(806, 306);
+            this.txtThanTotal.Location = new System.Drawing.Point(806, 340);
             this.txtThanTotal.Name = "txtThanTotal";
             this.txtThanTotal.Properties.Appearance.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtThanTotal.Properties.Appearance.Options.UseFont = true;
@@ -771,7 +785,7 @@
             this.txtThanTotal.Properties.Mask.EditMask = "f3";
             this.txtThanTotal.Properties.Mask.MaskType = DevExpress.XtraEditors.Mask.MaskType.Numeric;
             this.txtThanTotal.Properties.ReadOnly = true;
-            this.txtThanTotal.Size = new System.Drawing.Size(182, 26);
+            this.txtThanTotal.Size = new System.Drawing.Size(183, 26);
             this.txtThanTotal.TabIndex = 60;
             this.txtThanTotal.TabStop = false;
             this.txtThanTotal.TextChanged += new System.EventHandler(this.txtThanTotal_TextChanged);
@@ -780,7 +794,7 @@
             // 
             this.labelControl27.Appearance.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.labelControl27.Appearance.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(21)))), ((int)(((byte)(66)))), ((int)(((byte)(139)))));
-            this.labelControl27.Location = new System.Drawing.Point(669, 307);
+            this.labelControl27.Location = new System.Drawing.Point(669, 340);
             this.labelControl27.Name = "labelControl27";
             this.labelControl27.Size = new System.Drawing.Size(93, 25);
             this.labelControl27.TabIndex = 61;
@@ -790,7 +804,7 @@
             // 
             this.txtThan.EditValue = "00";
             this.txtThan.EnterMoveNextControl = true;
-            this.txtThan.Location = new System.Drawing.Point(471, 307);
+            this.txtThan.Location = new System.Drawing.Point(142, 340);
             this.txtThan.Name = "txtThan";
             this.txtThan.Properties.Appearance.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtThan.Properties.Appearance.Options.UseFont = true;
@@ -802,12 +816,13 @@
             this.txtThan.Properties.Mask.MaskType = DevExpress.XtraEditors.Mask.MaskType.Numeric;
             this.txtThan.Size = new System.Drawing.Size(182, 26);
             this.txtThan.TabIndex = 13;
+            this.txtThan.TextChanged += new System.EventHandler(this.txtThanMajuri_TextChanged);
             // 
             // labelControl28
             // 
             this.labelControl28.Appearance.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.labelControl28.Appearance.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(21)))), ((int)(((byte)(66)))), ((int)(((byte)(139)))));
-            this.labelControl28.Location = new System.Drawing.Point(332, 307);
+            this.labelControl28.Location = new System.Drawing.Point(11, 340);
             this.labelControl28.Name = "labelControl28";
             this.labelControl28.Size = new System.Drawing.Size(77, 25);
             this.labelControl28.TabIndex = 59;
@@ -817,7 +832,7 @@
             // 
             this.txtPCDAmount.EditValue = "0.000";
             this.txtPCDAmount.EnterMoveNextControl = true;
-            this.txtPCDAmount.Location = new System.Drawing.Point(142, 309);
+            this.txtPCDAmount.Location = new System.Drawing.Point(806, 295);
             this.txtPCDAmount.Name = "txtPCDAmount";
             this.txtPCDAmount.Properties.Appearance.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtPCDAmount.Properties.Appearance.Options.UseFont = true;
@@ -831,12 +846,13 @@
             this.txtPCDAmount.Size = new System.Drawing.Size(182, 26);
             this.txtPCDAmount.TabIndex = 56;
             this.txtPCDAmount.TabStop = false;
+            this.txtPCDAmount.TextChanged += new System.EventHandler(this.txtPCDAmount_TextChanged);
             // 
             // labelControl29
             // 
             this.labelControl29.Appearance.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.labelControl29.Appearance.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(21)))), ((int)(((byte)(66)))), ((int)(((byte)(139)))));
-            this.labelControl29.Location = new System.Drawing.Point(11, 314);
+            this.labelControl29.Location = new System.Drawing.Point(675, 300);
             this.labelControl29.Name = "labelControl29";
             this.labelControl29.Size = new System.Drawing.Size(96, 16);
             this.labelControl29.TabIndex = 57;
@@ -1344,6 +1360,63 @@
             this.labelControl1.TabIndex = 0;
             this.labelControl1.Text = "નોટ નં.:";
             // 
+            // labelControl36
+            // 
+            this.labelControl36.Appearance.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelControl36.Appearance.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(21)))), ((int)(((byte)(66)))), ((int)(((byte)(139)))));
+            this.labelControl36.Location = new System.Drawing.Point(669, 370);
+            this.labelControl36.Name = "labelControl36";
+            this.labelControl36.Size = new System.Drawing.Size(91, 25);
+            this.labelControl36.TabIndex = 89;
+            this.labelControl36.Text = "માર્જિન - ટકા :";
+            // 
+            // labelControl35
+            // 
+            this.labelControl35.Appearance.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelControl35.Appearance.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(21)))), ((int)(((byte)(66)))), ((int)(((byte)(139)))));
+            this.labelControl35.Location = new System.Drawing.Point(700, 400);
+            this.labelControl35.Name = "labelControl35";
+            this.labelControl35.Size = new System.Drawing.Size(106, 25);
+            this.labelControl35.TabIndex = 90;
+            this.labelControl35.Text = "પર માર્જિન રૂ. :  ";
+            // 
+            // labelControl37
+            // 
+            this.labelControl37.Appearance.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelControl37.Appearance.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(21)))), ((int)(((byte)(66)))), ((int)(((byte)(139)))));
+            this.labelControl37.Location = new System.Drawing.Point(669, 430);
+            this.labelControl37.Name = "labelControl37";
+            this.labelControl37.Size = new System.Drawing.Size(118, 25);
+            this.labelControl37.TabIndex = 91;
+            this.labelControl37.Text = "રફ પર માર્જિન રૂ. :";
+            // 
+            // labelControl38
+            // 
+            this.labelControl38.Appearance.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelControl38.Appearance.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(21)))), ((int)(((byte)(66)))), ((int)(((byte)(139)))));
+            this.labelControl38.Location = new System.Drawing.Point(669, 405);
+            this.labelControl38.Name = "labelControl38";
+            this.labelControl38.Size = new System.Drawing.Size(27, 16);
+            this.labelControl38.TabIndex = 92;
+            this.labelControl38.Text = "1 CT";
+            // 
+            // txtrufmargin
+            // 
+            this.txtrufmargin.EditValue = "0.000";
+            this.txtrufmargin.EnterMoveNextControl = true;
+            this.txtrufmargin.Location = new System.Drawing.Point(806, 430);
+            this.txtrufmargin.Name = "txtrufmargin";
+            this.txtrufmargin.Properties.Appearance.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtrufmargin.Properties.Appearance.Options.UseFont = true;
+            this.txtrufmargin.Properties.DisplayFormat.FormatString = "f3";
+            this.txtrufmargin.Properties.DisplayFormat.FormatType = DevExpress.Utils.FormatType.Numeric;
+            this.txtrufmargin.Properties.EditFormat.FormatString = "f3";
+            this.txtrufmargin.Properties.EditFormat.FormatType = DevExpress.Utils.FormatType.Numeric;
+            this.txtrufmargin.Properties.Mask.EditMask = "f3";
+            this.txtrufmargin.Properties.Mask.MaskType = DevExpress.XtraEditors.Mask.MaskType.Numeric;
+            this.txtrufmargin.Size = new System.Drawing.Size(182, 26);
+            this.txtrufmargin.TabIndex = 93;
+            // 
             // FrmKarkhanaDetails
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -1368,7 +1441,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.groupControl1)).EndInit();
             this.groupControl1.ResumeLayout(false);
             this.groupControl1.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.textEdit1.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtctmargin.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtFinalPer.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtComissionMajuri.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtThanMajuri.Properties)).EndInit();
@@ -1405,6 +1478,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.dtpKharidiDate.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtKatNo.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtNotNo.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtrufmargin.Properties)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -1485,13 +1559,18 @@
         private DevExpress.XtraEditors.LabelControl labelControl31;
         private DevExpress.XtraEditors.TextEdit txtFinalPer;
         private DevExpress.XtraEditors.LabelControl labelControl33;
-        private DevExpress.XtraEditors.TextEdit textEdit1;
+        private DevExpress.XtraEditors.TextEdit txtctmargin;
         private DevExpress.XtraEditors.LabelControl labelControl34;
         private DevExpress.XtraEditors.SimpleButton SBtnShow;
         private DevExpress.XtraGrid.GridControl gridControl1;
         private DevExpress.XtraGrid.Views.Grid.GridView gridView1;
         private DevExpress.XtraEditors.PanelControl panelControl4;
         private DevExpress.XtraEditors.SimpleButton SBtnClose;
+        private DevExpress.XtraEditors.LabelControl labelControl36;
+        private DevExpress.XtraEditors.LabelControl labelControl38;
+        private DevExpress.XtraEditors.LabelControl labelControl37;
+        private DevExpress.XtraEditors.LabelControl labelControl35;
+        private DevExpress.XtraEditors.TextEdit txtrufmargin;
 
         //private DevExpress.XtraGrid.GridControl gridControl1;
         //private DevExpress.XtraGrid.Views.Grid.GridView gridView1;

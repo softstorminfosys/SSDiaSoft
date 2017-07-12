@@ -310,7 +310,7 @@ namespace DiamondPro
             {
                 if (e.KeyChar != 13 && e.KeyChar != 8)
                 {
-                    DataTable dtParty = new TRN_Payment_detail_Function().FillNotNo("", 1);
+                    DataTable dtParty = new TRN_Payment_detail_Function().FilluniqueNotNo("", 1);
                     //dtParty.Columns["PARTY NAME"].SetOrdinal(1);
                     FrmSearchProperty frmSearch = new FrmSearchProperty();
                     frmSearch.dtTable = dtParty.Copy();

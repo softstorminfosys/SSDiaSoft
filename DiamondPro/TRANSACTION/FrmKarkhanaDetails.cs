@@ -79,6 +79,7 @@ namespace DiamondPro
                 ObjProperty.ThanMajuri = Convert.ToDouble(txtThanMajuri.Text);
                 ObjProperty.CommMajuri = Convert.ToDouble(txtComissionMajuri.Text);
                 ObjProperty.FinalPadatarTaka = Convert.ToDouble(txtFinalPer.Text);
+                ObjProperty.FinalAmount = Convert.ToDouble(txtFinalAmount.Text);
                 ObjProperty.Status = "R";
 
                 int RetVal = new Karkhana_Return_Function().InsertUpdate(ObjProperty);
@@ -230,6 +231,10 @@ namespace DiamondPro
             {
                 ErrorMsg = "Banava Chadelu Vajan is Wrong Please Check.\n";
             }
+            if (Convert.ToDouble(txtCts.Text) != (Convert.ToDouble(txtBanvaChadelu.Text) + Convert.ToDouble(txtVajanGhatt.Text) + Convert.ToDouble(txtDblVajan.Text) + Convert.ToDouble(txtChokiVajan.Text) + Convert.ToDouble(txtPalsuKachu.Text)))
+            {
+                ErrorMsg = "Total Vajan is not Match with Kul Vajan.\n";
+            }
             if (ErrorMsg != "")
             {
                 XtraMessageBox.Show(ErrorMsg,"Save Validation",MessageBoxButtons.OK,MessageBoxIcon.Error);
@@ -270,6 +275,13 @@ namespace DiamondPro
             return PCD;
         }
 
+        private double CalculateThanAmount()
+        {
+            double TA = 0;
+            TA = Convert.ToDouble(txtThan.Text) * Convert.ToDouble(txtThanMajuri.Text);
+            return TA;
+        }
+
         private void CalcBanavaChadelu()
         {
             double BanavaChadelu = 0;
@@ -280,15 +292,47 @@ namespace DiamondPro
         private void CalcTaiyarPadatar()
         {
             double TaiyarPadatar = 0;
-            if (Convert.ToDouble(txtTaiyarVajan.Text) > 0)
+           if (Convert.ToDouble(txtTaiyarVajan.Text) > 0)
             {
-                TaiyarPadatar = (Convert.ToDouble(txtAmount.Text) + Convert.ToDouble(txtThanTotal.Text)) / Convert.ToDouble(txtTaiyarVajan.Text);
-                txtTaiyarPadatar.Text = TaiyarPadatar.ToString();
+                TaiyarPadatar = (Convert.ToDouble(txtAmount.Text) + Convert.ToDouble(txtThanTotal.Text) - Convert.ToDouble(txtPCDAmount.Text)) / Convert.ToDouble(txtTaiyarVajan.Text);
+                txtTaiyarPadatar.Text = Convert.ToInt32(TaiyarPadatar).ToString();
             }
-            else
-                txtTaiyarPadatar.Text = "0.00";
+           else
+               txtTaiyarPadatar.Text = "0.00";
+        }
+        private void Calccomissionpadatar()
+        {
+            double commissionper = 0;
+            //if (Convert.ToDouble(txtComissionMajuri.Text) > 0)
+            //{
+            commissionper = (Convert.ToDouble(txtComissionMajuri.Text) + Convert.ToDouble(txtTaiyarPadatar.Text));
+            txtComissionTaiyar.Text =(Convert.ToInt32(commissionper)).ToString();
+            //}
+            // else
+            //   txtRafTaka.Text = "0.00";
         }
 
+        private void CalcMarginTaka()
+        {
+            double Mtaka = 0;
+            double CTM = 0;
+            if (Convert.ToDouble(txtFinalPer.Text) > 0)
+            {
+                Mtaka = Math.Round(Convert.ToDouble(txtComissionTaiyar.Text) * 100) / Convert.ToDouble(txtFinalPer.Text);
+                int Mtaka1 = Convert.ToInt32(Mtaka);
+                txtFinalPadatar.Text = Mtaka1.ToString();
+                CTM = Convert.ToDouble(txtFinalPadatar.Text) - Convert.ToDouble(txtComissionTaiyar.Text);
+                txtctmargin.Text = CTM.ToString();
+                txtrufmargin.Text = (CTM * Convert.ToDouble(txtTaiyarVajan.Text)).ToString(); ;
+            }
+            else
+            {
+                txtFinalPadatar.Text = txtComissionTaiyar.Text;
+            }
+            CalcRafTaka();
+            CalcSTaka();
+           
+        }
         private void CalcSTaka()
         {
             double Staka = 0;
@@ -301,6 +345,8 @@ namespace DiamondPro
                 txtSTaka.Text = "0.00";
         }
 
+       
+       
         private void CalcRafTaka()
         {
             double RTaka = 0;
@@ -405,21 +451,31 @@ namespace DiamondPro
             txtPCDAmount.Text = Convert.ToString(CalculatePCD());
         }
 
-        private void txtTaiyarVajan_TextChanged(object sender, EventArgs e)
+        protected void txtTaiyarVajan_TextChanged(object sender, EventArgs e)
         {
             CalcTaiyarPadatar();
             CalcSTaka();
             CalcRafTaka();
+            Calccomissionpadatar();
+            CalcMarginTaka();
+            //txtComissionMajuri_TextChanged(null, EventArgs.Empty);
         }
 
-        private void txtAmount_TextChanged(object sender, EventArgs e)
+        protected void txtAmount_TextChanged(object sender, EventArgs e)
         {
-            CalcTaiyarPadatar();
+          
+           txtTaiyarVajan_TextChanged(null, EventArgs.Empty);
+
+        }
+        private void txtPCDAmount_TextChanged(object sender, EventArgs e)
+        {
+            txtTaiyarVajan_TextChanged(null, EventArgs.Empty);
         }
 
         private void txtThanTotal_TextChanged(object sender, EventArgs e)
         {
-            CalcTaiyarPadatar();
+            //CalcTaiyarPadatar();
+            txtTaiyarVajan_TextChanged(null, EventArgs.Empty);
         }
 
         private void txtBanvaChadelu_TextChanged(object sender, EventArgs e)
@@ -435,15 +491,38 @@ namespace DiamondPro
         private void txtPalsuKachu_TextChanged(object sender, EventArgs e)
         {
             txtPalsuAmount.Text = Convert.ToString(Convert.ToDouble(txtPalsuKachu.Text) * Convert.ToDouble(txtPalsuRate.Text));
+            CalculatePCD();
         }
         private void txtChokiVajan_TextChanged(object sender, EventArgs e)
         {
             txtChokiAmount.Text = Convert.ToString(Convert.ToDouble(txtChokiVajan.Text) * Convert.ToDouble(txtChokiRate.Text));
+            CalculatePCD();
         }
         private void txtDblVajan_TextChanged(object sender, EventArgs e)
         {
             txtDblAmount.Text = Convert.ToString(Convert.ToDouble(txtDblVajan.Text) * Convert.ToDouble(txtDblRate.Text));
+            CalculatePCD();
         }
+        private void txtThan_TextChanged(object sender, EventArgs e)
+        {
+            CalculateThanAmount();
+        }
+
+        private void txtThanMajuri_TextChanged(object sender, EventArgs e)
+        {
+            txtThanTotal.Text = Convert.ToString(CalculateThanAmount()); 
+        }
+
+        private void txtComissionMajuri_TextChanged(object sender, EventArgs e)
+        {
+            Calccomissionpadatar();
+            CalcMarginTaka();
+        }
+        private void txtFinalPer_TextChanged(object sender, EventArgs e)
+        {
+            CalcMarginTaka();
+        }
+
         #endregion
 
         #region Grid Event
@@ -499,5 +578,12 @@ namespace DiamondPro
             }
         }
         #endregion
+
+      
+      
+
+      
+
+      
     }
 }

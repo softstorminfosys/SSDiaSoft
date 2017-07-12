@@ -374,7 +374,7 @@ namespace DiamondPro
             {
                 if (e.KeyChar != 13 && e.KeyChar != 8)
                 {
-                    DataTable dtParty = new MST_Party_Function().PartyMasterGetDataFOrGrid(" Active = 1");
+                    DataTable dtParty = new MST_Party_Function().PartyMasterGetDataFOrGrid(" PartyType in('KHARIDI') AND Active = 1");
                     FrmSearchProperty frmSearch = new FrmSearchProperty();
                     frmSearch.dtTable = dtParty.Copy();
                     frmSearch.serachfield = "PARTY NAME";
