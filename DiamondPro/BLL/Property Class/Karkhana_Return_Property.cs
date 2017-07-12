@@ -42,6 +42,7 @@ namespace DiamondPro.BLL.Property_Class
         public double ThanMajuri { get; set; }
         public double CommMajuri { get; set; }
         public double FinalPadatarTaka { get; set; }
+        public double FinalAmount { get; set; }
         public string Status { get; set; }
     }
 }

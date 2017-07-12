@@ -38,6 +38,7 @@ namespace DiamondPro
         #region Button Event
         private void BtnSave_Click(object sender, EventArgs e)
         {
+            txtFinalAmount.Text = (Convert.ToDouble(txtFinalPadatar.Text) * Convert.ToDouble(txtTaiyarVajan.Text)).ToString();
             try
             {
                 if (!SaveValidation())

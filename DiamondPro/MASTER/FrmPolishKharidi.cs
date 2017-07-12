@@ -373,7 +373,7 @@ namespace DiamondPro
                 ObjProperty.BasicTotal = Convert.ToDouble(txtBasicTotal.Text);
                 ObjProperty.AngadiyaPer = Convert.ToDouble(txtAngadiyaPer.Text);
                 ObjProperty.AngadiyaKharch = Convert.ToDouble(txtAngadiyaValue.Text);
-                ObjProperty.FinalTotal = Convert.ToDouble(txtFinalTotal.Text);
+                ObjProperty.FinalTotal = Convert.ToDouble(txtFinalAmount.Text);
                 ObjProperty.PendingAmount = Convert.ToDouble(txtPendingPayment.Text);
                 ObjProperty.PaidAmount = Convert.ToDouble(txtDonePayment.Text);
 

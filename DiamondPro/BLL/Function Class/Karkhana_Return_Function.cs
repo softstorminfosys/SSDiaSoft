@@ -51,7 +51,7 @@ namespace DiamondPro.BLL.Function_Class
             Request.AddParameter("@ThanMajuri", pProperty.ThanMajuri, DbType.Double, ParameterDirection.Input);
             Request.AddParameter("@CommMajuri", pProperty.CommMajuri, DbType.Double, ParameterDirection.Input);
             Request.AddParameter("@FinalPer", pProperty.FinalPadatarTaka, DbType.Double, ParameterDirection.Input);
-            Request.AddParameter("@FinalAmount", pProperty.FinalPadatarTaka, DbType.Double, ParameterDirection.Input);
+            Request.AddParameter("@FinalAmount", pProperty.FinalAmount, DbType.Double, ParameterDirection.Input);
             Request.AddParameter("@Status", pProperty.Status, DbType.String, ParameterDirection.Input);
             Request.AddParameter("@ReturnValue", 0, DbType.Int32, ParameterDirection.Output);
             Request.ComandText1 = "Karkhana_IssueReturn_InsertUpdate";

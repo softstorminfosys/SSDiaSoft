@@ -129,7 +129,7 @@
             this.pnlButton.Dock = System.Windows.Forms.DockStyle.Bottom;
             this.pnlButton.Location = new System.Drawing.Point(0, 520);
             this.pnlButton.Name = "pnlButton";
-            this.pnlButton.Size = new System.Drawing.Size(1491, 47);
+            this.pnlButton.Size = new System.Drawing.Size(1370, 47);
             this.pnlButton.TabIndex = 1;
             // 
             // SBtnShow
@@ -200,7 +200,7 @@
             this.repositoryItemTextEdit1,
             this.rtxtTTAmount,
             this.rchkSelect});
-            this.grdTo.Size = new System.Drawing.Size(1491, 520);
+            this.grdTo.Size = new System.Drawing.Size(1370, 520);
             this.grdTo.TabIndex = 3;
             this.grdTo.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
             this.dgvTo});
@@ -466,7 +466,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1491, 567);
+            this.ClientSize = new System.Drawing.Size(1370, 567);
             this.Controls.Add(this.panelControl3);
             this.Controls.Add(this.grdTo);
             this.Controls.Add(this.pnlButton);

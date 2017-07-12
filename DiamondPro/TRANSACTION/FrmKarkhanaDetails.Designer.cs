@@ -43,6 +43,11 @@
             this.BtnDelete = new DevExpress.XtraEditors.SimpleButton();
             this.BtnSave = new DevExpress.XtraEditors.SimpleButton();
             this.groupControl1 = new DevExpress.XtraEditors.GroupControl();
+            this.txtrufmargin = new DevExpress.XtraEditors.TextEdit();
+            this.labelControl38 = new DevExpress.XtraEditors.LabelControl();
+            this.labelControl37 = new DevExpress.XtraEditors.LabelControl();
+            this.labelControl35 = new DevExpress.XtraEditors.LabelControl();
+            this.labelControl36 = new DevExpress.XtraEditors.LabelControl();
             this.txtctmargin = new DevExpress.XtraEditors.TextEdit();
             this.labelControl34 = new DevExpress.XtraEditors.LabelControl();
             this.txtFinalPer = new DevExpress.XtraEditors.TextEdit();
@@ -111,11 +116,7 @@
             this.labelControl2 = new DevExpress.XtraEditors.LabelControl();
             this.txtNotNo = new DevExpress.XtraEditors.TextEdit();
             this.labelControl1 = new DevExpress.XtraEditors.LabelControl();
-            this.labelControl36 = new DevExpress.XtraEditors.LabelControl();
-            this.labelControl35 = new DevExpress.XtraEditors.LabelControl();
-            this.labelControl37 = new DevExpress.XtraEditors.LabelControl();
-            this.labelControl38 = new DevExpress.XtraEditors.LabelControl();
-            this.txtrufmargin = new DevExpress.XtraEditors.TextEdit();
+            this.txtFinalAmount = new DevExpress.XtraEditors.TextEdit();
             ((System.ComponentModel.ISupportInitialize)(this.dockManager1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.panelControl3)).BeginInit();
             this.panelControl3.SuspendLayout();
@@ -129,6 +130,7 @@
             this.panelControl2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.groupControl1)).BeginInit();
             this.groupControl1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.txtrufmargin.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtctmargin.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtFinalPer.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtComissionMajuri.Properties)).BeginInit();
@@ -166,7 +168,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.dtpKharidiDate.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtKatNo.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtNotNo.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.txtrufmargin.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtFinalAmount.Properties)).BeginInit();
             this.SuspendLayout();
             // 
             // dockManager1
@@ -322,6 +324,7 @@
             // 
             this.groupControl1.AppearanceCaption.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Underline, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.groupControl1.AppearanceCaption.Options.UseFont = true;
+            this.groupControl1.Controls.Add(this.txtFinalAmount);
             this.groupControl1.Controls.Add(this.txtrufmargin);
             this.groupControl1.Controls.Add(this.labelControl38);
             this.groupControl1.Controls.Add(this.labelControl37);
@@ -401,6 +404,63 @@
             this.groupControl1.Size = new System.Drawing.Size(1053, 604);
             this.groupControl1.TabIndex = 0;
             this.groupControl1.Text = "કારખાના ની વિગત";
+            // 
+            // txtrufmargin
+            // 
+            this.txtrufmargin.EditValue = "0.000";
+            this.txtrufmargin.EnterMoveNextControl = true;
+            this.txtrufmargin.Location = new System.Drawing.Point(806, 430);
+            this.txtrufmargin.Name = "txtrufmargin";
+            this.txtrufmargin.Properties.Appearance.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtrufmargin.Properties.Appearance.Options.UseFont = true;
+            this.txtrufmargin.Properties.DisplayFormat.FormatString = "f3";
+            this.txtrufmargin.Properties.DisplayFormat.FormatType = DevExpress.Utils.FormatType.Numeric;
+            this.txtrufmargin.Properties.EditFormat.FormatString = "f3";
+            this.txtrufmargin.Properties.EditFormat.FormatType = DevExpress.Utils.FormatType.Numeric;
+            this.txtrufmargin.Properties.Mask.EditMask = "f3";
+            this.txtrufmargin.Properties.Mask.MaskType = DevExpress.XtraEditors.Mask.MaskType.Numeric;
+            this.txtrufmargin.Size = new System.Drawing.Size(182, 26);
+            this.txtrufmargin.TabIndex = 93;
+            // 
+            // labelControl38
+            // 
+            this.labelControl38.Appearance.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelControl38.Appearance.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(21)))), ((int)(((byte)(66)))), ((int)(((byte)(139)))));
+            this.labelControl38.Location = new System.Drawing.Point(669, 405);
+            this.labelControl38.Name = "labelControl38";
+            this.labelControl38.Size = new System.Drawing.Size(27, 16);
+            this.labelControl38.TabIndex = 92;
+            this.labelControl38.Text = "1 CT";
+            // 
+            // labelControl37
+            // 
+            this.labelControl37.Appearance.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelControl37.Appearance.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(21)))), ((int)(((byte)(66)))), ((int)(((byte)(139)))));
+            this.labelControl37.Location = new System.Drawing.Point(669, 430);
+            this.labelControl37.Name = "labelControl37";
+            this.labelControl37.Size = new System.Drawing.Size(118, 25);
+            this.labelControl37.TabIndex = 91;
+            this.labelControl37.Text = "રફ પર માર્જિન રૂ. :";
+            // 
+            // labelControl35
+            // 
+            this.labelControl35.Appearance.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelControl35.Appearance.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(21)))), ((int)(((byte)(66)))), ((int)(((byte)(139)))));
+            this.labelControl35.Location = new System.Drawing.Point(700, 400);
+            this.labelControl35.Name = "labelControl35";
+            this.labelControl35.Size = new System.Drawing.Size(106, 25);
+            this.labelControl35.TabIndex = 90;
+            this.labelControl35.Text = "પર માર્જિન રૂ. :  ";
+            // 
+            // labelControl36
+            // 
+            this.labelControl36.Appearance.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelControl36.Appearance.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(21)))), ((int)(((byte)(66)))), ((int)(((byte)(139)))));
+            this.labelControl36.Location = new System.Drawing.Point(669, 370);
+            this.labelControl36.Name = "labelControl36";
+            this.labelControl36.Size = new System.Drawing.Size(91, 25);
+            this.labelControl36.TabIndex = 89;
+            this.labelControl36.Text = "માર્જિન - ટકા :";
             // 
             // txtctmargin
             // 
@@ -1360,62 +1420,25 @@
             this.labelControl1.TabIndex = 0;
             this.labelControl1.Text = "નોટ નં.:";
             // 
-            // labelControl36
+            // txtFinalAmount
             // 
-            this.labelControl36.Appearance.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelControl36.Appearance.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(21)))), ((int)(((byte)(66)))), ((int)(((byte)(139)))));
-            this.labelControl36.Location = new System.Drawing.Point(669, 370);
-            this.labelControl36.Name = "labelControl36";
-            this.labelControl36.Size = new System.Drawing.Size(91, 25);
-            this.labelControl36.TabIndex = 89;
-            this.labelControl36.Text = "માર્જિન - ટકા :";
-            // 
-            // labelControl35
-            // 
-            this.labelControl35.Appearance.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelControl35.Appearance.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(21)))), ((int)(((byte)(66)))), ((int)(((byte)(139)))));
-            this.labelControl35.Location = new System.Drawing.Point(700, 400);
-            this.labelControl35.Name = "labelControl35";
-            this.labelControl35.Size = new System.Drawing.Size(106, 25);
-            this.labelControl35.TabIndex = 90;
-            this.labelControl35.Text = "પર માર્જિન રૂ. :  ";
-            // 
-            // labelControl37
-            // 
-            this.labelControl37.Appearance.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelControl37.Appearance.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(21)))), ((int)(((byte)(66)))), ((int)(((byte)(139)))));
-            this.labelControl37.Location = new System.Drawing.Point(669, 430);
-            this.labelControl37.Name = "labelControl37";
-            this.labelControl37.Size = new System.Drawing.Size(118, 25);
-            this.labelControl37.TabIndex = 91;
-            this.labelControl37.Text = "રફ પર માર્જિન રૂ. :";
-            // 
-            // labelControl38
-            // 
-            this.labelControl38.Appearance.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelControl38.Appearance.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(21)))), ((int)(((byte)(66)))), ((int)(((byte)(139)))));
-            this.labelControl38.Location = new System.Drawing.Point(669, 405);
-            this.labelControl38.Name = "labelControl38";
-            this.labelControl38.Size = new System.Drawing.Size(27, 16);
-            this.labelControl38.TabIndex = 92;
-            this.labelControl38.Text = "1 CT";
-            // 
-            // txtrufmargin
-            // 
-            this.txtrufmargin.EditValue = "0.000";
-            this.txtrufmargin.EnterMoveNextControl = true;
-            this.txtrufmargin.Location = new System.Drawing.Point(806, 430);
-            this.txtrufmargin.Name = "txtrufmargin";
-            this.txtrufmargin.Properties.Appearance.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtrufmargin.Properties.Appearance.Options.UseFont = true;
-            this.txtrufmargin.Properties.DisplayFormat.FormatString = "f3";
-            this.txtrufmargin.Properties.DisplayFormat.FormatType = DevExpress.Utils.FormatType.Numeric;
-            this.txtrufmargin.Properties.EditFormat.FormatString = "f3";
-            this.txtrufmargin.Properties.EditFormat.FormatType = DevExpress.Utils.FormatType.Numeric;
-            this.txtrufmargin.Properties.Mask.EditMask = "f3";
-            this.txtrufmargin.Properties.Mask.MaskType = DevExpress.XtraEditors.Mask.MaskType.Numeric;
-            this.txtrufmargin.Size = new System.Drawing.Size(182, 26);
-            this.txtrufmargin.TabIndex = 93;
+            this.txtFinalAmount.EditValue = "0.000";
+            this.txtFinalAmount.EnterMoveNextControl = true;
+            this.txtFinalAmount.Location = new System.Drawing.Point(471, 492);
+            this.txtFinalAmount.Name = "txtFinalAmount";
+            this.txtFinalAmount.Properties.Appearance.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtFinalAmount.Properties.Appearance.Options.UseFont = true;
+            this.txtFinalAmount.Properties.DisplayFormat.FormatString = "f3";
+            this.txtFinalAmount.Properties.DisplayFormat.FormatType = DevExpress.Utils.FormatType.Numeric;
+            this.txtFinalAmount.Properties.EditFormat.FormatString = "f3";
+            this.txtFinalAmount.Properties.EditFormat.FormatType = DevExpress.Utils.FormatType.Numeric;
+            this.txtFinalAmount.Properties.Mask.EditMask = "f3";
+            this.txtFinalAmount.Properties.Mask.MaskType = DevExpress.XtraEditors.Mask.MaskType.Numeric;
+            this.txtFinalAmount.Properties.ReadOnly = true;
+            this.txtFinalAmount.Size = new System.Drawing.Size(182, 26);
+            this.txtFinalAmount.TabIndex = 94;
+            this.txtFinalAmount.TabStop = false;
+            this.txtFinalAmount.Visible = false;
             // 
             // FrmKarkhanaDetails
             // 
@@ -1441,6 +1464,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.groupControl1)).EndInit();
             this.groupControl1.ResumeLayout(false);
             this.groupControl1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.txtrufmargin.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtctmargin.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtFinalPer.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtComissionMajuri.Properties)).EndInit();
@@ -1478,7 +1502,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.dtpKharidiDate.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtKatNo.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtNotNo.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.txtrufmargin.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtFinalAmount.Properties)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -1571,6 +1595,7 @@
         private DevExpress.XtraEditors.LabelControl labelControl37;
         private DevExpress.XtraEditors.LabelControl labelControl35;
         private DevExpress.XtraEditors.TextEdit txtrufmargin;
+        private DevExpress.XtraEditors.TextEdit txtFinalAmount;
 
         //private DevExpress.XtraGrid.GridControl gridControl1;
         //private DevExpress.XtraGrid.Views.Grid.GridView gridView1;
