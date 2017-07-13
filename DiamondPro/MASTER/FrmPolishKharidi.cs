@@ -244,6 +244,7 @@ namespace DiamondPro
             txtAngadiyaPer.Text = "0.00";
             txtAngadiyaValue.Text = "0.00";
             txtFinalTotal.Text = "0.00";
+            txtMarginPer.Text = "0.00";
             txtPendingPayment.Text = "0.00";
             txtDonePayment.Text = "0.00";
             GetNotNumber();
@@ -315,10 +316,15 @@ namespace DiamondPro
 
         private void CalculateMarginPer()
         {
+            if (Convert.ToDouble(txtMarginPer.Text)>0)
+            {
             double MarginAmt = 0;
-            MarginAmt = Convert.ToDouble((Convert.ToDouble(txtBasicTotal.Text) * Convert.ToDouble(txtMarginPer.Text)) / 100);
-            txtMarginAmt.Text = MarginAmt.ToString();
-            txtFinalAmount.Text = Convert.ToString(Convert.ToDouble(txtBasicTotal.Text) + Convert.ToDouble(txtMarginAmt.Text)); 
+            MarginAmt = Math.Round(Convert.ToDouble((Convert.ToDouble(txtBasicTotal.Text) * 100) / Convert.ToDouble(txtMarginPer.Text)));
+            txtMarginAmt.Text = Convert.ToInt32(MarginAmt - Convert.ToDouble(txtBasicTotal.Text)).ToString();
+            txtFinalAmount.Text = Convert.ToString(Convert.ToInt32(Convert.ToDouble(txtBasicTotal.Text) + Convert.ToDouble(txtMarginAmt.Text))); }
+            else{
+            txtMarginAmt.Text = "0.00";
+            txtFinalAmount.Text = "0.00"; }
         }      
 
         private void FillGrid()
