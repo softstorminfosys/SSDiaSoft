@@ -220,16 +220,18 @@ namespace DiamondPro.TRANSACTION
                 //        dgvTo.SetFocusedRowCellValue("Sel", 0);
                 //    }
                 //}
+               
                 int BoxNo = new BoxMerge_Function().GetBoxNumber();
                 _dtSelect = (DataTable)grdTo.DataSource;
-                _dtSelect.Select("Sel=1");
-               
-                int Result = new BoxMerge_Function().BoxCreate(_dtSelect, BoxNo);
+               // _dtSelect.Select("Sel=1");
+                var result = _dtSelect.AsEnumerable().Where(dr => dr.Field<int>("Sel") == 1).CopyToDataTable();
+                int Result = new BoxMerge_Function().BoxCreate(result, BoxNo);
 
                 if (Result > 0)
                 {
                     MessageBox.Show("Box No. B"+Result+" is created successfully.");
-                    BtnClear_Click(null,null);
+
+                    BtnClear_Click(null, null); FillGrid();
                 }
                 else
                 {
