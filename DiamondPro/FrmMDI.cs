@@ -141,10 +141,10 @@ namespace DiamondPro
         private void વચણToolStripMenuItem_Click(object sender, EventArgs e)
         {
             
-            FrmVechan frm = new FrmVechan();
-            frm.MdiParent = this;
-            imageSlider1.Visible = false;
-            frm.Show();
+            //FrmVechan frm = new FrmVechan();
+            //frm.MdiParent = this;
+            //imageSlider1.Visible = false;
+            //frm.Show();
         }
         #endregion
 
