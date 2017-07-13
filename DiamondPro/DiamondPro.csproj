@@ -132,6 +132,7 @@
     <Compile Include="BLL\Function Class\Karkhana_Issue_Function.cs" />
     <Compile Include="BLL\Function Class\Karkhana_Return_Function.cs" />
     <Compile Include="BLL\Function Class\MST_Karkhana_Function.cs" />
+    <Compile Include="BLL\Function Class\MST_Vechan_Function.cs" />
     <Compile Include="BLL\Function Class\ParameterValue_Function.cs" />
     <Compile Include="BLL\Function Class\MST_PolishKharidi_Function.cs" />
     <Compile Include="BLL\Function Class\MST_Dalal_Function.cs" />
@@ -149,6 +150,7 @@
     <Compile Include="BLL\Property Class\MST_Dalal_Property.cs" />
     <Compile Include="BLL\Property Class\MST_Kharidi_Property.cs" />
     <Compile Include="BLL\Property Class\MST_Party_Property.cs" />
+    <Compile Include="BLL\Property Class\MST_Vechan_Property.cs" />
     <Compile Include="BLL\Property Class\ParameterType_Property.cs" />
     <Compile Include="BLL\Property Class\Parameter_Value_Property.cs" />
     <Compile Include="BLL\Property Class\TRN_Payment_detail_Property.cs" />

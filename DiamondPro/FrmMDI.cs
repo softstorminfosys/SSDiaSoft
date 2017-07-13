@@ -13,8 +13,6 @@ using DevExpress.LookAndFeel;
 using Microsoft.Win32;
 using DiamondPro.TRANSACTION;
 using DiamondPro.BLL.Function_Class;
-using DevExpress.XtraSplashForm;
-using DevExpress;
 
 namespace DiamondPro
 {
@@ -140,12 +138,22 @@ namespace DiamondPro
             frm.Show();
            
         }
+        private void વચણToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            
+            FrmVechan frm = new FrmVechan();
+            frm.MdiParent = this;
+            imageSlider1.Visible = false;
+            frm.Show();
+        }
         #endregion
 
         private void backupToolStripMenuItem_Click(object sender, EventArgs e)
         {
             int RetVal = new BoxNumbering_Function().DBBackup();
         }
+
+        
 
       
 

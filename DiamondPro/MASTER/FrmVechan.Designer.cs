@@ -42,12 +42,9 @@
             this.labelControl16 = new DevExpress.XtraEditors.LabelControl();
             this.txtPendingPayment = new DevExpress.XtraEditors.TextEdit();
             this.labelControl15 = new DevExpress.XtraEditors.LabelControl();
-            this.BtnClear = new DevExpress.XtraEditors.SimpleButton();
-            this.BtnDelete = new DevExpress.XtraEditors.SimpleButton();
-            this.BtnSave = new DevExpress.XtraEditors.SimpleButton();
             this.txtFinalTotal = new DevExpress.XtraEditors.TextEdit();
             this.labelControl14 = new DevExpress.XtraEditors.LabelControl();
-            this.txtTotalPayment = new DevExpress.XtraEditors.TextEdit();
+            this.txtBasicTotal = new DevExpress.XtraEditors.TextEdit();
             this.labelControl13 = new DevExpress.XtraEditors.LabelControl();
             this.txtPer = new DevExpress.XtraEditors.TextEdit();
             this.labelControl12 = new DevExpress.XtraEditors.LabelControl();
@@ -71,8 +68,11 @@
             this.labelControl3 = new DevExpress.XtraEditors.LabelControl();
             this.txtQtyName = new DevExpress.XtraEditors.TextEdit();
             this.labelControl2 = new DevExpress.XtraEditors.LabelControl();
-            this.txtSaleNotNo = new DevExpress.XtraEditors.TextEdit();
+            this.txtVechanNotNo = new DevExpress.XtraEditors.TextEdit();
             this.labelControl1 = new DevExpress.XtraEditors.LabelControl();
+            this.BtnClear = new DevExpress.XtraEditors.SimpleButton();
+            this.BtnDelete = new DevExpress.XtraEditors.SimpleButton();
+            this.BtnSave = new DevExpress.XtraEditors.SimpleButton();
             ((System.ComponentModel.ISupportInitialize)(this.groupControl1)).BeginInit();
             this.groupControl1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.txtQtySize.Properties)).BeginInit();
@@ -82,7 +82,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.txtDonePayment.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtPendingPayment.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtFinalTotal.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.txtTotalPayment.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtBasicTotal.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtPer.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtRate.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtCts.Properties)).BeginInit();
@@ -96,7 +96,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.dtpVechanDate.Properties.CalendarTimeProperties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dtpVechanDate.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtQtyName.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.txtSaleNotNo.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtVechanNotNo.Properties)).BeginInit();
             this.SuspendLayout();
             // 
             // groupControl1
@@ -120,7 +120,7 @@
             this.groupControl1.Controls.Add(this.BtnSave);
             this.groupControl1.Controls.Add(this.txtFinalTotal);
             this.groupControl1.Controls.Add(this.labelControl14);
-            this.groupControl1.Controls.Add(this.txtTotalPayment);
+            this.groupControl1.Controls.Add(this.txtBasicTotal);
             this.groupControl1.Controls.Add(this.labelControl13);
             this.groupControl1.Controls.Add(this.txtPer);
             this.groupControl1.Controls.Add(this.labelControl12);
@@ -144,7 +144,7 @@
             this.groupControl1.Controls.Add(this.labelControl3);
             this.groupControl1.Controls.Add(this.txtQtyName);
             this.groupControl1.Controls.Add(this.labelControl2);
-            this.groupControl1.Controls.Add(this.txtSaleNotNo);
+            this.groupControl1.Controls.Add(this.txtVechanNotNo);
             this.groupControl1.Controls.Add(this.labelControl1);
             this.groupControl1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.groupControl1.Location = new System.Drawing.Point(0, 0);
@@ -316,46 +316,6 @@
             this.labelControl15.TabIndex = 33;
             this.labelControl15.Text = "પેન્ડીંગ પેમેન્ટ :";
             // 
-            // BtnClear
-            // 
-            this.BtnClear.Appearance.Font = new System.Drawing.Font("Tahoma", 10F, System.Drawing.FontStyle.Bold);
-            this.BtnClear.Appearance.Options.UseFont = true;
-            this.BtnClear.Image = ((System.Drawing.Image)(resources.GetObject("BtnClear.Image")));
-            this.BtnClear.Location = new System.Drawing.Point(389, 250);
-            this.BtnClear.LookAndFeel.SkinName = "Blue";
-            this.BtnClear.LookAndFeel.UseDefaultLookAndFeel = false;
-            this.BtnClear.Name = "BtnClear";
-            this.BtnClear.Size = new System.Drawing.Size(104, 31);
-            this.BtnClear.TabIndex = 11;
-            this.BtnClear.Text = "&Clear";
-            // 
-            // BtnDelete
-            // 
-            this.BtnDelete.Appearance.Font = new System.Drawing.Font("Tahoma", 10F, System.Drawing.FontStyle.Bold);
-            this.BtnDelete.Appearance.Options.UseFont = true;
-            this.BtnDelete.Image = ((System.Drawing.Image)(resources.GetObject("BtnDelete.Image")));
-            this.BtnDelete.Location = new System.Drawing.Point(279, 250);
-            this.BtnDelete.LookAndFeel.SkinName = "Blue";
-            this.BtnDelete.LookAndFeel.UseDefaultLookAndFeel = false;
-            this.BtnDelete.Name = "BtnDelete";
-            this.BtnDelete.Size = new System.Drawing.Size(104, 31);
-            this.BtnDelete.TabIndex = 10;
-            this.BtnDelete.Text = "&Delete";
-            // 
-            // BtnSave
-            // 
-            this.BtnSave.Appearance.Font = new System.Drawing.Font("Tahoma", 10F, System.Drawing.FontStyle.Bold);
-            this.BtnSave.Appearance.Options.UseFont = true;
-            this.BtnSave.Image = ((System.Drawing.Image)(resources.GetObject("BtnSave.Image")));
-            this.BtnSave.ImageLocation = DevExpress.XtraEditors.ImageLocation.MiddleLeft;
-            this.BtnSave.Location = new System.Drawing.Point(173, 250);
-            this.BtnSave.LookAndFeel.SkinName = "Blue";
-            this.BtnSave.LookAndFeel.UseDefaultLookAndFeel = false;
-            this.BtnSave.Name = "BtnSave";
-            this.BtnSave.Size = new System.Drawing.Size(100, 31);
-            this.BtnSave.TabIndex = 9;
-            this.BtnSave.Text = "&Save";
-            // 
             // txtFinalTotal
             // 
             this.txtFinalTotal.EditValue = "0.000";
@@ -384,24 +344,24 @@
             this.labelControl14.Text = "fienl Ti[Tl :";
             this.labelControl14.Visible = false;
             // 
-            // txtTotalPayment
+            // txtBasicTotal
             // 
-            this.txtTotalPayment.EditValue = "0.000";
-            this.txtTotalPayment.EnterMoveNextControl = true;
-            this.txtTotalPayment.Location = new System.Drawing.Point(482, 209);
-            this.txtTotalPayment.Name = "txtTotalPayment";
-            this.txtTotalPayment.Properties.Appearance.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtTotalPayment.Properties.Appearance.Options.UseFont = true;
-            this.txtTotalPayment.Properties.DisplayFormat.FormatString = "f3";
-            this.txtTotalPayment.Properties.DisplayFormat.FormatType = DevExpress.Utils.FormatType.Numeric;
-            this.txtTotalPayment.Properties.EditFormat.FormatString = "f3";
-            this.txtTotalPayment.Properties.EditFormat.FormatType = DevExpress.Utils.FormatType.Numeric;
-            this.txtTotalPayment.Properties.Mask.EditMask = "f3";
-            this.txtTotalPayment.Properties.Mask.MaskType = DevExpress.XtraEditors.Mask.MaskType.Numeric;
-            this.txtTotalPayment.Properties.ReadOnly = true;
-            this.txtTotalPayment.Size = new System.Drawing.Size(182, 26);
-            this.txtTotalPayment.TabIndex = 25;
-            this.txtTotalPayment.TabStop = false;
+            this.txtBasicTotal.EditValue = "0.000";
+            this.txtBasicTotal.EnterMoveNextControl = true;
+            this.txtBasicTotal.Location = new System.Drawing.Point(482, 209);
+            this.txtBasicTotal.Name = "txtBasicTotal";
+            this.txtBasicTotal.Properties.Appearance.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtBasicTotal.Properties.Appearance.Options.UseFont = true;
+            this.txtBasicTotal.Properties.DisplayFormat.FormatString = "f3";
+            this.txtBasicTotal.Properties.DisplayFormat.FormatType = DevExpress.Utils.FormatType.Numeric;
+            this.txtBasicTotal.Properties.EditFormat.FormatString = "f3";
+            this.txtBasicTotal.Properties.EditFormat.FormatType = DevExpress.Utils.FormatType.Numeric;
+            this.txtBasicTotal.Properties.Mask.EditMask = "f3";
+            this.txtBasicTotal.Properties.Mask.MaskType = DevExpress.XtraEditors.Mask.MaskType.Numeric;
+            this.txtBasicTotal.Properties.ReadOnly = true;
+            this.txtBasicTotal.Size = new System.Drawing.Size(182, 26);
+            this.txtBasicTotal.TabIndex = 25;
+            this.txtBasicTotal.TabStop = false;
             // 
             // labelControl13
             // 
@@ -684,17 +644,17 @@
             this.labelControl2.TabIndex = 2;
             this.labelControl2.Text = "ક્વાલિટી નું નામ:";
             // 
-            // txtSaleNotNo
+            // txtVechanNotNo
             // 
-            this.txtSaleNotNo.EnterMoveNextControl = true;
-            this.txtSaleNotNo.Location = new System.Drawing.Point(178, 52);
-            this.txtSaleNotNo.Name = "txtSaleNotNo";
-            this.txtSaleNotNo.Properties.Appearance.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtSaleNotNo.Properties.Appearance.Options.UseFont = true;
-            this.txtSaleNotNo.Properties.ReadOnly = true;
-            this.txtSaleNotNo.Size = new System.Drawing.Size(182, 26);
-            this.txtSaleNotNo.TabIndex = 1;
-            this.txtSaleNotNo.TabStop = false;
+            this.txtVechanNotNo.EnterMoveNextControl = true;
+            this.txtVechanNotNo.Location = new System.Drawing.Point(178, 52);
+            this.txtVechanNotNo.Name = "txtVechanNotNo";
+            this.txtVechanNotNo.Properties.Appearance.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtVechanNotNo.Properties.Appearance.Options.UseFont = true;
+            this.txtVechanNotNo.Properties.ReadOnly = true;
+            this.txtVechanNotNo.Size = new System.Drawing.Size(182, 26);
+            this.txtVechanNotNo.TabIndex = 1;
+            this.txtVechanNotNo.TabStop = false;
             // 
             // labelControl1
             // 
@@ -705,6 +665,47 @@
             this.labelControl1.Size = new System.Drawing.Size(78, 25);
             this.labelControl1.TabIndex = 0;
             this.labelControl1.Text = "સેલ નોટ નં.:";
+            // 
+            // BtnClear
+            // 
+            this.BtnClear.Appearance.Font = new System.Drawing.Font("Tahoma", 10F, System.Drawing.FontStyle.Bold);
+            this.BtnClear.Appearance.Options.UseFont = true;
+            this.BtnClear.Image = ((System.Drawing.Image)(resources.GetObject("BtnClear.Image")));
+            this.BtnClear.Location = new System.Drawing.Point(389, 250);
+            this.BtnClear.LookAndFeel.SkinName = "Blue";
+            this.BtnClear.LookAndFeel.UseDefaultLookAndFeel = false;
+            this.BtnClear.Name = "BtnClear";
+            this.BtnClear.Size = new System.Drawing.Size(104, 31);
+            this.BtnClear.TabIndex = 11;
+            this.BtnClear.Text = "&Clear";
+            // 
+            // BtnDelete
+            // 
+            this.BtnDelete.Appearance.Font = new System.Drawing.Font("Tahoma", 10F, System.Drawing.FontStyle.Bold);
+            this.BtnDelete.Appearance.Options.UseFont = true;
+            this.BtnDelete.Image = ((System.Drawing.Image)(resources.GetObject("BtnDelete.Image")));
+            this.BtnDelete.Location = new System.Drawing.Point(279, 250);
+            this.BtnDelete.LookAndFeel.SkinName = "Blue";
+            this.BtnDelete.LookAndFeel.UseDefaultLookAndFeel = false;
+            this.BtnDelete.Name = "BtnDelete";
+            this.BtnDelete.Size = new System.Drawing.Size(104, 31);
+            this.BtnDelete.TabIndex = 10;
+            this.BtnDelete.Text = "&Delete";
+            // 
+            // BtnSave
+            // 
+            this.BtnSave.Appearance.Font = new System.Drawing.Font("Tahoma", 10F, System.Drawing.FontStyle.Bold);
+            this.BtnSave.Appearance.Options.UseFont = true;
+            this.BtnSave.Image = ((System.Drawing.Image)(resources.GetObject("BtnSave.Image")));
+            this.BtnSave.ImageLocation = DevExpress.XtraEditors.ImageLocation.MiddleLeft;
+            this.BtnSave.Location = new System.Drawing.Point(173, 250);
+            this.BtnSave.LookAndFeel.SkinName = "Blue";
+            this.BtnSave.LookAndFeel.UseDefaultLookAndFeel = false;
+            this.BtnSave.Name = "BtnSave";
+            this.BtnSave.Size = new System.Drawing.Size(100, 31);
+            this.BtnSave.TabIndex = 9;
+            this.BtnSave.Text = "&Save";
+            this.BtnSave.Click += new System.EventHandler(this.BtnSave_Click);
             // 
             // FrmVechan
             // 
@@ -724,7 +725,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.txtDonePayment.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtPendingPayment.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtFinalTotal.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.txtTotalPayment.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtBasicTotal.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtPer.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtRate.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtCts.Properties)).EndInit();
@@ -738,7 +739,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.dtpVechanDate.Properties.CalendarTimeProperties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dtpVechanDate.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtQtyName.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.txtSaleNotNo.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtVechanNotNo.Properties)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -761,7 +762,7 @@
         private DevExpress.XtraEditors.SimpleButton BtnSave;
         private DevExpress.XtraEditors.TextEdit txtFinalTotal;
         private DevExpress.XtraEditors.LabelControl labelControl14;
-        private DevExpress.XtraEditors.TextEdit txtTotalPayment;
+        private DevExpress.XtraEditors.TextEdit txtBasicTotal;
         private DevExpress.XtraEditors.LabelControl labelControl13;
         private DevExpress.XtraEditors.TextEdit txtPer;
         private DevExpress.XtraEditors.LabelControl labelControl12;
@@ -785,7 +786,7 @@
         private DevExpress.XtraEditors.LabelControl labelControl3;
         private DevExpress.XtraEditors.TextEdit txtQtyName;
         private DevExpress.XtraEditors.LabelControl labelControl2;
-        private DevExpress.XtraEditors.TextEdit txtSaleNotNo;
+        private DevExpress.XtraEditors.TextEdit txtVechanNotNo;
         private DevExpress.XtraEditors.LabelControl labelControl1;
         private DevExpress.XtraEditors.TextEdit txtQtySize;
         private DevExpress.XtraEditors.LabelControl labelControl20;
