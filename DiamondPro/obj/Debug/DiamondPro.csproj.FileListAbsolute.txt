@@ -47,3 +47,4 @@ E:\Sony Vaio VPCEH28FN\Diamond 10072017\DiamondPro\obj\Debug\DiamondPro.TRANSACT
 E:\Sony Vaio VPCEH28FN\Diamond 10072017\DiamondPro\obj\Debug\DiamondPro.TRANSACTION.FrmStockTransfer.resources
 E:\Sony Vaio VPCEH28FN\Diamond 10072017\DiamondPro\obj\Debug\DiamondPro.csproj.GenerateResource.Cache
 E:\Sony Vaio VPCEH28FN\Diamond 10072017\DiamondPro\obj\Debug\DiamondPro.exe.licenses
+E:\Sony Vaio VPCEH28FN\Diamond 10072017\DiamondPro\obj\Debug\DiamondPro.MASTER.FrmVechan.resources

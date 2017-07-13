@@ -713,7 +713,7 @@
             this.ClientSize = new System.Drawing.Size(1024, 323);
             this.Controls.Add(this.groupControl1);
             this.Name = "FrmVechan";
-            this.Text = "FrmVechan";
+            this.Text = "Vechan Master";
             ((System.ComponentModel.ISupportInitialize)(this.groupControl1)).EndInit();
             this.groupControl1.ResumeLayout(false);
             this.groupControl1.PerformLayout();

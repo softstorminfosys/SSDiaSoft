@@ -13,6 +13,8 @@ using DevExpress.LookAndFeel;
 using Microsoft.Win32;
 using DiamondPro.TRANSACTION;
 using DiamondPro.BLL.Function_Class;
+using DevExpress.XtraSplashForm;
+using DevExpress;
 
 namespace DiamondPro
 {
@@ -55,6 +57,7 @@ namespace DiamondPro
             frm.MdiParent = this;
             imageSlider1.Visible = false;
             frm.Show();
+            
         }
                 
         private void pARAMETERTYPEToolStripMenuItem_Click(object sender, EventArgs e)
@@ -135,6 +138,7 @@ namespace DiamondPro
             frm.MdiParent = this;
             imageSlider1.Visible = false;
             frm.Show();
+           
         }
         #endregion
 
@@ -142,6 +146,8 @@ namespace DiamondPro
         {
             int RetVal = new BoxNumbering_Function().DBBackup();
         }
+
+      
 
         
     }

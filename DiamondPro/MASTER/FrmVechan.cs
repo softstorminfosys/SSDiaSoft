@@ -8,6 +8,12 @@ using System.Linq;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using DevExpress.XtraEditors;
+using DiamondPro.BLL.Property_Class;
+using DiamondPro.BLL;
+using DiamondPro.Search;
+using Param_Hospital.BLL.Property_Class;
+using DiamondPro.BLL.Function_Class; 
+
 
 namespace DiamondPro.MASTER
 {

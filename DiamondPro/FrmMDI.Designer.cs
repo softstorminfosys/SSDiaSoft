@@ -159,7 +159,7 @@
             // 
             this.KachukharidiToolStripMenuItem.BackgroundImage = global::DiamondPro.Properties.Resources.MenuBack;
             this.KachukharidiToolStripMenuItem.Name = "KachukharidiToolStripMenuItem";
-            this.KachukharidiToolStripMenuItem.Size = new System.Drawing.Size(146, 34);
+            this.KachukharidiToolStripMenuItem.Size = new System.Drawing.Size(152, 34);
             this.KachukharidiToolStripMenuItem.Text = "કાચુ - રફ";
             this.KachukharidiToolStripMenuItem.Click += new System.EventHandler(this.kachuKharidiToolStripMenuItem_Click);
             // 
@@ -167,7 +167,7 @@
             // 
             this.PolishKharidiToolStripMenuItem.BackgroundImage = global::DiamondPro.Properties.Resources.MenuBack;
             this.PolishKharidiToolStripMenuItem.Name = "PolishKharidiToolStripMenuItem";
-            this.PolishKharidiToolStripMenuItem.Size = new System.Drawing.Size(146, 34);
+            this.PolishKharidiToolStripMenuItem.Size = new System.Drawing.Size(152, 34);
             this.PolishKharidiToolStripMenuItem.Text = "પોલીસ";
             this.PolishKharidiToolStripMenuItem.Click += new System.EventHandler(this.polishKharidiToolStripMenuItem_Click);
             // 
