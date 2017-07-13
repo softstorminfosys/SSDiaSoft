@@ -67,7 +67,7 @@
             this.panelControl1.Dock = System.Windows.Forms.DockStyle.Top;
             this.panelControl1.Location = new System.Drawing.Point(0, 0);
             this.panelControl1.Name = "panelControl1";
-            this.panelControl1.Size = new System.Drawing.Size(1393, 225);
+            this.panelControl1.Size = new System.Drawing.Size(1370, 225);
             this.panelControl1.TabIndex = 0;
             // 
             // groupControl1
@@ -92,7 +92,7 @@
             this.groupControl1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.groupControl1.Location = new System.Drawing.Point(0, 0);
             this.groupControl1.Name = "groupControl1";
-            this.groupControl1.Size = new System.Drawing.Size(1393, 225);
+            this.groupControl1.Size = new System.Drawing.Size(1370, 225);
             this.groupControl1.TabIndex = 0;
             this.groupControl1.Text = "દલાલ ની વિગત";
             // 
@@ -271,7 +271,7 @@
             this.gridControl1.Location = new System.Drawing.Point(0, 225);
             this.gridControl1.MainView = this.gridView1;
             this.gridControl1.Name = "gridControl1";
-            this.gridControl1.Size = new System.Drawing.Size(1393, 512);
+            this.gridControl1.Size = new System.Drawing.Size(1370, 512);
             this.gridControl1.TabIndex = 1;
             this.gridControl1.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
             this.gridView1});
@@ -289,7 +289,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1393, 737);
+            this.ClientSize = new System.Drawing.Size(1370, 737);
             this.Controls.Add(this.gridControl1);
             this.Controls.Add(this.panelControl1);
             this.Name = "FrmDalalMaster";

@@ -203,6 +203,12 @@
     <Compile Include="MASTER\FrmPolishKharidi.Designer.cs">
       <DependentUpon>FrmPolishKharidi.cs</DependentUpon>
     </Compile>
+    <Compile Include="MASTER\FrmVechan.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MASTER\FrmVechan.Designer.cs">
+      <DependentUpon>FrmVechan.cs</DependentUpon>
+    </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Search\FrmSearch.cs">
@@ -276,6 +282,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="MASTER\FrmPolishKharidi.resx">
       <DependentUpon>FrmPolishKharidi.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MASTER\FrmVechan.resx">
+      <DependentUpon>FrmVechan.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\licenses.licx" />
     <EmbeddedResource Include="Properties\Resources.resx">
