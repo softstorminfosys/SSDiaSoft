@@ -39,6 +39,17 @@ namespace DiamondPro.BLL.Function_Class
             return dt;
         }
 
+        public DataTable GetQualityDetailSale(string SearchParam)
+        {
+            DataTable dt = new DataTable();
+            Request Request = new Request();
+            Request.AddParameter("@SearchParam", SearchParam, DbType.String, ParameterDirection.Input);
+            Request.CommandType = CommandType.StoredProcedure;
+            Request.ComandText1 = "Get_Stock_Details";
+            Ope.GetDataTable(Operation.ConnectionString1, dt, Request);
+            return dt;
+        }
+
         public int Save(DataTable dtFrom, DataTable dtTo)
         {
             int RetValue = 0;

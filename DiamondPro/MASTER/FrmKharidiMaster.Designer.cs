@@ -527,6 +527,7 @@
             this.txtPaymentTerm.Properties.Appearance.Options.UseFont = true;
             this.txtPaymentTerm.Size = new System.Drawing.Size(182, 26);
             this.txtPaymentTerm.TabIndex = 2;
+//            this.txtPaymentTerm.EditValueChanged += new System.EventHandler(this.txtPaymentTerm_EditValueChanged);
             this.txtPaymentTerm.TextChanged += new System.EventHandler(this.txtPaymentTerm_TextChanged);
             this.txtPaymentTerm.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtPaymentTerm_KeyPress);
             // 

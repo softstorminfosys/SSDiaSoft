@@ -170,5 +170,12 @@ namespace DiamondPro.DLL
                 Textboxtext = new CultureInfo("en").TextInfo.ToTitleCase(Textboxtext.ToLower());
             return Textboxtext;
         }
+
+        public double TruncateDecimal(double value, int precision)
+        {
+            double step = (double)Math.Pow(10, precision);
+            double tmp = Math.Truncate(step * value);
+            return tmp / step;
+        }
     }
 }

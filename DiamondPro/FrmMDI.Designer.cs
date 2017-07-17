@@ -41,7 +41,7 @@
             this.transactionToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.KachukharidiToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.PolishKharidiToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.વચણToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.VechanToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.પમનટToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.કરખનToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.કરખનઇસસયToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -69,7 +69,7 @@
             this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.mASTERToolStripMenuItem,
             this.transactionToolStripMenuItem,
-            this.વચણToolStripMenuItem,
+            this.VechanToolStripMenuItem,
             this.પમનટToolStripMenuItem,
             this.કરખનToolStripMenuItem,
             this.બકસToolStripMenuItem,
@@ -171,14 +171,14 @@
             this.PolishKharidiToolStripMenuItem.Text = "પોલીસ";
             this.PolishKharidiToolStripMenuItem.Click += new System.EventHandler(this.polishKharidiToolStripMenuItem_Click);
             // 
-            // વચણToolStripMenuItem
+            // VechanToolStripMenuItem
             // 
-            this.વચણToolStripMenuItem.Font = new System.Drawing.Font("Segoe UI", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.વચણToolStripMenuItem.ForeColor = System.Drawing.Color.WhiteSmoke;
-            this.વચણToolStripMenuItem.Name = "વચણToolStripMenuItem";
-            this.વચણToolStripMenuItem.Size = new System.Drawing.Size(64, 34);
-            this.વચણToolStripMenuItem.Text = "વેચાણ";
-            this.વચણToolStripMenuItem.Click += new System.EventHandler(this.વચણToolStripMenuItem_Click);
+            this.VechanToolStripMenuItem.Font = new System.Drawing.Font("Segoe UI", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.VechanToolStripMenuItem.ForeColor = System.Drawing.Color.WhiteSmoke;
+            this.VechanToolStripMenuItem.Name = "VechanToolStripMenuItem";
+            this.VechanToolStripMenuItem.Size = new System.Drawing.Size(64, 34);
+            this.VechanToolStripMenuItem.Text = "વેચાણ";
+            this.VechanToolStripMenuItem.Click += new System.EventHandler(this.વચણToolStripMenuItem_Click);
             // 
             // પમનટToolStripMenuItem
             // 
@@ -346,7 +346,7 @@
         private System.Windows.Forms.ToolStripMenuItem pARAMETERVALUEToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem kARKHANAMASTERToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem PolishKharidiToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem વચણToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem VechanToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem પમનટToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem કરખનToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem બકસToolStripMenuItem;

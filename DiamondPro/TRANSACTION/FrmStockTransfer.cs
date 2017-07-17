@@ -25,6 +25,11 @@ namespace DiamondPro.TRANSACTION
         DataTable dtFrom = new DataTable();
         DataTable dtTo = new DataTable();
         double amount = 0, Cts = 0;
+        double TAmount = 0;
+        double TCts = 0;
+        double amountT = 0, CtsT = 0;
+        double TTAmount = 0;
+        double TTCts = 0;
 
         public FrmStockTransfer()
         {
@@ -345,7 +350,10 @@ namespace DiamondPro.TRANSACTION
                         }
                         else
                         {
-                            AddFromRow();
+                            if (dgvFrom.IsLastRow)
+                            {
+                                AddFromRow();
+                            }                            
                             dgvFrom.MoveNext();
                             dgvFrom.FocusedColumn = gridColumn1;
                         }
@@ -398,7 +406,10 @@ namespace DiamondPro.TRANSACTION
                     {
                         if (rbgOneMany.SelectedIndex == 0)
                         {
-                            AddToRow();
+                            if (dgvTo.IsLastRow)
+                            {
+                                AddToRow();
+                            }                           
                             dgvTo.MoveNext();
                             dgvTo.FocusedColumn = gridColumn7;
                             
@@ -435,8 +446,7 @@ namespace DiamondPro.TRANSACTION
             {
                 GridSummaryItem item = ((GridSummaryItem)e.Item);
 
-                double TAmount = 0;
-                double TCts = 0;
+                
                 // Initialization.  
                 if (e.SummaryProcess == CustomSummaryProcess.Start)
                 {
@@ -493,23 +503,22 @@ namespace DiamondPro.TRANSACTION
             try
             {
                 GridSummaryItem item = ((GridSummaryItem)e.Item);
-                double TAmount = 0;
-                double TCts = 0;
+                
                 // Initialization.  
                 if (e.SummaryProcess == CustomSummaryProcess.Start)
                 {
-                    amount = 0;
-                    Cts = 0;
-                    TAmount = 0;
-                    TCts = 0;
+                    amountT = 0;
+                    CtsT = 0;
+                    TTAmount = 0;
+                    TTCts = 0;
                 }
                 // Calculation. 
                 if (e.SummaryProcess == CustomSummaryProcess.Calculate)
                 {
-                    amount += Val.ToDouble(dgvTo.GetRowCellValue(e.RowHandle, "Amount"));
-                    Cts += Val.ToDouble(dgvTo.GetRowCellValue(e.RowHandle, "Cts"));
-                    amount += Val.ToDouble(dgvTo.GetRowCellValue(e.RowHandle, "TAmount"));
-                    Cts += Val.ToDouble(dgvTo.GetRowCellValue(e.RowHandle, "TCarat"));
+                    amountT += Val.ToDouble(dgvTo.GetRowCellValue(e.RowHandle, "Amount"));
+                    CtsT += Val.ToDouble(dgvTo.GetRowCellValue(e.RowHandle, "Cts"));
+                    TTAmount += Val.ToDouble(dgvTo.GetRowCellValue(e.RowHandle, "TAmount"));
+                    TTCts += Val.ToDouble(dgvTo.GetRowCellValue(e.RowHandle, "TCarat"));
                 }
                 // Finalization.  
                 if (e.SummaryProcess == CustomSummaryProcess.Finalize)
@@ -519,7 +528,7 @@ namespace DiamondPro.TRANSACTION
                         case "RATE":
                             if (Cts != 0)
                             {
-                                e.TotalValue = Math.Round(Val.ToDouble(amount / Cts),2);
+                                e.TotalValue = Math.Round(Val.ToDouble(amountT / CtsT), 2);
                             }
                             else
                             {
@@ -529,7 +538,7 @@ namespace DiamondPro.TRANSACTION
                         case "TRATE":
                             if (TCts != 0)
                             {
-                                e.TotalValue = Math.Round(Val.ToDouble(TAmount / TCts),2);
+                                e.TotalValue = Math.Round(Val.ToDouble(TTAmount / TTCts), 2);
                             }
                             else
                             {

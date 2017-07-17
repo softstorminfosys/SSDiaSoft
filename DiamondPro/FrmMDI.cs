@@ -13,6 +13,7 @@ using DevExpress.LookAndFeel;
 using Microsoft.Win32;
 using DiamondPro.TRANSACTION;
 using DiamondPro.BLL.Function_Class;
+using DiamondPro.MASTER;
 
 namespace DiamondPro
 {
@@ -40,7 +41,7 @@ namespace DiamondPro
         #endregion
 
         #region Menu Event
-        
+
         private void partyMasterToolStripMenuItem_Click(object sender, EventArgs e)
         {
             FrmPartyMaster frm = new FrmPartyMaster();
@@ -55,9 +56,9 @@ namespace DiamondPro
             frm.MdiParent = this;
             imageSlider1.Visible = false;
             frm.Show();
-            
+
         }
-                
+
         private void pARAMETERTYPEToolStripMenuItem_Click(object sender, EventArgs e)
         {
             FrmParameterType frm = new FrmParameterType();
@@ -136,15 +137,14 @@ namespace DiamondPro
             frm.MdiParent = this;
             imageSlider1.Visible = false;
             frm.Show();
-           
+
         }
         private void વચણToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            
-            //FrmVechan frm = new FrmVechan();
-            //frm.MdiParent = this;
-            //imageSlider1.Visible = false;
-            //frm.Show();
+            FrmVechan frm = new FrmVechan();
+            frm.MdiParent = this;
+            imageSlider1.Visible = false;
+            frm.Show();
         }
         #endregion
 
@@ -152,11 +152,5 @@ namespace DiamondPro
         {
             int RetVal = new BoxNumbering_Function().DBBackup();
         }
-
-        
-
-      
-
-        
     }
 }
