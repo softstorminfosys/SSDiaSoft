@@ -401,6 +401,7 @@ namespace DiamondPro.MASTER
             dgvSale.SetFocusedRowCellValue("Amount",Amount);
         }
 
+        
         private void dgvSale_CustomSummaryCalculate(object sender, DevExpress.Data.CustomSummaryEventArgs e)
         {
             try
