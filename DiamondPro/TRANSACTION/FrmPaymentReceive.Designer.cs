@@ -28,54 +28,54 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.dtpIssueDate = new DevExpress.XtraEditors.DateEdit();
+            this.dtpPaymentDate = new DevExpress.XtraEditors.DateEdit();
             this.labelControl4 = new DevExpress.XtraEditors.LabelControl();
             this.txtPaymentType = new DevExpress.XtraEditors.TextEdit();
             this.labelControl13 = new DevExpress.XtraEditors.LabelControl();
-            this.txtAmount = new DevExpress.XtraEditors.TextEdit();
+            this.txtTotalAmount = new DevExpress.XtraEditors.TextEdit();
             this.labelControl16 = new DevExpress.XtraEditors.LabelControl();
-            this.txtRate = new DevExpress.XtraEditors.TextEdit();
+            this.txtPendingPayment = new DevExpress.XtraEditors.TextEdit();
             this.labelControl15 = new DevExpress.XtraEditors.LabelControl();
-            this.txtCts = new DevExpress.XtraEditors.TextEdit();
+            this.txtReceivePayment = new DevExpress.XtraEditors.TextEdit();
             this.labelControl11 = new DevExpress.XtraEditors.LabelControl();
             this.labelControl3 = new DevExpress.XtraEditors.LabelControl();
-            this.txtKatNo = new DevExpress.XtraEditors.TextEdit();
+            this.txtPaymentAmt = new DevExpress.XtraEditors.TextEdit();
             this.labelControl2 = new DevExpress.XtraEditors.LabelControl();
-            this.txtNotNo = new DevExpress.XtraEditors.TextEdit();
+            this.txtSaleNotNo = new DevExpress.XtraEditors.TextEdit();
             this.labelControl1 = new DevExpress.XtraEditors.LabelControl();
             this.txtParty = new DevExpress.XtraEditors.TextEdit();
-            this.textEdit1 = new DevExpress.XtraEditors.TextEdit();
+            this.txtAngadiya = new DevExpress.XtraEditors.TextEdit();
             this.labelControl5 = new DevExpress.XtraEditors.LabelControl();
-            ((System.ComponentModel.ISupportInitialize)(this.dtpIssueDate.Properties.CalendarTimeProperties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dtpIssueDate.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dtpPaymentDate.Properties.CalendarTimeProperties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dtpPaymentDate.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtPaymentType.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.txtAmount.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.txtRate.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.txtCts.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.txtKatNo.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.txtNotNo.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtTotalAmount.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtPendingPayment.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtReceivePayment.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtPaymentAmt.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtSaleNotNo.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtParty.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.textEdit1.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtAngadiya.Properties)).BeginInit();
             this.SuspendLayout();
             // 
-            // dtpIssueDate
+            // dtpPaymentDate
             // 
-            this.dtpIssueDate.EditValue = null;
-            this.dtpIssueDate.Location = new System.Drawing.Point(791, 28);
-            this.dtpIssueDate.Name = "dtpIssueDate";
-            this.dtpIssueDate.Properties.Appearance.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.dtpIssueDate.Properties.Appearance.Options.UseFont = true;
-            this.dtpIssueDate.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
+            this.dtpPaymentDate.EditValue = null;
+            this.dtpPaymentDate.Location = new System.Drawing.Point(791, 28);
+            this.dtpPaymentDate.Name = "dtpPaymentDate";
+            this.dtpPaymentDate.Properties.Appearance.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.dtpPaymentDate.Properties.Appearance.Options.UseFont = true;
+            this.dtpPaymentDate.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
-            this.dtpIssueDate.Properties.CalendarTimeProperties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
+            this.dtpPaymentDate.Properties.CalendarTimeProperties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
-            this.dtpIssueDate.Properties.CalendarTimeProperties.DisplayFormat.FormatString = "dd/MM/yyyy";
-            this.dtpIssueDate.Properties.CalendarTimeProperties.DisplayFormat.FormatType = DevExpress.Utils.FormatType.Custom;
-            this.dtpIssueDate.Properties.CalendarTimeProperties.EditFormat.FormatString = "d";
-            this.dtpIssueDate.Properties.CalendarTimeProperties.EditFormat.FormatType = DevExpress.Utils.FormatType.DateTime;
-            this.dtpIssueDate.Properties.CalendarTimeProperties.Mask.EditMask = "d";
-            this.dtpIssueDate.Size = new System.Drawing.Size(182, 26);
-            this.dtpIssueDate.TabIndex = 86;
+            this.dtpPaymentDate.Properties.CalendarTimeProperties.DisplayFormat.FormatString = "dd/MM/yyyy";
+            this.dtpPaymentDate.Properties.CalendarTimeProperties.DisplayFormat.FormatType = DevExpress.Utils.FormatType.Custom;
+            this.dtpPaymentDate.Properties.CalendarTimeProperties.EditFormat.FormatString = "d";
+            this.dtpPaymentDate.Properties.CalendarTimeProperties.EditFormat.FormatType = DevExpress.Utils.FormatType.DateTime;
+            this.dtpPaymentDate.Properties.CalendarTimeProperties.Mask.EditMask = "d";
+            this.dtpPaymentDate.Size = new System.Drawing.Size(182, 26);
+            this.dtpPaymentDate.TabIndex = 86;
             // 
             // labelControl4
             // 
@@ -107,24 +107,24 @@
             this.labelControl13.TabIndex = 94;
             this.labelControl13.Text = "પેમેન્ટ કેમાં મળ્યું?:";
             // 
-            // txtAmount
+            // txtTotalAmount
             // 
-            this.txtAmount.EditValue = "0.000";
-            this.txtAmount.EnterMoveNextControl = true;
-            this.txtAmount.Location = new System.Drawing.Point(791, 95);
-            this.txtAmount.Name = "txtAmount";
-            this.txtAmount.Properties.Appearance.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtAmount.Properties.Appearance.Options.UseFont = true;
-            this.txtAmount.Properties.DisplayFormat.FormatString = "f3";
-            this.txtAmount.Properties.DisplayFormat.FormatType = DevExpress.Utils.FormatType.Numeric;
-            this.txtAmount.Properties.EditFormat.FormatString = "f3";
-            this.txtAmount.Properties.EditFormat.FormatType = DevExpress.Utils.FormatType.Numeric;
-            this.txtAmount.Properties.Mask.EditMask = "f3";
-            this.txtAmount.Properties.Mask.MaskType = DevExpress.XtraEditors.Mask.MaskType.Numeric;
-            this.txtAmount.Properties.ReadOnly = true;
-            this.txtAmount.Size = new System.Drawing.Size(182, 26);
-            this.txtAmount.TabIndex = 90;
-            this.txtAmount.TabStop = false;
+            this.txtTotalAmount.EditValue = "0.000";
+            this.txtTotalAmount.EnterMoveNextControl = true;
+            this.txtTotalAmount.Location = new System.Drawing.Point(791, 95);
+            this.txtTotalAmount.Name = "txtTotalAmount";
+            this.txtTotalAmount.Properties.Appearance.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtTotalAmount.Properties.Appearance.Options.UseFont = true;
+            this.txtTotalAmount.Properties.DisplayFormat.FormatString = "f3";
+            this.txtTotalAmount.Properties.DisplayFormat.FormatType = DevExpress.Utils.FormatType.Numeric;
+            this.txtTotalAmount.Properties.EditFormat.FormatString = "f3";
+            this.txtTotalAmount.Properties.EditFormat.FormatType = DevExpress.Utils.FormatType.Numeric;
+            this.txtTotalAmount.Properties.Mask.EditMask = "f3";
+            this.txtTotalAmount.Properties.Mask.MaskType = DevExpress.XtraEditors.Mask.MaskType.Numeric;
+            this.txtTotalAmount.Properties.ReadOnly = true;
+            this.txtTotalAmount.Size = new System.Drawing.Size(182, 26);
+            this.txtTotalAmount.TabIndex = 90;
+            this.txtTotalAmount.TabStop = false;
             // 
             // labelControl16
             // 
@@ -136,24 +136,24 @@
             this.labelControl16.TabIndex = 93;
             this.labelControl16.Text = "ટોટલ પેમેન્ટ :";
             // 
-            // txtRate
+            // txtPendingPayment
             // 
-            this.txtRate.EditValue = "0.000";
-            this.txtRate.EnterMoveNextControl = true;
-            this.txtRate.Location = new System.Drawing.Point(473, 96);
-            this.txtRate.Name = "txtRate";
-            this.txtRate.Properties.Appearance.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtRate.Properties.Appearance.Options.UseFont = true;
-            this.txtRate.Properties.DisplayFormat.FormatString = "f3";
-            this.txtRate.Properties.DisplayFormat.FormatType = DevExpress.Utils.FormatType.Numeric;
-            this.txtRate.Properties.EditFormat.FormatString = "f3";
-            this.txtRate.Properties.EditFormat.FormatType = DevExpress.Utils.FormatType.Numeric;
-            this.txtRate.Properties.Mask.EditMask = "f3";
-            this.txtRate.Properties.Mask.MaskType = DevExpress.XtraEditors.Mask.MaskType.Numeric;
-            this.txtRate.Properties.ReadOnly = true;
-            this.txtRate.Size = new System.Drawing.Size(182, 26);
-            this.txtRate.TabIndex = 88;
-            this.txtRate.TabStop = false;
+            this.txtPendingPayment.EditValue = "0.000";
+            this.txtPendingPayment.EnterMoveNextControl = true;
+            this.txtPendingPayment.Location = new System.Drawing.Point(473, 96);
+            this.txtPendingPayment.Name = "txtPendingPayment";
+            this.txtPendingPayment.Properties.Appearance.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtPendingPayment.Properties.Appearance.Options.UseFont = true;
+            this.txtPendingPayment.Properties.DisplayFormat.FormatString = "f3";
+            this.txtPendingPayment.Properties.DisplayFormat.FormatType = DevExpress.Utils.FormatType.Numeric;
+            this.txtPendingPayment.Properties.EditFormat.FormatString = "f3";
+            this.txtPendingPayment.Properties.EditFormat.FormatType = DevExpress.Utils.FormatType.Numeric;
+            this.txtPendingPayment.Properties.Mask.EditMask = "f3";
+            this.txtPendingPayment.Properties.Mask.MaskType = DevExpress.XtraEditors.Mask.MaskType.Numeric;
+            this.txtPendingPayment.Properties.ReadOnly = true;
+            this.txtPendingPayment.Size = new System.Drawing.Size(182, 26);
+            this.txtPendingPayment.TabIndex = 88;
+            this.txtPendingPayment.TabStop = false;
             // 
             // labelControl15
             // 
@@ -165,24 +165,24 @@
             this.labelControl15.TabIndex = 92;
             this.labelControl15.Text = "બાકી રહેતું પેમેન્ટ :";
             // 
-            // txtCts
+            // txtReceivePayment
             // 
-            this.txtCts.EditValue = "0.000";
-            this.txtCts.EnterMoveNextControl = true;
-            this.txtCts.Location = new System.Drawing.Point(175, 98);
-            this.txtCts.Name = "txtCts";
-            this.txtCts.Properties.Appearance.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtCts.Properties.Appearance.Options.UseFont = true;
-            this.txtCts.Properties.DisplayFormat.FormatString = "f0";
-            this.txtCts.Properties.DisplayFormat.FormatType = DevExpress.Utils.FormatType.Numeric;
-            this.txtCts.Properties.EditFormat.FormatString = "f0";
-            this.txtCts.Properties.EditFormat.FormatType = DevExpress.Utils.FormatType.Numeric;
-            this.txtCts.Properties.Mask.EditMask = "f0";
-            this.txtCts.Properties.Mask.MaskType = DevExpress.XtraEditors.Mask.MaskType.Numeric;
-            this.txtCts.Properties.ReadOnly = true;
-            this.txtCts.Size = new System.Drawing.Size(182, 26);
-            this.txtCts.TabIndex = 87;
-            this.txtCts.TabStop = false;
+            this.txtReceivePayment.EditValue = "0.000";
+            this.txtReceivePayment.EnterMoveNextControl = true;
+            this.txtReceivePayment.Location = new System.Drawing.Point(175, 98);
+            this.txtReceivePayment.Name = "txtReceivePayment";
+            this.txtReceivePayment.Properties.Appearance.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtReceivePayment.Properties.Appearance.Options.UseFont = true;
+            this.txtReceivePayment.Properties.DisplayFormat.FormatString = "f0";
+            this.txtReceivePayment.Properties.DisplayFormat.FormatType = DevExpress.Utils.FormatType.Numeric;
+            this.txtReceivePayment.Properties.EditFormat.FormatString = "f0";
+            this.txtReceivePayment.Properties.EditFormat.FormatType = DevExpress.Utils.FormatType.Numeric;
+            this.txtReceivePayment.Properties.Mask.EditMask = "f0";
+            this.txtReceivePayment.Properties.Mask.MaskType = DevExpress.XtraEditors.Mask.MaskType.Numeric;
+            this.txtReceivePayment.Properties.ReadOnly = true;
+            this.txtReceivePayment.Size = new System.Drawing.Size(182, 26);
+            this.txtReceivePayment.TabIndex = 87;
+            this.txtReceivePayment.TabStop = false;
             // 
             // labelControl11
             // 
@@ -190,9 +190,9 @@
             this.labelControl11.Appearance.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(21)))), ((int)(((byte)(66)))), ((int)(((byte)(139)))));
             this.labelControl11.Location = new System.Drawing.Point(53, 97);
             this.labelControl11.Name = "labelControl11";
-            this.labelControl11.Size = new System.Drawing.Size(97, 25);
+            this.labelControl11.Size = new System.Drawing.Size(88, 25);
             this.labelControl11.TabIndex = 91;
-            this.labelControl11.Text = "ચૂકવેલું પેમેન્ટ :";
+            this.labelControl11.Text = "મેળેલું પેમેન્ટ :";
             // 
             // labelControl3
             // 
@@ -204,15 +204,15 @@
             this.labelControl3.TabIndex = 89;
             this.labelControl3.Text = "પેમેન્ટ ની તારીખ :";
             // 
-            // txtKatNo
+            // txtPaymentAmt
             // 
-            this.txtKatNo.EnterMoveNextControl = true;
-            this.txtKatNo.Location = new System.Drawing.Point(473, 63);
-            this.txtKatNo.Name = "txtKatNo";
-            this.txtKatNo.Properties.Appearance.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtKatNo.Properties.Appearance.Options.UseFont = true;
-            this.txtKatNo.Size = new System.Drawing.Size(182, 26);
-            this.txtKatNo.TabIndex = 84;
+            this.txtPaymentAmt.EnterMoveNextControl = true;
+            this.txtPaymentAmt.Location = new System.Drawing.Point(473, 63);
+            this.txtPaymentAmt.Name = "txtPaymentAmt";
+            this.txtPaymentAmt.Properties.Appearance.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtPaymentAmt.Properties.Appearance.Options.UseFont = true;
+            this.txtPaymentAmt.Size = new System.Drawing.Size(182, 26);
+            this.txtPaymentAmt.TabIndex = 84;
             // 
             // labelControl2
             // 
@@ -224,15 +224,15 @@
             this.labelControl2.TabIndex = 85;
             this.labelControl2.Text = "પેમેન્ટ રકમ:";
             // 
-            // txtNotNo
+            // txtSaleNotNo
             // 
-            this.txtNotNo.EnterMoveNextControl = true;
-            this.txtNotNo.Location = new System.Drawing.Point(174, 63);
-            this.txtNotNo.Name = "txtNotNo";
-            this.txtNotNo.Properties.Appearance.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtNotNo.Properties.Appearance.Options.UseFont = true;
-            this.txtNotNo.Size = new System.Drawing.Size(182, 26);
-            this.txtNotNo.TabIndex = 82;
+            this.txtSaleNotNo.EnterMoveNextControl = true;
+            this.txtSaleNotNo.Location = new System.Drawing.Point(174, 63);
+            this.txtSaleNotNo.Name = "txtSaleNotNo";
+            this.txtSaleNotNo.Properties.Appearance.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtSaleNotNo.Properties.Appearance.Options.UseFont = true;
+            this.txtSaleNotNo.Size = new System.Drawing.Size(182, 26);
+            this.txtSaleNotNo.TabIndex = 82;
             // 
             // labelControl1
             // 
@@ -254,15 +254,15 @@
             this.txtParty.Size = new System.Drawing.Size(182, 26);
             this.txtParty.TabIndex = 96;
             // 
-            // textEdit1
+            // txtAngadiya
             // 
-            this.textEdit1.EnterMoveNextControl = true;
-            this.textEdit1.Location = new System.Drawing.Point(791, 63);
-            this.textEdit1.Name = "textEdit1";
-            this.textEdit1.Properties.Appearance.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textEdit1.Properties.Appearance.Options.UseFont = true;
-            this.textEdit1.Size = new System.Drawing.Size(182, 26);
-            this.textEdit1.TabIndex = 97;
+            this.txtAngadiya.EnterMoveNextControl = true;
+            this.txtAngadiya.Location = new System.Drawing.Point(791, 63);
+            this.txtAngadiya.Name = "txtAngadiya";
+            this.txtAngadiya.Properties.Appearance.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtAngadiya.Properties.Appearance.Options.UseFont = true;
+            this.txtAngadiya.Size = new System.Drawing.Size(182, 26);
+            this.txtAngadiya.TabIndex = 97;
             // 
             // labelControl5
             // 
@@ -279,36 +279,36 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1026, 354);
-            this.Controls.Add(this.textEdit1);
+            this.Controls.Add(this.txtAngadiya);
             this.Controls.Add(this.labelControl5);
             this.Controls.Add(this.txtParty);
-            this.Controls.Add(this.dtpIssueDate);
+            this.Controls.Add(this.dtpPaymentDate);
             this.Controls.Add(this.labelControl4);
             this.Controls.Add(this.txtPaymentType);
             this.Controls.Add(this.labelControl13);
-            this.Controls.Add(this.txtAmount);
+            this.Controls.Add(this.txtTotalAmount);
             this.Controls.Add(this.labelControl16);
-            this.Controls.Add(this.txtRate);
+            this.Controls.Add(this.txtPendingPayment);
             this.Controls.Add(this.labelControl15);
-            this.Controls.Add(this.txtCts);
+            this.Controls.Add(this.txtReceivePayment);
             this.Controls.Add(this.labelControl11);
             this.Controls.Add(this.labelControl3);
-            this.Controls.Add(this.txtKatNo);
+            this.Controls.Add(this.txtPaymentAmt);
             this.Controls.Add(this.labelControl2);
-            this.Controls.Add(this.txtNotNo);
+            this.Controls.Add(this.txtSaleNotNo);
             this.Controls.Add(this.labelControl1);
             this.Name = "FrmPaymentReceive";
             this.Text = "FrmPaymentReceive";
-            ((System.ComponentModel.ISupportInitialize)(this.dtpIssueDate.Properties.CalendarTimeProperties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dtpIssueDate.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dtpPaymentDate.Properties.CalendarTimeProperties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dtpPaymentDate.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtPaymentType.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.txtAmount.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.txtRate.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.txtCts.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.txtKatNo.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.txtNotNo.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtTotalAmount.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtPendingPayment.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtReceivePayment.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtPaymentAmt.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtSaleNotNo.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtParty.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.textEdit1.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtAngadiya.Properties)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -316,23 +316,23 @@
 
         #endregion
 
-        private DevExpress.XtraEditors.DateEdit dtpIssueDate;
+        private DevExpress.XtraEditors.DateEdit dtpPaymentDate;
         private DevExpress.XtraEditors.LabelControl labelControl4;
         private DevExpress.XtraEditors.TextEdit txtPaymentType;
         private DevExpress.XtraEditors.LabelControl labelControl13;
-        private DevExpress.XtraEditors.TextEdit txtAmount;
+        private DevExpress.XtraEditors.TextEdit txtTotalAmount;
         private DevExpress.XtraEditors.LabelControl labelControl16;
-        private DevExpress.XtraEditors.TextEdit txtRate;
+        private DevExpress.XtraEditors.TextEdit txtPendingPayment;
         private DevExpress.XtraEditors.LabelControl labelControl15;
-        private DevExpress.XtraEditors.TextEdit txtCts;
+        private DevExpress.XtraEditors.TextEdit txtReceivePayment;
         private DevExpress.XtraEditors.LabelControl labelControl11;
         private DevExpress.XtraEditors.LabelControl labelControl3;
-        private DevExpress.XtraEditors.TextEdit txtKatNo;
+        private DevExpress.XtraEditors.TextEdit txtPaymentAmt;
         private DevExpress.XtraEditors.LabelControl labelControl2;
-        private DevExpress.XtraEditors.TextEdit txtNotNo;
+        private DevExpress.XtraEditors.TextEdit txtSaleNotNo;
         private DevExpress.XtraEditors.LabelControl labelControl1;
         private DevExpress.XtraEditors.TextEdit txtParty;
-        private DevExpress.XtraEditors.TextEdit textEdit1;
+        private DevExpress.XtraEditors.TextEdit txtAngadiya;
         private DevExpress.XtraEditors.LabelControl labelControl5;
     }
 }
