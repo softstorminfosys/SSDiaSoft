@@ -346,7 +346,7 @@ namespace DiamondPro.MASTER
             }
         }
 
-        private void rtxtCarat_KeyDown(object sender, KeyEventArgs e)
+        private void rtxtRate_KeyDown(object sender, KeyEventArgs e)
         {
             try
             {
@@ -361,10 +361,17 @@ namespace DiamondPro.MASTER
                         e.Handled = true;
                         return;
                     }
-                    else if (Val.ToDouble(teValue.EditValue) == 0)
+                    else if (Val.ToDouble(dgvSale.GetFocusedRowCellValue("Cts")) == 0)
                     {
                         XtraMessageBox.Show("Please Enter Sale Carat.", "Grid Validation", MessageBoxButtons.OK, MessageBoxIcon.Error);
                         dgvSale.FocusedColumn = gridColumn3;
+                        e.Handled = true;
+                        return;
+                    }
+                    else if (Val.ToDouble(teValue.EditValue) == 0)
+                    {
+                        XtraMessageBox.Show("Please Enter Sale Rate.", "Grid Validation", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                        dgvSale.FocusedColumn = gridColumn4;
                         e.Handled = true;
                         return;
                     }
@@ -373,7 +380,7 @@ namespace DiamondPro.MASTER
                         if (dgvSale.IsLastRow)
                         {
                             AddNewRow();
-                        }                        
+                        }
                         dgvSale.MoveNext();
                         dgvSale.Focus();
                         dgvSale.FocusedColumn = gridColumn1;
@@ -401,7 +408,6 @@ namespace DiamondPro.MASTER
             dgvSale.SetFocusedRowCellValue("Amount",Amount);
         }
 
-        
         private void dgvSale_CustomSummaryCalculate(object sender, DevExpress.Data.CustomSummaryEventArgs e)
         {
             try
@@ -445,6 +451,8 @@ namespace DiamondPro.MASTER
                 XtraMessageBox.Show(ex.Message);
             }
         }
+
+        
 
         
     }

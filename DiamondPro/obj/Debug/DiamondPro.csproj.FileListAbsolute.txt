@@ -79,7 +79,6 @@ E:\Projects\SSDiaSoft-master1\DiamondPro\obj\Debug\DiamondPro.exe
 E:\Projects\SSDiaSoft-master1\DiamondPro\obj\Debug\DiamondPro.pdb
 E:\Projects\SSDiaSoft-master1\DiamondPro\bin\Debug\DiamondPro.exe
 E:\Projects\SSDiaSoft-master1\DiamondPro\bin\Debug\DiamondPro.pdb
-E:\Projects\SSDiaSoft-master1\DiamondPro\obj\Debug\DiamondPro.csprojResolveAssemblyReference.cache
 E:\Projects\SSDiaSoft-master1\DiamondPro\obj\Debug\DiamondPro.FrmMDI.resources
 E:\Projects\SSDiaSoft-master1\DiamondPro\obj\Debug\DiamondPro.FrmDalalMaster.resources
 E:\Projects\SSDiaSoft-master1\DiamondPro\obj\Debug\DiamondPro.FrmKarkhanaMaster.resources
@@ -100,3 +99,4 @@ E:\Projects\SSDiaSoft-master1\DiamondPro\obj\Debug\DiamondPro.TRANSACTION.FrmPay
 E:\Projects\SSDiaSoft-master1\DiamondPro\obj\Debug\DiamondPro.TRANSACTION.FrmStockTransfer.resources
 E:\Projects\SSDiaSoft-master1\DiamondPro\obj\Debug\DiamondPro.csproj.GenerateResource.Cache
 E:\Projects\SSDiaSoft-master1\DiamondPro\obj\Debug\DiamondPro.exe.licenses
+E:\Projects\SSDiaSoft-master1\DiamondPro\obj\Debug\DiamondPro.FrmLogin.resources

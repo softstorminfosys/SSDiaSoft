@@ -111,7 +111,7 @@ namespace DiamondPro.BLL.Function_Class
             try
             {
                 Request Request = new Request();
-               
+                Request.AddParameter("@ReturnValue",0,DbType.Int32,ParameterDirection.Output);
                 Request.CommandType = CommandType.StoredProcedure;
                 Request.ComandText1 = "Sp_Database_Backup";
                 ArrayList arrlist = Ope.ExecuteQueryWithValue(Operation.ConnectionString1, Request);

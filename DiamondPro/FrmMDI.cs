@@ -19,6 +19,7 @@ namespace DiamondPro
 {
     public partial class FrmMDI : DevExpress.XtraEditors.XtraForm
     {
+        private bool MDIStatus = true;
         public FrmMDI()
         {
             InitializeComponent();
@@ -37,6 +38,11 @@ namespace DiamondPro
 
             RegistryKey rkey = Registry.CurrentUser.OpenSubKey(@"Control Panel\International", true);
             rkey.SetValue("sShortDate", "dd/MM/yyyy");
+        }
+
+        private void FrmMDI_FormClosing(object sender, FormClosingEventArgs e)
+        {
+            Application.Exit();
         }
         #endregion
 
@@ -151,6 +157,17 @@ namespace DiamondPro
         private void backupToolStripMenuItem_Click(object sender, EventArgs e)
         {
             int RetVal = new BoxNumbering_Function().DBBackup();
+
+            if (RetVal > 0)
+            {
+                XtraMessageBox.Show("Backed Up Save Successfully.");
+            }
+            else
+            {
+                XtraMessageBox.Show("Error While Backed Up DB.");
+            }
         }
+
+        
     }
 }

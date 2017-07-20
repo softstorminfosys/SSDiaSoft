@@ -29,7 +29,7 @@ namespace DiamondPro
             BonusSkins.Register();
             SkinManager.EnableFormSkins();
             UserLookAndFeel.Default.SetSkinStyle("Blue");
-            Application.Run(new FrmMDI());
+            Application.Run(new FrmLogin());
         }
     }
 }

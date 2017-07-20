@@ -15,7 +15,7 @@ namespace InterviewDemo.DLL
         SqlConnection connection = new SqlConnection();
         SqlCommand command = new SqlCommand();
         SqlDataAdapter DataAdapter = new SqlDataAdapter();
-        
+        public static string MDI = "DiamondPro.FrmMDI";
         private SqlTransaction _Transaction;
 
         public SqlTransaction Transaction
