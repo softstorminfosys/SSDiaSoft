@@ -249,6 +249,18 @@
     <Compile Include="TRANSACTION\FrmPaymentDetail.Designer.cs">
       <DependentUpon>FrmPaymentDetail.cs</DependentUpon>
     </Compile>
+    <Compile Include="TRANSACTION\FrmPaymentPay.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="TRANSACTION\FrmPaymentPay.Designer.cs">
+      <DependentUpon>FrmPaymentPay.cs</DependentUpon>
+    </Compile>
+    <Compile Include="TRANSACTION\FrmPaymentReceive.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="TRANSACTION\FrmPaymentReceive.Designer.cs">
+      <DependentUpon>FrmPaymentReceive.cs</DependentUpon>
+    </Compile>
     <Compile Include="TRANSACTION\FrmPaymentRecieve.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -316,6 +328,12 @@
     </EmbeddedResource>
     <EmbeddedResource Include="TRANSACTION\FrmPaymentDetail.resx">
       <DependentUpon>FrmPaymentDetail.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="TRANSACTION\FrmPaymentPay.resx">
+      <DependentUpon>FrmPaymentPay.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="TRANSACTION\FrmPaymentReceive.resx">
+      <DependentUpon>FrmPaymentReceive.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="TRANSACTION\FrmPaymentRecieve.resx">
       <DependentUpon>FrmPaymentRecieve.cs</DependentUpon>

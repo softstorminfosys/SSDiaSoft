@@ -100,3 +100,5 @@ E:\Projects\SSDiaSoft-master1\DiamondPro\obj\Debug\DiamondPro.TRANSACTION.FrmPay
 E:\Projects\SSDiaSoft-master1\DiamondPro\obj\Debug\DiamondPro.TRANSACTION.FrmStockTransfer.resources
 E:\Projects\SSDiaSoft-master1\DiamondPro\obj\Debug\DiamondPro.csproj.GenerateResource.Cache
 E:\Projects\SSDiaSoft-master1\DiamondPro\obj\Debug\DiamondPro.exe.licenses
+E:\Sony Vaio VPCEH28FN\Diamond 10072017\DiamondPro\obj\Debug\DiamondPro.TRANSACTION.FrmPaymentPay.resources
+E:\Sony Vaio VPCEH28FN\Diamond 10072017\DiamondPro\obj\Debug\DiamondPro.TRANSACTION.FrmPaymentReceive.resources
