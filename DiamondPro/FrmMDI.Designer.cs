@@ -41,8 +41,6 @@
             this.transactionToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.KachukharidiToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.PolishKharidiToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.VechanToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.પમનટToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.કરખનToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.કરખનઇસસયToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.કરખનરટરનToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -51,6 +49,8 @@
             this.નબરગToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.BoxNumberingToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.StockTransferToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.VechanToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.પમનટToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.backupToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.statusStrip1 = new System.Windows.Forms.StatusStrip();
             this.toolTip1 = new System.Windows.Forms.ToolTip(this.components);
@@ -69,11 +69,11 @@
             this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.mASTERToolStripMenuItem,
             this.transactionToolStripMenuItem,
-            this.VechanToolStripMenuItem,
-            this.પમનટToolStripMenuItem,
             this.કરખનToolStripMenuItem,
             this.બકસToolStripMenuItem,
             this.નબરગToolStripMenuItem,
+            this.VechanToolStripMenuItem,
+            this.પમનટToolStripMenuItem,
             this.backupToolStripMenuItem});
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
@@ -86,8 +86,8 @@
             this.mASTERToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.partyMasterToolStripMenuItem,
             this.dalalMasterToolStripMenuItem,
-            this.pARAMETERMASTERToolStripMenuItem,
-            this.kARKHANAMASTERToolStripMenuItem});
+            this.kARKHANAMASTERToolStripMenuItem,
+            this.pARAMETERMASTERToolStripMenuItem});
             this.mASTERToolStripMenuItem.Font = new System.Drawing.Font("Segoe UI", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.mASTERToolStripMenuItem.ForeColor = System.Drawing.Color.WhiteSmoke;
             this.mASTERToolStripMenuItem.Name = "mASTERToolStripMenuItem";
@@ -171,23 +171,6 @@
             this.PolishKharidiToolStripMenuItem.Text = "પોલીસ";
             this.PolishKharidiToolStripMenuItem.Click += new System.EventHandler(this.polishKharidiToolStripMenuItem_Click);
             // 
-            // VechanToolStripMenuItem
-            // 
-            this.VechanToolStripMenuItem.Font = new System.Drawing.Font("Segoe UI", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.VechanToolStripMenuItem.ForeColor = System.Drawing.Color.WhiteSmoke;
-            this.VechanToolStripMenuItem.Name = "VechanToolStripMenuItem";
-            this.VechanToolStripMenuItem.Size = new System.Drawing.Size(64, 34);
-            this.VechanToolStripMenuItem.Text = "વેચાણ";
-            this.VechanToolStripMenuItem.Click += new System.EventHandler(this.વચણToolStripMenuItem_Click);
-            // 
-            // પમનટToolStripMenuItem
-            // 
-            this.પમનટToolStripMenuItem.Font = new System.Drawing.Font("Segoe UI", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.પમનટToolStripMenuItem.ForeColor = System.Drawing.Color.WhiteSmoke;
-            this.પમનટToolStripMenuItem.Name = "પમનટToolStripMenuItem";
-            this.પમનટToolStripMenuItem.Size = new System.Drawing.Size(62, 34);
-            this.પમનટToolStripMenuItem.Text = "પેમેન્ટ";
-            // 
             // કરખનToolStripMenuItem
             // 
             this.કરખનToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
@@ -257,6 +240,23 @@
             this.StockTransferToolStripMenuItem.Size = new System.Drawing.Size(168, 34);
             this.StockTransferToolStripMenuItem.Text = "સ્ટોક ટ્રાન્સફર";
             this.StockTransferToolStripMenuItem.Click += new System.EventHandler(this.StockTransferToolStripMenuItem_Click);
+            // 
+            // VechanToolStripMenuItem
+            // 
+            this.VechanToolStripMenuItem.Font = new System.Drawing.Font("Segoe UI", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.VechanToolStripMenuItem.ForeColor = System.Drawing.Color.WhiteSmoke;
+            this.VechanToolStripMenuItem.Name = "VechanToolStripMenuItem";
+            this.VechanToolStripMenuItem.Size = new System.Drawing.Size(64, 34);
+            this.VechanToolStripMenuItem.Text = "વેચાણ";
+            this.VechanToolStripMenuItem.Click += new System.EventHandler(this.વચણToolStripMenuItem_Click);
+            // 
+            // પમનટToolStripMenuItem
+            // 
+            this.પમનટToolStripMenuItem.Font = new System.Drawing.Font("Segoe UI", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.પમનટToolStripMenuItem.ForeColor = System.Drawing.Color.WhiteSmoke;
+            this.પમનટToolStripMenuItem.Name = "પમનટToolStripMenuItem";
+            this.પમનટToolStripMenuItem.Size = new System.Drawing.Size(62, 34);
+            this.પમનટToolStripMenuItem.Text = "પેમેન્ટ";
             // 
             // backupToolStripMenuItem
             // 
