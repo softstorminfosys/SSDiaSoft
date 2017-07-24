@@ -777,7 +777,7 @@
             this.rtxtCarat.Mask.MaskType = DevExpress.XtraEditors.Mask.MaskType.Numeric;
             this.rtxtCarat.Name = "rtxtCarat";
             this.rtxtCarat.EditValueChanged += new System.EventHandler(this.rtxtCarat_EditValueChanged);
-            this.rtxtCarat.KeyDown += new System.Windows.Forms.KeyEventHandler(this.rtxtCarat_KeyDown);
+//            this.rtxtCarat.KeyDown += new System.Windows.Forms.KeyEventHandler(this.rtxtCarat_KeyDown);
             // 
             // gridColumn4
             // 
@@ -801,6 +801,7 @@
             this.rtxtRate.Mask.EditMask = "f2";
             this.rtxtRate.Mask.MaskType = DevExpress.XtraEditors.Mask.MaskType.Numeric;
             this.rtxtRate.Name = "rtxtRate";
+            this.rtxtRate.KeyDown += new System.Windows.Forms.KeyEventHandler(this.rtxtRate_KeyDown);
             // 
             // gridColumn5
             // 

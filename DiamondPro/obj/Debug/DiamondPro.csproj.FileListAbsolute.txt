@@ -79,7 +79,6 @@ E:\Projects\SSDiaSoft-master1\DiamondPro\obj\Debug\DiamondPro.exe
 E:\Projects\SSDiaSoft-master1\DiamondPro\obj\Debug\DiamondPro.pdb
 E:\Projects\SSDiaSoft-master1\DiamondPro\bin\Debug\DiamondPro.exe
 E:\Projects\SSDiaSoft-master1\DiamondPro\bin\Debug\DiamondPro.pdb
-E:\Projects\SSDiaSoft-master1\DiamondPro\obj\Debug\DiamondPro.csprojResolveAssemblyReference.cache
 E:\Projects\SSDiaSoft-master1\DiamondPro\obj\Debug\DiamondPro.FrmMDI.resources
 E:\Projects\SSDiaSoft-master1\DiamondPro\obj\Debug\DiamondPro.FrmDalalMaster.resources
 E:\Projects\SSDiaSoft-master1\DiamondPro\obj\Debug\DiamondPro.FrmKarkhanaMaster.resources
@@ -100,5 +99,9 @@ E:\Projects\SSDiaSoft-master1\DiamondPro\obj\Debug\DiamondPro.TRANSACTION.FrmPay
 E:\Projects\SSDiaSoft-master1\DiamondPro\obj\Debug\DiamondPro.TRANSACTION.FrmStockTransfer.resources
 E:\Projects\SSDiaSoft-master1\DiamondPro\obj\Debug\DiamondPro.csproj.GenerateResource.Cache
 E:\Projects\SSDiaSoft-master1\DiamondPro\obj\Debug\DiamondPro.exe.licenses
+<<<<<<< HEAD
 E:\Sony Vaio VPCEH28FN\Diamond 10072017\DiamondPro\obj\Debug\DiamondPro.TRANSACTION.FrmPaymentPay.resources
 E:\Sony Vaio VPCEH28FN\Diamond 10072017\DiamondPro\obj\Debug\DiamondPro.TRANSACTION.FrmPaymentReceive.resources
+=======
+E:\Projects\SSDiaSoft-master1\DiamondPro\obj\Debug\DiamondPro.FrmLogin.resources
+>>>>>>> f6aadbdc104630427a5c6123dafd04c698122ca4

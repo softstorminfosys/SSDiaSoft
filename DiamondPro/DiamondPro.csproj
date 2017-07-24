@@ -115,6 +115,7 @@
     <Reference Include="System.Configuration" />
     <Reference Include="System.Core" />
     <Reference Include="System.Data.Linq" />
+    <Reference Include="System.Management" />
     <Reference Include="System.Printing" />
     <Reference Include="System.Runtime.Remoting" />
     <Reference Include="System.Xml.Linq" />
@@ -131,6 +132,7 @@
     <Compile Include="BLL\Function Class\BoxNumbering_Function.cs" />
     <Compile Include="BLL\Function Class\Karkhana_Issue_Function.cs" />
     <Compile Include="BLL\Function Class\Karkhana_Return_Function.cs" />
+    <Compile Include="BLL\Function Class\Login_Function.cs" />
     <Compile Include="BLL\Function Class\MST_Karkhana_Function.cs" />
     <Compile Include="BLL\Function Class\MST_Vechan_Function.cs" />
     <Compile Include="BLL\Function Class\ParameterValue_Function.cs" />
@@ -157,6 +159,12 @@
     <Compile Include="DLL\Operation.cs" />
     <Compile Include="DLL\Request.cs" />
     <Compile Include="DLL\Validation.cs" />
+    <Compile Include="FrmLogin.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmLogin.Designer.cs">
+      <DependentUpon>FrmLogin.cs</DependentUpon>
+    </Compile>
     <Compile Include="FrmMDI.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -249,6 +257,7 @@
     <Compile Include="TRANSACTION\FrmPaymentDetail.Designer.cs">
       <DependentUpon>FrmPaymentDetail.cs</DependentUpon>
     </Compile>
+<<<<<<< HEAD
     <Compile Include="TRANSACTION\FrmPaymentPay.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -263,9 +272,15 @@
     </Compile>
     <Compile Include="TRANSACTION\FrmPaymentRecieve.cs">
       <SubType>Form</SubType>
+=======
+    <Compile Include="TRANSACTION\FrmPaymentPay.cs" />
+    <Compile Include="TRANSACTION\FrmPaymentPay.Designer.cs">
+      <DependentUpon>FrmPaymentPay.cs</DependentUpon>
+>>>>>>> f6aadbdc104630427a5c6123dafd04c698122ca4
     </Compile>
-    <Compile Include="TRANSACTION\FrmPaymentRecieve.Designer.cs">
-      <DependentUpon>FrmPaymentRecieve.cs</DependentUpon>
+    <Compile Include="TRANSACTION\FrmPaymentReceive.cs" />
+    <Compile Include="TRANSACTION\FrmPaymentReceive.Designer.cs">
+      <DependentUpon>FrmPaymentReceive.cs</DependentUpon>
     </Compile>
     <Compile Include="TRANSACTION\FrmStockTransfer.cs">
       <SubType>Form</SubType>
@@ -273,6 +288,9 @@
     <Compile Include="TRANSACTION\FrmStockTransfer.Designer.cs">
       <DependentUpon>FrmStockTransfer.cs</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="FrmLogin.resx">
+      <DependentUpon>FrmLogin.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="FrmMDI.resx">
       <DependentUpon>FrmMDI.cs</DependentUpon>
     </EmbeddedResource>
@@ -334,9 +352,12 @@
     </EmbeddedResource>
     <EmbeddedResource Include="TRANSACTION\FrmPaymentReceive.resx">
       <DependentUpon>FrmPaymentReceive.cs</DependentUpon>
+<<<<<<< HEAD
     </EmbeddedResource>
     <EmbeddedResource Include="TRANSACTION\FrmPaymentRecieve.resx">
       <DependentUpon>FrmPaymentRecieve.cs</DependentUpon>
+=======
+>>>>>>> f6aadbdc104630427a5c6123dafd04c698122ca4
     </EmbeddedResource>
     <EmbeddedResource Include="TRANSACTION\FrmStockTransfer.resx">
       <DependentUpon>FrmStockTransfer.cs</DependentUpon>
@@ -379,6 +400,12 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\Check1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\LoginPage.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\LoginButton.jpg" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it.
