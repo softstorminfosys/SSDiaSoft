@@ -58,11 +58,11 @@
             this.labelControl15 = new DevExpress.XtraEditors.LabelControl();
             this.txtPartyName = new DevExpress.XtraEditors.TextEdit();
             this.labelControl6 = new DevExpress.XtraEditors.LabelControl();
-            this.dtpKharidiDate = new DevExpress.XtraEditors.DateEdit();
+            this.dtpVechanDate = new DevExpress.XtraEditors.DateEdit();
             this.labelControl3 = new DevExpress.XtraEditors.LabelControl();
+            this.txtVechanNo = new DevExpress.XtraEditors.TextEdit();
             this.txtKatNo = new DevExpress.XtraEditors.TextEdit();
             this.labelControl2 = new DevExpress.XtraEditors.LabelControl();
-            this.txtNotNo = new DevExpress.XtraEditors.TextEdit();
             this.panelControl2 = new DevExpress.XtraEditors.PanelControl();
             this.BtnClear = new DevExpress.XtraEditors.SimpleButton();
             this.BtnDelete = new DevExpress.XtraEditors.SimpleButton();
@@ -85,10 +85,10 @@
             ((System.ComponentModel.ISupportInitialize)(this.dtpPaymentDate.Properties.CalendarTimeProperties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dtpPaymentDate.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtPartyName.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dtpKharidiDate.Properties.CalendarTimeProperties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dtpKharidiDate.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dtpVechanDate.Properties.CalendarTimeProperties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dtpVechanDate.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtVechanNo.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtKatNo.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.txtNotNo.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.panelControl2)).BeginInit();
             this.panelControl2.SuspendLayout();
             this.SuspendLayout();
@@ -100,7 +100,7 @@
             this.panelControl1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panelControl1.Location = new System.Drawing.Point(0, 0);
             this.panelControl1.Name = "panelControl1";
-            this.panelControl1.Size = new System.Drawing.Size(931, 527);
+            this.panelControl1.Size = new System.Drawing.Size(931, 452);
             this.panelControl1.TabIndex = 1;
             // 
             // groupControl1
@@ -110,10 +110,12 @@
             this.groupControl1.Controls.Add(this.lblTransId);
             this.groupControl1.Controls.Add(this.labelControl13);
             this.groupControl1.Controls.Add(this.panelControl3);
+            this.groupControl1.Controls.Add(this.txtKatNo);
+            this.groupControl1.Controls.Add(this.labelControl2);
             this.groupControl1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.groupControl1.Location = new System.Drawing.Point(0, 0);
             this.groupControl1.Name = "groupControl1";
-            this.groupControl1.Size = new System.Drawing.Size(931, 527);
+            this.groupControl1.Size = new System.Drawing.Size(931, 452);
             this.groupControl1.TabIndex = 0;
             this.groupControl1.Text = "પેમેન્ટ લેવડ ની વિગત";
             // 
@@ -163,21 +165,19 @@
             this.panelControl3.Controls.Add(this.labelControl15);
             this.panelControl3.Controls.Add(this.txtPartyName);
             this.panelControl3.Controls.Add(this.labelControl6);
-            this.panelControl3.Controls.Add(this.dtpKharidiDate);
+            this.panelControl3.Controls.Add(this.dtpVechanDate);
             this.panelControl3.Controls.Add(this.labelControl3);
-            this.panelControl3.Controls.Add(this.txtKatNo);
-            this.panelControl3.Controls.Add(this.labelControl2);
-            this.panelControl3.Controls.Add(this.txtNotNo);
+            this.panelControl3.Controls.Add(this.txtVechanNo);
             this.panelControl3.Location = new System.Drawing.Point(28, 86);
             this.panelControl3.Name = "panelControl3";
-            this.panelControl3.Size = new System.Drawing.Size(877, 372);
+            this.panelControl3.Size = new System.Drawing.Size(877, 270);
             this.panelControl3.TabIndex = 0;
             // 
             // txtFinalTotal
             // 
             this.txtFinalTotal.EditValue = "0.000";
             this.txtFinalTotal.EnterMoveNextControl = true;
-            this.txtFinalTotal.Location = new System.Drawing.Point(572, 180);
+            this.txtFinalTotal.Location = new System.Drawing.Point(572, 146);
             this.txtFinalTotal.Name = "txtFinalTotal";
             this.txtFinalTotal.Properties.Appearance.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtFinalTotal.Properties.Appearance.Options.UseFont = true;
@@ -195,7 +195,7 @@
             // 
             this.labelControl14.Appearance.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.labelControl14.Appearance.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(21)))), ((int)(((byte)(66)))), ((int)(((byte)(139)))));
-            this.labelControl14.Location = new System.Drawing.Point(450, 181);
+            this.labelControl14.Location = new System.Drawing.Point(450, 147);
             this.labelControl14.Name = "labelControl14";
             this.labelControl14.Size = new System.Drawing.Size(97, 25);
             this.labelControl14.TabIndex = 75;
@@ -237,7 +237,7 @@
             // 
             this.txtAngadiyaPer.EditValue = "0.000";
             this.txtAngadiyaPer.EnterMoveNextControl = true;
-            this.txtAngadiyaPer.Location = new System.Drawing.Point(572, 148);
+            this.txtAngadiyaPer.Location = new System.Drawing.Point(572, 114);
             this.txtAngadiyaPer.Name = "txtAngadiyaPer";
             this.txtAngadiyaPer.Properties.Appearance.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtAngadiyaPer.Properties.Appearance.Options.UseFont = true;
@@ -256,7 +256,7 @@
             // 
             this.labelControl17.Appearance.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.labelControl17.Appearance.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(21)))), ((int)(((byte)(66)))), ((int)(((byte)(139)))));
-            this.labelControl17.Location = new System.Drawing.Point(450, 149);
+            this.labelControl17.Location = new System.Drawing.Point(450, 115);
             this.labelControl17.Name = "labelControl17";
             this.labelControl17.Size = new System.Drawing.Size(115, 25);
             this.labelControl17.TabIndex = 72;
@@ -269,9 +269,9 @@
             this.labelControl12.Appearance.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(21)))), ((int)(((byte)(66)))), ((int)(((byte)(139)))));
             this.labelControl12.Location = new System.Drawing.Point(120, 52);
             this.labelControl12.Name = "labelControl12";
-            this.labelControl12.Size = new System.Drawing.Size(55, 25);
+            this.labelControl12.Size = new System.Drawing.Size(100, 25);
             this.labelControl12.TabIndex = 70;
-            this.labelControl12.Text = "નોટ નં. :";
+            this.labelControl12.Text = "વેચાણ નોટ નં. :";
             // 
             // labelControl10
             // 
@@ -287,7 +287,7 @@
             // 
             this.txtDueAmount.EditValue = "0.000";
             this.txtDueAmount.EnterMoveNextControl = true;
-            this.txtDueAmount.Location = new System.Drawing.Point(572, 212);
+            this.txtDueAmount.Location = new System.Drawing.Point(572, 178);
             this.txtDueAmount.Name = "txtDueAmount";
             this.txtDueAmount.Properties.Appearance.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtDueAmount.Properties.Appearance.Options.UseFont = true;
@@ -305,7 +305,7 @@
             // 
             this.labelControl9.Appearance.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.labelControl9.Appearance.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(21)))), ((int)(((byte)(66)))), ((int)(((byte)(139)))));
-            this.labelControl9.Location = new System.Drawing.Point(450, 211);
+            this.labelControl9.Location = new System.Drawing.Point(450, 177);
             this.labelControl9.Name = "labelControl9";
             this.labelControl9.Size = new System.Drawing.Size(99, 25);
             this.labelControl9.TabIndex = 68;
@@ -371,7 +371,7 @@
             // 
             this.txtRate.EditValue = "0.000";
             this.txtRate.EnterMoveNextControl = true;
-            this.txtRate.Location = new System.Drawing.Point(572, 115);
+            this.txtRate.Location = new System.Drawing.Point(572, 81);
             this.txtRate.Name = "txtRate";
             this.txtRate.Properties.Appearance.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtRate.Properties.Appearance.Options.UseFont = true;
@@ -388,7 +388,7 @@
             // 
             this.labelControl5.Appearance.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.labelControl5.Appearance.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(21)))), ((int)(((byte)(66)))), ((int)(((byte)(139)))));
-            this.labelControl5.Location = new System.Drawing.Point(450, 114);
+            this.labelControl5.Location = new System.Drawing.Point(450, 80);
             this.labelControl5.Name = "labelControl5";
             this.labelControl5.Size = new System.Drawing.Size(37, 25);
             this.labelControl5.TabIndex = 62;
@@ -424,7 +424,7 @@
             // dtpPaymentDate
             // 
             this.dtpPaymentDate.EditValue = null;
-            this.dtpPaymentDate.Location = new System.Drawing.Point(572, 83);
+            this.dtpPaymentDate.Location = new System.Drawing.Point(572, 49);
             this.dtpPaymentDate.Name = "dtpPaymentDate";
             this.dtpPaymentDate.Properties.Appearance.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.dtpPaymentDate.Properties.Appearance.Options.UseFont = true;
@@ -444,7 +444,7 @@
             // 
             this.labelControl4.Appearance.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.labelControl4.Appearance.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(21)))), ((int)(((byte)(66)))), ((int)(((byte)(139)))));
-            this.labelControl4.Location = new System.Drawing.Point(447, 83);
+            this.labelControl4.Location = new System.Drawing.Point(447, 49);
             this.labelControl4.Name = "labelControl4";
             this.labelControl4.Size = new System.Drawing.Size(114, 25);
             this.labelControl4.TabIndex = 58;
@@ -456,8 +456,8 @@
             this.CmbPaymentType.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.CmbPaymentType.FormattingEnabled = true;
             this.CmbPaymentType.Items.AddRange(new object[] {
-            "કાચી ખરીદી",
-            "તૈયાર ખરીદી"});
+            "Cash",
+            "Cheque"});
             this.CmbPaymentType.Location = new System.Drawing.Point(242, 19);
             this.CmbPaymentType.Name = "CmbPaymentType";
             this.CmbPaymentType.Size = new System.Drawing.Size(182, 27);
@@ -495,24 +495,24 @@
             this.labelControl6.TabIndex = 53;
             this.labelControl6.Text = "પાર્ટી નું નામ :";
             // 
-            // dtpKharidiDate
+            // dtpVechanDate
             // 
-            this.dtpKharidiDate.EditValue = null;
-            this.dtpKharidiDate.Location = new System.Drawing.Point(242, 84);
-            this.dtpKharidiDate.Name = "dtpKharidiDate";
-            this.dtpKharidiDate.Properties.Appearance.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.dtpKharidiDate.Properties.Appearance.Options.UseFont = true;
-            this.dtpKharidiDate.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
+            this.dtpVechanDate.EditValue = null;
+            this.dtpVechanDate.Location = new System.Drawing.Point(242, 84);
+            this.dtpVechanDate.Name = "dtpVechanDate";
+            this.dtpVechanDate.Properties.Appearance.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.dtpVechanDate.Properties.Appearance.Options.UseFont = true;
+            this.dtpVechanDate.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
-            this.dtpKharidiDate.Properties.CalendarTimeProperties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
+            this.dtpVechanDate.Properties.CalendarTimeProperties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
-            this.dtpKharidiDate.Properties.CalendarTimeProperties.DisplayFormat.FormatString = "dd/MM/yyyy";
-            this.dtpKharidiDate.Properties.CalendarTimeProperties.DisplayFormat.FormatType = DevExpress.Utils.FormatType.Custom;
-            this.dtpKharidiDate.Properties.CalendarTimeProperties.EditFormat.FormatString = "d";
-            this.dtpKharidiDate.Properties.CalendarTimeProperties.EditFormat.FormatType = DevExpress.Utils.FormatType.DateTime;
-            this.dtpKharidiDate.Properties.CalendarTimeProperties.Mask.EditMask = "d";
-            this.dtpKharidiDate.Size = new System.Drawing.Size(182, 26);
-            this.dtpKharidiDate.TabIndex = 4;
+            this.dtpVechanDate.Properties.CalendarTimeProperties.DisplayFormat.FormatString = "dd/MM/yyyy";
+            this.dtpVechanDate.Properties.CalendarTimeProperties.DisplayFormat.FormatType = DevExpress.Utils.FormatType.Custom;
+            this.dtpVechanDate.Properties.CalendarTimeProperties.EditFormat.FormatString = "d";
+            this.dtpVechanDate.Properties.CalendarTimeProperties.EditFormat.FormatType = DevExpress.Utils.FormatType.DateTime;
+            this.dtpVechanDate.Properties.CalendarTimeProperties.Mask.EditMask = "d";
+            this.dtpVechanDate.Size = new System.Drawing.Size(182, 26);
+            this.dtpVechanDate.TabIndex = 4;
             // 
             // labelControl3
             // 
@@ -522,39 +522,40 @@
             this.labelControl3.Name = "labelControl3";
             this.labelControl3.Size = new System.Drawing.Size(116, 25);
             this.labelControl3.TabIndex = 52;
-            this.labelControl3.Text = "ખરીદી ની તારીખ :";
+            this.labelControl3.Text = "વેચાણ ની તારીખ :";
+            // 
+            // txtVechanNo
+            // 
+            this.txtVechanNo.EnterMoveNextControl = true;
+            this.txtVechanNo.Location = new System.Drawing.Point(242, 52);
+            this.txtVechanNo.Name = "txtVechanNo";
+            this.txtVechanNo.Properties.Appearance.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtVechanNo.Properties.Appearance.Options.UseFont = true;
+            this.txtVechanNo.Size = new System.Drawing.Size(182, 26);
+            this.txtVechanNo.TabIndex = 2;
+            this.txtVechanNo.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtNotNo_KeyPress);
             // 
             // txtKatNo
             // 
             this.txtKatNo.EnterMoveNextControl = true;
-            this.txtKatNo.Location = new System.Drawing.Point(572, 52);
+            this.txtKatNo.Location = new System.Drawing.Point(515, 362);
             this.txtKatNo.Name = "txtKatNo";
             this.txtKatNo.Properties.Appearance.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtKatNo.Properties.Appearance.Options.UseFont = true;
             this.txtKatNo.Size = new System.Drawing.Size(182, 26);
             this.txtKatNo.TabIndex = 3;
-            this.txtKatNo.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtKatNo_KeyPress);
+            this.txtKatNo.Visible = false;
             // 
             // labelControl2
             // 
             this.labelControl2.Appearance.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.labelControl2.Appearance.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(21)))), ((int)(((byte)(66)))), ((int)(((byte)(139)))));
-            this.labelControl2.Location = new System.Drawing.Point(447, 52);
+            this.labelControl2.Location = new System.Drawing.Point(466, 363);
             this.labelControl2.Name = "labelControl2";
             this.labelControl2.Size = new System.Drawing.Size(43, 25);
             this.labelControl2.TabIndex = 50;
             this.labelControl2.Text = "કટ નં.:";
-            // 
-            // txtNotNo
-            // 
-            this.txtNotNo.EnterMoveNextControl = true;
-            this.txtNotNo.Location = new System.Drawing.Point(242, 52);
-            this.txtNotNo.Name = "txtNotNo";
-            this.txtNotNo.Properties.Appearance.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtNotNo.Properties.Appearance.Options.UseFont = true;
-            this.txtNotNo.Size = new System.Drawing.Size(182, 26);
-            this.txtNotNo.TabIndex = 2;
-            this.txtNotNo.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtNotNo_KeyPress);
+            this.labelControl2.Visible = false;
             // 
             // panelControl2
             // 
@@ -562,7 +563,7 @@
             this.panelControl2.Controls.Add(this.BtnDelete);
             this.panelControl2.Controls.Add(this.BtnSave);
             this.panelControl2.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.panelControl2.Location = new System.Drawing.Point(0, 484);
+            this.panelControl2.Location = new System.Drawing.Point(0, 409);
             this.panelControl2.Name = "panelControl2";
             this.panelControl2.Size = new System.Drawing.Size(931, 43);
             this.panelControl2.TabIndex = 31;
@@ -615,7 +616,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(931, 527);
+            this.ClientSize = new System.Drawing.Size(931, 452);
             this.Controls.Add(this.panelControl2);
             this.Controls.Add(this.panelControl1);
             this.Name = "FrmPaymentRecieve";
@@ -640,10 +641,10 @@
             ((System.ComponentModel.ISupportInitialize)(this.dtpPaymentDate.Properties.CalendarTimeProperties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dtpPaymentDate.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtPartyName.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dtpKharidiDate.Properties.CalendarTimeProperties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dtpKharidiDate.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dtpVechanDate.Properties.CalendarTimeProperties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dtpVechanDate.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtVechanNo.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtKatNo.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.txtNotNo.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.panelControl2)).EndInit();
             this.panelControl2.ResumeLayout(false);
             this.ResumeLayout(false);
@@ -676,11 +677,11 @@
         private DevExpress.XtraEditors.LabelControl labelControl15;
         private DevExpress.XtraEditors.TextEdit txtPartyName;
         private DevExpress.XtraEditors.LabelControl labelControl6;
-        private DevExpress.XtraEditors.DateEdit dtpKharidiDate;
+        private DevExpress.XtraEditors.DateEdit dtpVechanDate;
         private DevExpress.XtraEditors.LabelControl labelControl3;
         private DevExpress.XtraEditors.TextEdit txtKatNo;
         private DevExpress.XtraEditors.LabelControl labelControl2;
-        private DevExpress.XtraEditors.TextEdit txtNotNo;
+        private DevExpress.XtraEditors.TextEdit txtVechanNo;
         private DevExpress.XtraEditors.LabelControl labelControl10;
         private DevExpress.XtraEditors.LabelControl labelControl12;
         private DevExpress.XtraEditors.LabelControl lblTransId;

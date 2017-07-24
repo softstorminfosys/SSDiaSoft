@@ -143,6 +143,7 @@
     <Compile Include="BLL\Function Class\ParameterType_Function.cs" />
     <Compile Include="BLL\Function Class\StockTransfer_Function.cs" />
     <Compile Include="BLL\Function Class\TRN_Payment_detail_Function.cs" />
+    <Compile Include="BLL\Function Class\UserRights_Function.cs" />
     <Compile Include="BLL\Property Class\BoxNumbering_Property.cs" />
     <Compile Include="BLL\Property Class\Karkhana_Issue_Property.cs" />
     <Compile Include="BLL\Property Class\Karkhana_Return_Property.cs" />
@@ -156,6 +157,7 @@
     <Compile Include="BLL\Property Class\ParameterType_Property.cs" />
     <Compile Include="BLL\Property Class\Parameter_Value_Property.cs" />
     <Compile Include="BLL\Property Class\TRN_Payment_detail_Property.cs" />
+    <Compile Include="DLL\GlobalCls.cs" />
     <Compile Include="DLL\Operation.cs" />
     <Compile Include="DLL\Request.cs" />
     <Compile Include="DLL\Validation.cs" />
@@ -213,6 +215,12 @@
     <Compile Include="MASTER\FrmPolishKharidi.Designer.cs">
       <DependentUpon>FrmPolishKharidi.cs</DependentUpon>
     </Compile>
+    <Compile Include="MASTER\FrmUsersRights.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MASTER\FrmUsersRights.designer.cs">
+      <DependentUpon>FrmUsersRights.cs</DependentUpon>
+    </Compile>
     <Compile Include="MASTER\FrmVechan.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -257,13 +265,17 @@
     <Compile Include="TRANSACTION\FrmPaymentDetail.Designer.cs">
       <DependentUpon>FrmPaymentDetail.cs</DependentUpon>
     </Compile>
-    <Compile Include="TRANSACTION\FrmPaymentPay.cs" />
+    <Compile Include="TRANSACTION\FrmPaymentPay.cs">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="TRANSACTION\FrmPaymentPay.Designer.cs">
       <DependentUpon>FrmPaymentPay.cs</DependentUpon>
     </Compile>
-    <Compile Include="TRANSACTION\FrmPaymentReceive.cs" />
-    <Compile Include="TRANSACTION\FrmPaymentReceive.Designer.cs">
-      <DependentUpon>FrmPaymentReceive.cs</DependentUpon>
+    <Compile Include="TRANSACTION\FrmPaymentRecieve.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="TRANSACTION\FrmPaymentRecieve.Designer.cs">
+      <DependentUpon>FrmPaymentRecieve.cs</DependentUpon>
     </Compile>
     <Compile Include="TRANSACTION\FrmStockTransfer.cs">
       <SubType>Form</SubType>
@@ -273,6 +285,7 @@
     </Compile>
     <EmbeddedResource Include="FrmLogin.resx">
       <DependentUpon>FrmLogin.cs</DependentUpon>
+      <SubType>Designer</SubType>
     </EmbeddedResource>
     <EmbeddedResource Include="FrmMDI.resx">
       <DependentUpon>FrmMDI.cs</DependentUpon>
@@ -297,6 +310,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="MASTER\FrmPolishKharidi.resx">
       <DependentUpon>FrmPolishKharidi.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MASTER\FrmUsersRights.resx">
+      <DependentUpon>FrmUsersRights.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="MASTER\FrmVechan.resx">
       <DependentUpon>FrmVechan.cs</DependentUpon>
@@ -333,8 +349,8 @@
     <EmbeddedResource Include="TRANSACTION\FrmPaymentPay.resx">
       <DependentUpon>FrmPaymentPay.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="TRANSACTION\FrmPaymentReceive.resx">
-      <DependentUpon>FrmPaymentReceive.cs</DependentUpon>
+    <EmbeddedResource Include="TRANSACTION\FrmPaymentRecieve.resx">
+      <DependentUpon>FrmPaymentRecieve.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="TRANSACTION\FrmStockTransfer.resx">
       <DependentUpon>FrmStockTransfer.cs</DependentUpon>

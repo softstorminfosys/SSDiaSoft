@@ -298,7 +298,7 @@
             this.Controls.Add(this.txtSaleNotNo);
             this.Controls.Add(this.labelControl1);
             this.Name = "FrmPaymentReceive";
-            this.Text = "FrmPaymentReceive";
+            this.Text = "Payment Recieve";
             ((System.ComponentModel.ISupportInitialize)(this.dtpPaymentDate.Properties.CalendarTimeProperties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dtpPaymentDate.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtPaymentType.Properties)).EndInit();

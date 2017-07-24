@@ -8,11 +8,13 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Data.SqlClient;
+using DiamondPro.DLL;
 
 namespace DiamondPro.BLL.Function_Class
 {
     public class StockTransfer_Function
     {
+        Validation Val = new Validation();
         Operation Ope = new Operation();
 
         public int GetMaxReferenceNo()
@@ -59,17 +61,17 @@ namespace DiamondPro.BLL.Function_Class
 
                 foreach (DataRow Drow in dtFrom.Rows)
                 {
-                    if (Convert.ToString(Drow["QualityId"]) != "")
+                    if (Val.ToString(Drow["QualityId"]) != "")
                     {
                         Request Request = new Request();
                         Request.AddParameter("@RefId", ReferenceId, DbType.Int32, ParameterDirection.Input);
-                        Request.AddParameter("@QualityId", Convert.ToInt32(Drow["QualityId"]), DbType.Int32, ParameterDirection.Input);
-                        Request.AddParameter("@Cts", Convert.ToDouble(Drow["Cts"]), DbType.Double, ParameterDirection.Input);
-                        Request.AddParameter("@Rate", Convert.ToDouble(Drow["Rate"]), DbType.Double, ParameterDirection.Input);
-                        Request.AddParameter("@Amount", Convert.ToDouble(Drow["Amount"]), DbType.Double, ParameterDirection.Input);
-                        Request.AddParameter("@TCarat", Convert.ToDouble(Drow["TCarat"]), DbType.Double, ParameterDirection.Input);
-                        Request.AddParameter("@TRate", Convert.ToDouble(Drow["TRate"]), DbType.Double, ParameterDirection.Input);
-                        Request.AddParameter("@TAmount", Convert.ToDouble(Drow["TAmount"]), DbType.Double, ParameterDirection.Input);
+                        Request.AddParameter("@QualityId", Val.ToInt(Drow["QualityId"]), DbType.Int32, ParameterDirection.Input);
+                        Request.AddParameter("@Cts", Val.ToDouble(Drow["Cts"]), DbType.Double, ParameterDirection.Input);
+                        Request.AddParameter("@Rate", Val.ToDouble(Drow["Rate"]), DbType.Double, ParameterDirection.Input);
+                        Request.AddParameter("@Amount", Val.ToDouble(Drow["Amount"]), DbType.Double, ParameterDirection.Input);
+                        Request.AddParameter("@TCarat", Val.ToDouble(Drow["TCarat"]), DbType.Double, ParameterDirection.Input);
+                        Request.AddParameter("@TRate", Val.ToDouble(Drow["TRate"]), DbType.Double, ParameterDirection.Input);
+                        Request.AddParameter("@TAmount", Val.ToDouble(Drow["TAmount"]), DbType.Double, ParameterDirection.Input);
                         Request.AddParameter("@ReturnValue", 0, DbType.Int32, ParameterDirection.Output);
                         Request.CommandType = CommandType.StoredProcedure;
                         Request.ComandText1 = "TRN_Stock_Transfer_From_Save";
@@ -85,18 +87,18 @@ namespace DiamondPro.BLL.Function_Class
                 {
                     foreach (DataRow dRow in dtTo.Rows)
                     {
-                        if (Convert.ToString(dRow["QualityId"]) != "")
+                        if (Val.ToString(dRow["QualityId"]) != "")
                         {
                             Request Request1 = new Request();
-                            //Request1.AddParameter("@NDID", Convert.ToString(dRow["NDID"]) == "" ? 0 : Convert.ToInt32(dRow["NDID"]), DbType.Int32, ParameterDirection.Input);
+                            //Request1.AddParameter("@NDID", Val.ToString(dRow["NDID"]) == "" ? 0 : Val.ToInt32(dRow["NDID"]), DbType.Int32, ParameterDirection.Input);
                             Request1.AddParameter("@RefId", ReferenceId, DbType.Int32, ParameterDirection.Input);
-                            Request1.AddParameter("@QualityId", Convert.ToInt32(dRow["QualityId"]), DbType.Int32, ParameterDirection.Input);
-                            Request1.AddParameter("@Cts", Convert.ToDouble(dRow["Cts"]), DbType.Double, ParameterDirection.Input);
-                            Request1.AddParameter("@Rate", Convert.ToDouble(dRow["Rate"]), DbType.Double, ParameterDirection.Input);
-                            Request1.AddParameter("@Amount", Convert.ToDouble(dRow["Amount"]), DbType.Double, ParameterDirection.Input);
-                            Request1.AddParameter("@TCarat", Convert.ToDouble(dRow["TCarat"]), DbType.Double, ParameterDirection.Input);
-                            Request1.AddParameter("@TRate", Convert.ToDouble(dRow["TRate"]), DbType.Double, ParameterDirection.Input);
-                            Request1.AddParameter("@TAmount", Convert.ToDouble(dRow["TAmount"]), DbType.Double, ParameterDirection.Input);
+                            Request1.AddParameter("@QualityId", Val.ToInt(dRow["QualityId"]), DbType.Int32, ParameterDirection.Input);
+                            Request1.AddParameter("@Cts", Val.ToDouble(dRow["Cts"]), DbType.Double, ParameterDirection.Input);
+                            Request1.AddParameter("@Rate", Val.ToDouble(dRow["Rate"]), DbType.Double, ParameterDirection.Input);
+                            Request1.AddParameter("@Amount", Val.ToDouble(dRow["Amount"]), DbType.Double, ParameterDirection.Input);
+                            Request1.AddParameter("@TCarat", Val.ToDouble(dRow["TCarat"]), DbType.Double, ParameterDirection.Input);
+                            Request1.AddParameter("@TRate", Val.ToDouble(dRow["TRate"]), DbType.Double, ParameterDirection.Input);
+                            Request1.AddParameter("@TAmount", Val.ToDouble(dRow["TAmount"]), DbType.Double, ParameterDirection.Input);
                             Request1.AddParameter("@ReturnValue", 0, DbType.Int32, ParameterDirection.Output);
                             Request1.CommandType = CommandType.StoredProcedure;
                             Request1.ComandText1 = "TRN_Stock_Transfer_To_Save";

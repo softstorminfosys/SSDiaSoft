@@ -19,6 +19,8 @@ namespace DiamondPro.BLL.Property_Class
         public double Cts { get; set; }
         public double Rate { get; set; }
         public double Amount { get; set; }
+        public double AngadiyaPer { get; set; }
+        public double AngadiyaAmt { get; set; }
         public double PaidAmount { get; set; }
         public double DueAmount { get; set; }
     }

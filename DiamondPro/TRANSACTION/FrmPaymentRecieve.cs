@@ -12,11 +12,13 @@ using DiamondPro.BLL.Function_Class;
 using DiamondPro.BLL.Property_Class;
 using Param_Hospital.BLL.Property_Class;
 using DiamondPro.Search;
+using DiamondPro.DLL;
 
 namespace DiamondPro.TRANSACTION
 {
     public partial class FrmPaymentRecieve : DevExpress.XtraEditors.XtraForm
     {
+        Validation Val = new Validation();
         int PaymentId = 0;
         int PaymentType = 0;
         DataTable dtSearch = new DataTable();
@@ -55,16 +57,17 @@ namespace DiamondPro.TRANSACTION
                 ObjProperty.Id = PaymentId;
                 ObjProperty.TransId = lblTransId.Text;
                 ObjProperty.PaymentType = CmbPaymentType.Text;
-                ObjProperty.PartyId = Convert.ToInt32(txtPartyName.Tag);
+                ObjProperty.PartyId = Val.ToInt(txtPartyName.Tag);
                 ObjProperty.PaymentDate = DateTime.Parse(dtpPaymentDate.EditValue.ToString()).ToString("yyyy/MM/dd");
-                ObjProperty.KharidiDate = DateTime.Parse(dtpKharidiDate.EditValue.ToString()).ToString("yyyy/MM/dd");
-                ObjProperty.NotNo = txtNotNo.Text;
-                ObjProperty.KatNo = txtKatNo.Text;
-                ObjProperty.Cts = Convert.ToDouble(txtCts.Text);
-                ObjProperty.Rate = Convert.ToDouble(txtRate.Text);
-                ObjProperty.Amount = Convert.ToDouble(txtTotalAmt.Text);
-                ObjProperty.PaidAmount = Convert.ToDouble(txtPaidAmount.Text);
-                ObjProperty.DueAmount = Convert.ToDouble(txtDueAmount.Text);
+                ObjProperty.KharidiDate = DateTime.Parse(dtpVechanDate.EditValue.ToString()).ToString("yyyy/MM/dd");
+                ObjProperty.NotNo = txtVechanNo.Text;
+                ObjProperty.Cts = Val.ToDouble(txtCts.Text);
+                ObjProperty.Rate = Val.ToDouble(txtRate.Text);
+                ObjProperty.Amount = Val.ToDouble(txtTotalAmt.Text);
+                ObjProperty.AngadiyaPer = Val.ToDouble(txtAngadiyaPer.Text);
+                ObjProperty.AngadiyaAmt = Val.ToDouble(txtAngadiyaValue.Text);
+                ObjProperty.PaidAmount = Val.ToDouble(txtPaidAmount.Text);
+                ObjProperty.DueAmount = Val.ToDouble(txtDueAmount.Text);
 
                 int RetVal = new TRN_Payment_detail_Function().InsertUpdate(ObjProperty,PaymentType);
 
@@ -117,10 +120,10 @@ namespace DiamondPro.TRANSACTION
             CmbPaymentType.SelectedIndex = 0;
             txtPartyName.Text = string.Empty;
             txtPartyName.Tag = string.Empty;
-            txtNotNo.Text = string.Empty;
-            txtKatNo.Text = string.Empty;
+            txtVechanNo.Text = string.Empty;
+            //txtKatNo.Text = string.Empty;
             dtpPaymentDate.EditValue = System.DateTime.Now;
-            dtpKharidiDate.EditValue = System.DateTime.Now;
+            dtpVechanDate.EditValue = System.DateTime.Now;
             txtCts.Text = "0.000";
             txtRate.Text = "0.000";
             txtTotalAmt.Text = "0.000";
@@ -131,9 +134,9 @@ namespace DiamondPro.TRANSACTION
 
         private void DesableAll()
         {
-            txtNotNo.Enabled = false;
+            txtVechanNo.Enabled = false;
             txtKatNo.Enabled = false;
-            dtpKharidiDate.Enabled = false;
+            dtpVechanDate.Enabled = false;
             dtpPaymentDate.Enabled = false;
             txtCts.Enabled = false;
             txtRate.Enabled = false;
@@ -142,9 +145,9 @@ namespace DiamondPro.TRANSACTION
 
         private void EnableAll()
         {
-            txtNotNo.Enabled = true;
+            txtVechanNo.Enabled = true;
             txtKatNo.Enabled = true;
-            dtpKharidiDate.Enabled = true;
+            dtpVechanDate.Enabled = true;
             dtpPaymentDate.Enabled = true;
             txtCts.Enabled = true;
             txtRate.Enabled = true;
@@ -164,14 +167,9 @@ namespace DiamondPro.TRANSACTION
                 ErrorMsg = ErrorMsg + "\n Party Name is Required.";
             }
 
-            if (txtNotNo.Text == "")
+            if (txtVechanNo.Text == "")
             {
-                ErrorMsg = ErrorMsg + "\n Not No is Required.";
-            }
-
-            if (txtKatNo.Text == "")
-            {
-                ErrorMsg = ErrorMsg + "\n Kat No is Required.";
+                ErrorMsg = ErrorMsg + "\n Vechan No is Required.";
             }
 
             if (ErrorMsg != "")
@@ -188,7 +186,7 @@ namespace DiamondPro.TRANSACTION
         #region TextBox Event
         private void txtPaidAmount_EditValueChanged(object sender, EventArgs e)
         {
-            txtDueAmount.Text = Convert.ToString(Convert.ToDouble(txtFinalTotal.Text) - Convert.ToDouble(txtPaidAmount.Text));
+            txtDueAmount.Text = Val.ToString(Convert.ToDouble(txtFinalTotal.Text) - Val.ToDouble(txtPaidAmount.Text));
         }
 
         private void txtPartyName_KeyPress(object sender, KeyPressEventArgs e)
@@ -242,25 +240,24 @@ namespace DiamondPro.TRANSACTION
 
                 if (e.KeyChar != 13 && e.KeyChar != 8)
                 {
-                    DataTable dtParty = new TRN_Payment_detail_Function().FillNotNo("PartyId = "+ txtPartyName.Tag +"",PaymentType);
+                    DataTable dtParty = new TRN_Payment_detail_Function().FillVechanNo("Vechanno = " + txtPartyName.Tag + "");
                     //dtParty.Columns["PARTY NAME"].SetOrdinal(1);
                     FrmSearchProperty frmSearch = new FrmSearchProperty();
                     frmSearch.dtTable = dtParty.Copy();
                     frmSearch.serachfield = "NotNo";
 
-                    FrmSearch frm = new FrmSearch(frmSearch, "DiamondPro.FrmKharidiMaster");
+                    FrmSearch frm = new FrmSearch(frmSearch, "");
                     frm.ShowDialog();
                     e.Handled = true;
                     if (!frm.FlagExit)
                     {
-                        txtNotNo.Text = frm.Dr.Cells["NotNo"].Value.ToString();
-                        txtKatNo.Text = frm.Dr.Cells["KatNo"].Value.ToString();
-                        dtpKharidiDate.EditValue = frm.Dr.Cells["KharidiDate"].Value.ToString();
+                        txtVechanNo.Text = frm.Dr.Cells["Vechanno"].Value.ToString();
+                        dtpVechanDate.EditValue = frm.Dr.Cells["VechanDate"].Value.ToString();
                         dtpPaymentDate.EditValue = frm.Dr.Cells["PaymentDate"].Value.ToString();
                         txtCts.Text = frm.Dr.Cells["Cts"].Value.ToString();
                         txtRate.Text = frm.Dr.Cells["Rate"].Value.ToString();
                         txtTotalAmt.Text = frm.Dr.Cells["FinalTotal"].Value.ToString();
-
+                        txtPaidAmount.Text = frm.Dr.Cells["PaidAmount"].Value.ToString();
                         DesableAll();
                     }
 
@@ -268,10 +265,10 @@ namespace DiamondPro.TRANSACTION
 
                 if (e.KeyChar == 8)
                 {
-                    txtNotNo.Text = string.Empty;
+                    txtVechanNo.Text = string.Empty;
                     txtKatNo.Text = string.Empty;
                     dtpPaymentDate.EditValue = System.DateTime.Now;
-                    dtpKharidiDate.EditValue = System.DateTime.Now;
+                    dtpVechanDate.EditValue = System.DateTime.Now;
                     txtCts.Text = "0.000";
                     txtRate.Text = "0.000";
                     txtTotalAmt.Text = "0.000";
@@ -286,72 +283,15 @@ namespace DiamondPro.TRANSACTION
                 XtraMessageBox.Show(ex.Message, "Party KeyPress", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
-
-        private void txtKatNo_KeyPress(object sender, KeyPressEventArgs e)
-        {
-            try
-            {
-                if (txtPartyName.Text == "")
-                {
-                    XtraMessageBox.Show("Please Select Party.", "NotNo Selection", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                    return;
-                }
-
-                if (e.KeyChar != 13 && e.KeyChar != 8)
-                {
-                    DataTable dtParty = new TRN_Payment_detail_Function().FillNotNo("PartyId = " + txtPartyName.Tag + "", PaymentType);
-                    //dtParty.Columns["PARTY NAME"].SetOrdinal(1);
-                    FrmSearchProperty frmSearch = new FrmSearchProperty();
-                    frmSearch.dtTable = dtParty.Copy();
-                    frmSearch.serachfield = "NotNo";
-
-                    FrmSearch frm = new FrmSearch(frmSearch, "DiamondPro.FrmKharidiMaster");
-                    frm.ShowDialog();
-                    e.Handled = true;
-                    if (!frm.FlagExit)
-                    {
-                        txtNotNo.Text = frm.Dr.Cells["NotNo"].Value.ToString();
-                        txtKatNo.Text = frm.Dr.Cells["KatNo"].Value.ToString();
-                        dtpKharidiDate.EditValue = frm.Dr.Cells["KharidiDate"].Value.ToString();
-                        dtpPaymentDate.EditValue = frm.Dr.Cells["PaymentDate"].Value.ToString();
-                        txtCts.Text = frm.Dr.Cells["Cts"].Value.ToString();
-                        txtRate.Text = frm.Dr.Cells["Rate"].Value.ToString();
-                        txtTotalAmt.Text = frm.Dr.Cells["FinalTotal"].Value.ToString();
-
-                        DesableAll();
-                    }
-
-                }
-
-                if (e.KeyChar == 8)
-                {
-                    txtNotNo.Text = string.Empty;
-                    txtKatNo.Text = string.Empty;
-                    dtpPaymentDate.EditValue = System.DateTime.Now;
-                    dtpKharidiDate.EditValue = System.DateTime.Now;
-                    txtCts.Text = "0.000";
-                    txtRate.Text = "0.000";
-                    txtTotalAmt.Text = "0.000";
-                    txtPaidAmount.Text = "0.000";
-                    txtDueAmount.Text = "0.000";
-
-                    EnableAll();
-                }
-            }
-            catch (Exception ex)
-            {
-                XtraMessageBox.Show(ex.Message, "Party KeyPress", MessageBoxButtons.OK, MessageBoxIcon.Error);
-            }
-        }
-
+                
         private void txtAngadiyaPer_TextChanged(object sender, EventArgs e)
         {
-            txtAngadiyaValue.Text = Convert.ToString((Convert.ToDouble(txtTotalAmt.Text) * Convert.ToDouble(txtAngadiyaPer.Text))/100);
+            txtAngadiyaValue.Text = Val.ToString((Convert.ToDouble(txtTotalAmt.Text) * Val.ToDouble(txtAngadiyaPer.Text)) / 100);
         }
 
         private void txtAngadiyaValue_TextChanged(object sender, EventArgs e)
         {
-            txtFinalTotal.Text = Convert.ToString(Convert.ToDouble(txtTotalAmt.Text) - Convert.ToDouble(txtAngadiyaValue.Text));
+            txtFinalTotal.Text = Val.ToString(Val.ToDouble(txtTotalAmt.Text) - Val.ToDouble(txtAngadiyaValue.Text));
         }
         #endregion
 
@@ -375,12 +315,6 @@ namespace DiamondPro.TRANSACTION
             }
         }
         #endregion
-
-        
-
-        
-
-        
-        
+                
     }
 }

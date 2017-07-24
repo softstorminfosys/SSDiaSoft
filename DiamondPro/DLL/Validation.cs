@@ -63,7 +63,7 @@ namespace DiamondPro.DLL
         }
 
 
-        public object ConvertToDateWithTry(Object StrDateNew)
+        public object ValToDateWithTry(Object StrDateNew)
         {
             DateTime result;
             if (StrDateNew == null)
@@ -123,7 +123,7 @@ namespace DiamondPro.DLL
             //result = DateTime.ParseExact(StrDate, format, Provider);            
             return result;
         }
-        public Object ConvertToDateWithTry(Object NewStrDate, string format)
+        public Object ValToDateWithTry(Object NewStrDate, string format)
         {
             if (NewStrDate == null)
                 return DBNull.Value;
@@ -136,7 +136,7 @@ namespace DiamondPro.DLL
             result = DateTime.ParseExact(StrDate, format, Provider);
             return result;
         }
-        public DateTime ConvertToDate(string StrDate, string format)
+        public DateTime ValToDate(string StrDate, string format)
         {
             DateTime result;
             CultureInfo Provider = CultureInfo.InvariantCulture;

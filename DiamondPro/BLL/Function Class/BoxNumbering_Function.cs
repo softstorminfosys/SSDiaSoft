@@ -8,11 +8,13 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Data.SqlClient;
+using DiamondPro.DLL;
 
 namespace DiamondPro.BLL.Function_Class
 {
     public class BoxNumbering_Function
     {
+        Validation Val = new Validation();
         Operation Ope = new Operation();
         SqlConnection conn = new SqlConnection();
 
@@ -53,17 +55,17 @@ namespace DiamondPro.BLL.Function_Class
                 {
                     foreach (DataRow dRow in dt.Rows)
                     {
-                        if (Convert.ToString(dRow["QualityId"]) != "")
+                        if (Val.ToString(dRow["QualityId"]) != "")
                         {
                             Request Request1 = new Request();
-                            Request1.AddParameter("@NDID", Convert.ToString(dRow["NDID"]) == "" ? 0 : Convert.ToInt32(dRow["NDID"]), DbType.Int32, ParameterDirection.Input);
+                            Request1.AddParameter("@NDID", Val.ToString(dRow["NDID"]) == "" ? 0 : Val.ToInt(dRow["NDID"]), DbType.Int32, ParameterDirection.Input);
                             Request1.AddParameter("@NID", RetValue, DbType.Int32, ParameterDirection.Input);
                             Request1.AddParameter("@BoxName", pPE.BoxName, DbType.String, ParameterDirection.Input);
-                            Request1.AddParameter("@QualityId", Convert.ToString(dRow["QualityId"]), DbType.Int32, ParameterDirection.Input);
-                            Request1.AddParameter("@ChavniId", Convert.ToString(dRow["ChavniId"]), DbType.Int32, ParameterDirection.Input);
-                            Request1.AddParameter("@Cts", Convert.ToDouble(dRow["Cts"]), DbType.Double, ParameterDirection.Input);
-                            Request1.AddParameter("@Rate", Convert.ToDouble(dRow["Rate"]), DbType.Double, ParameterDirection.Input);
-                            Request1.AddParameter("@Amount", Convert.ToDouble(dRow["Amount"]), DbType.Double, ParameterDirection.Input);
+                            Request1.AddParameter("@QualityId", Val.ToString(dRow["QualityId"]), DbType.Int32, ParameterDirection.Input);
+                            Request1.AddParameter("@ChavniId", Val.ToString(dRow["ChavniId"]), DbType.Int32, ParameterDirection.Input);
+                            Request1.AddParameter("@Cts", Val.ToDouble(dRow["Cts"]), DbType.Double, ParameterDirection.Input);
+                            Request1.AddParameter("@Rate", Val.ToDouble(dRow["Rate"]), DbType.Double, ParameterDirection.Input);
+                            Request1.AddParameter("@Amount", Val.ToDouble(dRow["Amount"]), DbType.Double, ParameterDirection.Input);
                             Request1.AddParameter("@ReturnValue", 0, DbType.Int32, ParameterDirection.Output);
                             Request1.CommandType = CommandType.StoredProcedure;
                             Request1.ComandText1 = "BoxNumber_Detail_Save";

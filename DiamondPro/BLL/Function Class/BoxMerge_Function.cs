@@ -1,4 +1,5 @@
 ﻿using DiamondPro.BLL.Property_Class;
+using DiamondPro.DLL;
 using InterviewDemo.DLL;
 using System;
 using System.Collections;
@@ -12,6 +13,7 @@ namespace DiamondPro.BLL.Function_Class
 {
     class BoxMerge_Function
     {
+        Validation Val = new Validation();
         Operation Ope = new Operation();
 
         public DataTable PacketDetailGetDataForGrid(string pSearchParam)
@@ -33,16 +35,16 @@ namespace DiamondPro.BLL.Function_Class
                 Request Request;
                 foreach (DataRow dRow in dtMerge.Rows)
                 {
-                    if (Convert.ToDouble(dRow["Cts"]) > 0 && Convert.ToInt32(dRow["KatNo"]) > 0 && Convert.ToString(dRow["NotNo"]) != "")
+                    if (Val.ToDouble(dRow["Cts"]) > 0 && Val.ToInt(dRow["KatNo"]) > 0 && Val.ToString(dRow["NotNo"]) != "")
                     {
                         Request = new Request();
-                        Request.AddParameter("@Id", Convert.ToInt32(dRow["BoxId"]), DbType.Int32, ParameterDirection.Input);
-                        //Request.AddParameter("@TransId", Convert.ToInt32(dRow["TransId"]), DbType.Int32, ParameterDirection.Input);
-                        Request.AddParameter("@NotNo", Convert.ToString(dRow["NotNo"]), DbType.String, ParameterDirection.Input);
-                        Request.AddParameter("@KatNo", Convert.ToInt32(dRow["KatNo"]), DbType.Int32, ParameterDirection.Input);
-                        Request.AddParameter("@Cts", Convert.ToDouble(dRow["Cts"]), DbType.Double, ParameterDirection.Input);
-                        Request.AddParameter("@Rate", Convert.ToDouble(dRow["Rate"]), DbType.Double, ParameterDirection.Input);
-                        Request.AddParameter("@FinalTotal", Convert.ToDouble(dRow["Amount"]), DbType.Double, ParameterDirection.Input);
+                        Request.AddParameter("@Id", Val.ToInt(dRow["BoxId"]), DbType.Int32, ParameterDirection.Input);
+                        //Request.AddParameter("@TransId", Val.ToInt32(dRow["TransId"]), DbType.Int32, ParameterDirection.Input);
+                        Request.AddParameter("@NotNo", Val.ToString(dRow["NotNo"]), DbType.String, ParameterDirection.Input);
+                        Request.AddParameter("@KatNo", Val.ToInt(dRow["KatNo"]), DbType.Int32, ParameterDirection.Input);
+                        Request.AddParameter("@Cts", Val.ToDouble(dRow["Cts"]), DbType.Double, ParameterDirection.Input);
+                        Request.AddParameter("@Rate", Val.ToDouble(dRow["Rate"]), DbType.Double, ParameterDirection.Input);
+                        Request.AddParameter("@FinalTotal", Val.ToDouble(dRow["Amount"]), DbType.Double, ParameterDirection.Input);
                         Request.AddParameter("@Status", "BOX CREATED", DbType.String, ParameterDirection.Input);
                         Request.AddParameter("@BoxNo", BoxNo, DbType.Int32, ParameterDirection.Input);
                         Request.AddParameter("@BoxName", "B" + BoxNo, DbType.String, ParameterDirection.Input);

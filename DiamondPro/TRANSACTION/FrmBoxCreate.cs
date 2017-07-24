@@ -10,11 +10,13 @@ using System.Windows.Forms;
 using DevExpress.XtraEditors;
 using DevExpress.XtraGrid;
 using DiamondPro.BLL.Function_Class;
+using DiamondPro.DLL;
 
 namespace DiamondPro.TRANSACTION
 {
     public partial class FrmBoxCreate : DevExpress.XtraEditors.XtraForm
     {
+        Validation Val = new Validation();
         DataTable _dtFrom = new DataTable();
         
         #region Constructor
@@ -89,7 +91,7 @@ namespace DiamondPro.TRANSACTION
             //    if (e.KeyCode == Keys.Enter)
             //    {
 
-            //        if (Convert.ToString(dgvFrom.GetFocusedRowCellValue("NotNo")) == "")
+            //        if (Val.ToString(dgvFrom.GetFocusedRowCellValue("NotNo")) == "")
             //        {
             //            MessageBox.Show("Not No is required.", "Validation", MessageBoxButtons.OK, MessageBoxIcon.Information);
             //            dgvFrom.FocusedColumn = FNotNo;
@@ -97,7 +99,7 @@ namespace DiamondPro.TRANSACTION
             //            return;
             //        }
 
-            //        if (Convert.ToString(dgvFrom.GetFocusedRowCellValue("KatNo")) == "")
+            //        if (Val.ToString(dgvFrom.GetFocusedRowCellValue("KatNo")) == "")
             //        {
             //            MessageBox.Show("Kat No is required.", "Validation", MessageBoxButtons.OK, MessageBoxIcon.Information);
             //            dgvFrom.FocusedColumn = FKatNo;
@@ -105,7 +107,7 @@ namespace DiamondPro.TRANSACTION
             //            return;
             //        }
 
-            //        if (Convert.ToString(dgvFrom.GetFocusedRowCellValue("TCarat")) == "")
+            //        if (Val.ToString(dgvFrom.GetFocusedRowCellValue("TCarat")) == "")
             //        {
             //            MessageBox.Show("Transfer Carat is required.", "Validation", MessageBoxButtons.OK, MessageBoxIcon.Information);
             //            dgvFrom.FocusedColumn = FTCarat;
@@ -139,7 +141,7 @@ namespace DiamondPro.TRANSACTION
                 if (e.KeyCode == Keys.Enter)
                 {
 
-                    if (Convert.ToString(dgvTo.GetFocusedRowCellValue("NotNo")) == "")
+                    if (Val.ToString(dgvTo.GetFocusedRowCellValue("NotNo")) == "")
                     {
                         MessageBox.Show("Not No is required.", "Validation", MessageBoxButtons.OK, MessageBoxIcon.Information);
                         dgvTo.FocusedColumn = TNotNo;
@@ -147,7 +149,7 @@ namespace DiamondPro.TRANSACTION
                         return;
                     }
 
-                    if (Convert.ToString(dgvTo.GetFocusedRowCellValue("KatNo")) == "")
+                    if (Val.ToString(dgvTo.GetFocusedRowCellValue("KatNo")) == "")
                     {
                         MessageBox.Show("Kat No is required.", "Validation", MessageBoxButtons.OK, MessageBoxIcon.Information);
                         dgvTo.FocusedColumn = TKatNo;
@@ -155,7 +157,7 @@ namespace DiamondPro.TRANSACTION
                         return;
                     }
 
-                    if (Convert.ToString(dgvTo.GetFocusedRowCellValue("TCarat")) == "")
+                    if (Val.ToString(dgvTo.GetFocusedRowCellValue("TCarat")) == "")
                     {
                         //MessageBox.Show("Transfer Carat is required.", "Validation", MessageBoxButtons.OK, MessageBoxIcon.Information);
                         //dgvTo.FocusedColumn = TTCarat;
@@ -186,7 +188,7 @@ namespace DiamondPro.TRANSACTION
             //try
             //{
             //    double FAmount = 0;
-            //    FAmount = Convert.ToDouble(dgvFrom.GetRowCellValue(dgvFrom.FocusedRowHandle, "TCarat")) * Convert.ToDouble(dgvFrom.GetRowCellValue(dgvFrom.FocusedRowHandle, "TRate"));
+            //    FAmount = Val.ToDouble(dgvFrom.GetRowCellValue(dgvFrom.FocusedRowHandle, "TCarat")) * Val.ToDouble(dgvFrom.GetRowCellValue(dgvFrom.FocusedRowHandle, "TRate"));
             //    dgvFrom.SetRowCellValue(dgvFrom.FocusedRowHandle,"TAmount", FAmount.ToString());
             //}
             //catch (Exception ex)
@@ -268,7 +270,7 @@ namespace DiamondPro.TRANSACTION
                         return;
                     }
 
-                    int RetVal = new BoxMerge_Function().Delete(Convert.ToString(gridView1.GetFocusedRowCellValue("BoxName")));
+                    int RetVal = new BoxMerge_Function().Delete(Val.ToString(gridView1.GetFocusedRowCellValue("BoxName")));
 
                     if (RetVal > 0)
                     {

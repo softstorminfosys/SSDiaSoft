@@ -15,12 +15,14 @@ using DiamondPro.BLL.Property_Class;
 using DevExpress.XtraGrid;
 using DevExpress.XtraGrid.Views.Grid;
 using DevExpress.Data;
+using DiamondPro.DLL;
 
 namespace DiamondPro.TRANSACTION
 {
     public partial class FrmBoxNumbering : DevExpress.XtraEditors.XtraForm
     {
         DataTable dtDetail = new DataTable();
+        Validation Val = new Validation();
         double amount;
         double Cts;
         #region Constructor
@@ -176,7 +178,7 @@ namespace DiamondPro.TRANSACTION
         #region User Function
         private void FillGrid()
         {
-            dtDetail = new BoxNumbering_Function().GetBoxDetails("BM.BoxNo = " + Convert.ToInt32(txtBoxNo.Tag) + "  AND BM.BoxName = '" + txtBoxNo.Text + "'");
+            dtDetail = new BoxNumbering_Function().GetBoxDetails("BM.BoxNo = " + Val.ToInt(txtBoxNo.Tag) + "  AND BM.BoxName = '" + txtBoxNo.Text + "'");
             if (dtDetail.Rows.Count > 0)
             {
                 grdTo.DataSource = null;
@@ -224,10 +226,10 @@ namespace DiamondPro.TRANSACTION
             {
                 BoxNumbering_Property objNumber = new BoxNumbering_Property();
                 objNumber.BoxName = txtBoxNo.Text;
-                objNumber.BoxNo = Convert.ToInt32(txtBoxNo.Tag);
-                objNumber.Cts = Convert.ToDouble(txtCts.Text);
-                objNumber.Rate = Convert.ToDouble(txtRate.Text);
-                objNumber.Amount = Convert.ToDouble(txtAmount.Text);
+                objNumber.BoxNo = Val.ToInt(txtBoxNo.Tag);
+                objNumber.Cts = Val.ToDouble(txtCts.Text);
+                objNumber.Rate = Val.ToDouble(txtRate.Text);
+                objNumber.Amount = Val.ToDouble(txtAmount.Text);
 
                 DataTable dt = new DataTable();
                 dt = (DataTable)grdTo.DataSource;
@@ -274,7 +276,7 @@ namespace DiamondPro.TRANSACTION
                     return;
                 }
 
-                int RetVal = new BoxNumbering_Function().Delete(Convert.ToInt32(txtBoxNo.Tag), txtBoxNo.Text, 0);
+                int RetVal = new BoxNumbering_Function().Delete(Val.ToInt(txtBoxNo.Tag), txtBoxNo.Text, 0);
 
                 if (RetVal > 0)
                 {
@@ -301,7 +303,7 @@ namespace DiamondPro.TRANSACTION
                     return;
                 }
 
-                int RetVal = new BoxNumbering_Function().Delete(Convert.ToInt32(txtBoxNo.Tag), txtBoxNo.Text, 1);
+                int RetVal = new BoxNumbering_Function().Delete(Val.ToInt(txtBoxNo.Tag), txtBoxNo.Text, 1);
 
                 if (RetVal > 0)
                 {
@@ -327,35 +329,35 @@ namespace DiamondPro.TRANSACTION
                 {
                     TextEdit teValue = (TextEdit)sender;
                     
-                    if (Convert.ToInt32(dgvTo.GetFocusedRowCellValue("QualityId")) == 0)
+                    if (Val.ToInt(dgvTo.GetFocusedRowCellValue("QualityId")) == 0)
                     {
                          XtraMessageBox.Show("Please Select Quality.", "Grid Validation", MessageBoxButtons.OK, MessageBoxIcon.Error);
                          dgvTo.FocusedColumn = gridColumn1;
                          e.Handled = true;
                          return;
                     }
-                    else if (Convert.ToInt32(dgvTo.GetFocusedRowCellValue("ChavniId")) == 0)
+                    else if (Val.ToInt(dgvTo.GetFocusedRowCellValue("ChavniId")) == 0)
                     {
                         XtraMessageBox.Show("Please Select Chavni.", "Grid Validation", MessageBoxButtons.OK, MessageBoxIcon.Error);
                         dgvTo.FocusedColumn = gridColumn2;
                         e.Handled = true;
                         return;
                     }
-                    else if (Convert.ToDouble(dgvTo.GetFocusedRowCellValue("Cts")) == 0)
+                    else if (Val.ToDouble(dgvTo.GetFocusedRowCellValue("Cts")) == 0)
                     {
                         XtraMessageBox.Show("Please Enter Carat.", "Grid Validation", MessageBoxButtons.OK, MessageBoxIcon.Error);
                         dgvTo.FocusedColumn = gridColumn3;
                         e.Handled = true;
                         return;
                     }
-                    else if (Convert.ToDouble(dgvTo.GetFocusedRowCellValue("Rate")) == 0)
+                    else if (Val.ToDouble(dgvTo.GetFocusedRowCellValue("Rate")) == 0)
                     {
                         XtraMessageBox.Show("Please Enter Rate.", "Grid Validation", MessageBoxButtons.OK, MessageBoxIcon.Error);
                         dgvTo.FocusedColumn = gridColumn4;
                         e.Handled = true;
                         return;
                     }
-                    else if (Convert.ToDouble(teValue.EditValue) == 0)//Convert.ToDouble(dgvTo.GetFocusedRowCellValue("Amount")
+                    else if (Val.ToDouble(teValue.EditValue) == 0)//Val.ToDouble(dgvTo.GetFocusedRowCellValue("Amount")
                     {
                         XtraMessageBox.Show("Please Enter Amount.", "Grid Validation", MessageBoxButtons.OK, MessageBoxIcon.Error);
                         dgvTo.FocusedColumn = gridColumn5;
@@ -383,8 +385,8 @@ namespace DiamondPro.TRANSACTION
                 TextEdit txtEdit = (TextEdit)sender;
                 if (e.KeyCode == Keys.Enter)
                 {
-                    double Cts = Convert.ToDouble(dgvTo.GetFocusedRowCellValue("Cts"));
-                    double Rate = Convert.ToDouble(txtEdit.EditValue);
+                    double Cts = Val.ToDouble(dgvTo.GetFocusedRowCellValue("Cts"));
+                    double Rate = Val.ToDouble(txtEdit.EditValue);
 
                     double Amount = Cts * Rate;
                     dgvTo.SetFocusedRowCellValue("Amount", Amount);
@@ -409,8 +411,8 @@ namespace DiamondPro.TRANSACTION
                 // Calculation. 
                 if (e.SummaryProcess == CustomSummaryProcess.Calculate)
                 {
-                    amount += Convert.ToDouble(dgvTo.GetRowCellValue(e.RowHandle,"Amount"));
-                    Cts += Convert.ToDouble(dgvTo.GetRowCellValue(e.RowHandle,"Cts"));
+                    amount += Val.ToDouble(dgvTo.GetRowCellValue(e.RowHandle,"Amount"));
+                    Cts += Val.ToDouble(dgvTo.GetRowCellValue(e.RowHandle,"Cts"));
                 }
                 // Finalization.  
                 if (e.SummaryProcess == CustomSummaryProcess.Finalize)
@@ -420,7 +422,7 @@ namespace DiamondPro.TRANSACTION
                         //case "RATE":
                             if (Cts != 0)
                             {
-                                e.TotalValue = Convert.ToDouble(amount/Cts);
+                                e.TotalValue = Val.ToDouble(amount/Cts);
                             }
                             else
                             {

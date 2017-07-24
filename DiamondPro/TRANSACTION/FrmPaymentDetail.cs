@@ -242,7 +242,7 @@ namespace DiamondPro.TRANSACTION
 
                 if (e.KeyChar != 13 && e.KeyChar != 8)
                 {
-                    DataTable dtParty = new TRN_Payment_detail_Function().FillNotNo("PartyId = "+ txtPartyName.Tag +"",PaymentType);
+                    DataTable dtParty = new TRN_Payment_detail_Function().FillVechanNo("PartyId = "+ txtPartyName.Tag +"");
                     //dtParty.Columns["PARTY NAME"].SetOrdinal(1);
                     FrmSearchProperty frmSearch = new FrmSearchProperty();
                     frmSearch.dtTable = dtParty.Copy();
@@ -299,7 +299,7 @@ namespace DiamondPro.TRANSACTION
 
                 if (e.KeyChar != 13 && e.KeyChar != 8)
                 {
-                    DataTable dtParty = new TRN_Payment_detail_Function().FillNotNo("PartyId = " + txtPartyName.Tag + "", PaymentType);
+                    DataTable dtParty = new TRN_Payment_detail_Function().FillVechanNo("PartyId = " + txtPartyName.Tag + "");
                     //dtParty.Columns["PARTY NAME"].SetOrdinal(1);
                     FrmSearchProperty frmSearch = new FrmSearchProperty();
                     frmSearch.dtTable = dtParty.Copy();
