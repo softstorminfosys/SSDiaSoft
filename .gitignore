@@ -2,4 +2,6 @@
 *.suo
 *.exe
 bin/
-obj./
+obj/
+**/bin/
+**/obj./
