@@ -1,5 +1,5 @@
 ﻿using DiamondPro.BLL.Property_Class;
-using InterviewDemo.DLL;
+using DiamondPro.DLL;
 using System;
 using System.Collections;
 using System.Collections.Generic;

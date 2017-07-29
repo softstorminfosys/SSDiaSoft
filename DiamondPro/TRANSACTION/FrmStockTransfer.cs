@@ -30,6 +30,7 @@ namespace DiamondPro.TRANSACTION
         double amountT = 0, CtsT = 0;
         double TTAmount = 0;
         double TTCts = 0;
+        string QuaId = string.Empty;
 
         public FrmStockTransfer()
         {
@@ -199,6 +200,11 @@ namespace DiamondPro.TRANSACTION
                             dgvFrom.SetFocusedRowCellValue("Rate", Val.ToString(dt.Rows[0]["Rate"]));
                             dgvFrom.SetFocusedRowCellValue("Amount", Val.ToString(dt.Rows[0]["Amount"]));
                         }
+
+                        if (QuaId == "")
+                            QuaId = frm.Dr.Cells["ParaValueId"].Value.ToString();
+                        else
+                            QuaId = QuaId +','+ frm.Dr.Cells["ParaValueId"].Value.ToString();
                     }
                 }
 
@@ -223,7 +229,7 @@ namespace DiamondPro.TRANSACTION
             {
                 if (e.KeyChar != 13 && e.KeyChar != 8)
                 {
-                    DataTable dtTQuality = new ParameterValue_Function().GetDataFoGrid(" ParameterType = 'Quality' AND MST_ParameterValue.Active = 1 ");
+                    DataTable dtTQuality = new ParameterValue_Function().GetDataFoGrid(" ParameterType = 'Quality' AND MST_ParameterValue.Active = 1 AND ParaValueId NOT IN(" + QuaId + ")");
                     FrmSearchProperty frmSearch = new FrmSearchProperty();
                     frmSearch.dtTable = dtTQuality.Copy();
                     frmSearch.serachfield = "PARAMETER VALUE";

@@ -224,6 +224,11 @@ namespace DiamondPro.TRANSACTION
         {
             try
             {
+                if (XtraMessageBox.Show("Are You Sure To Save Record?","Save Confirmation",MessageBoxButtons.YesNo,MessageBoxIcon.Question) == System.Windows.Forms.DialogResult.No)
+                {
+                    return;
+                }
+
                 BoxNumbering_Property objNumber = new BoxNumbering_Property();
                 objNumber.BoxName = txtBoxNo.Text;
                 objNumber.BoxNo = Val.ToInt(txtBoxNo.Tag);

@@ -12,7 +12,7 @@ using DiamondPro.BLL.Function_Class;
 using DiamondPro.DLL;
 using System.Management;
 using System.Security.Cryptography;
-using InterviewDemo.DLL;
+using DiamondPro.DLL;
 
 namespace DiamondPro
 {
@@ -164,7 +164,7 @@ namespace DiamondPro
             TDESAlgorithm.Mode = CipherMode.ECB;
             TDESAlgorithm.Padding = PaddingMode.PKCS7;
 
-            // Step 4. Val the input string to a byte[]
+            // Step 4. Convert the input string to a byte[]
             byte[] DataToEncrypt = UTF8.GetBytes(Message);
 
             // Step 5. Attempt to encrypt the string

@@ -8,13 +8,14 @@ using System.Data.SqlClient;
 using System.Windows.Forms;
 using System.Collections;
 
-namespace InterviewDemo.DLL
+namespace DiamondPro.DLL
 {
     public class Operation
     {
         SqlConnection connection = new SqlConnection();
         SqlCommand command = new SqlCommand();
         SqlDataAdapter DataAdapter = new SqlDataAdapter();
+        DataSet ds;
         public static DataTable dtCmpRights;
         public static string MDI = "DiamondPro.FrmMDI";
         private SqlTransaction _Transaction;
@@ -407,6 +408,56 @@ namespace InterviewDemo.DLL
             return AL;
         }
 
-       
+        public void fillComboBoxNoWhere(string ConnStr,ComboBox ComboBoxName, String ValueMember, String DisplayMember, String Tablename)
+        {
+            CreateAllObjects(ConnStr);
+            ComboBoxName.DataSource = null;
+            String strQuery = String.Empty;
+            strQuery = "SELECT " + ValueMember + " as value," + DisplayMember + " as text,1 as ord from " + Tablename;
+            FillCombo(strQuery, ComboBoxName);
+        }
+
+        public void FillCombo(string Query, ComboBox ddl)
+        {
+
+            string strText = "Text";
+            string strValue = "Value";
+
+            DataSet ds = this.getDatasetfromquery(Query);
+            ddl.DataSource = ds.Tables[0];
+            ddl.DisplayMember = strText;
+            ddl.ValueMember = strValue;
+            try
+            {
+                ddl.SelectedIndex = 0;
+            }
+            catch (Exception)
+            {
+            }
+        }
+
+        public DataSet getDatasetfromquery(string Query)
+        {
+            this.command = new SqlCommand();
+            this.DataAdapter = new SqlDataAdapter();
+            this.ds = new DataSet();
+
+            this.command.Connection = connection;
+
+            if (Equals(this.command, null))
+            {
+                this.command = new SqlCommand();
+            }
+            if (this._Transaction != null)
+            {
+                this.command.Transaction = _Transaction;
+            }
+            command.Connection = connection;
+            this.command.CommandType = CommandType.Text;
+            this.command.CommandText = Query;
+            this.DataAdapter.SelectCommand = this.command;
+            this.DataAdapter.Fill(this.ds);
+            return this.ds;
+        }
     }
 }

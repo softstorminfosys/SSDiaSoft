@@ -1,5 +1,5 @@
 ﻿using DiamondPro.DLL;
-using InterviewDemo.DLL;
+using DiamondPro.DLL;
 using System;
 using System.Collections.Generic;
 using System.Data;

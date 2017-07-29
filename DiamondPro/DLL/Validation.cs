@@ -147,7 +147,6 @@ namespace DiamondPro.DLL
 
         public Image byteArrayToImage(Byte[] byteArrayIn)
         {
-
             if (Equals(byteArrayIn, null))
             {
                 byteArrayIn = new Byte[0];

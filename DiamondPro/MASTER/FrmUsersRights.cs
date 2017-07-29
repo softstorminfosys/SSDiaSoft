@@ -8,7 +8,6 @@ using System.Linq;
 using System.Text;
 using System.Windows.Forms;
 using System.Reflection;
-using InterviewDemo.DLL;
 using DiamondPro.DLL;
 using DiamondPro.BLL.Function_Class;
 
@@ -17,6 +16,7 @@ namespace DiamondPro.MASTER
     public partial class FrmUsersRights : Form
     {
         Validation Val = new Validation();
+        UserRights_Function objUserRight = new UserRights_Function(); 
         public FrmUsersRights()
         {
             InitializeComponent();
@@ -162,24 +162,23 @@ namespace DiamondPro.MASTER
 
         #endregion
 
-
         #region login
 
         private void btnlogin_Click(object sender, EventArgs e)
         {
-            //if (LOGIN_INFO.UserPass.Equals(password.Text.Trim()))
-            //{
-            //    MainPanel.Visible = true;
-            //    pnllogin.Visible = false;
-            //    pnllogin.SendToBack();
-            //}
-            //else
-            //{
-            //    MessageBox.Show("Password is Wrong", "LOGIN ERROR", MessageBoxButtons.OK, MessageBoxIcon.Hand);
-            //    password.Focus();
-            //    return;
-            //}
-            //cmbUserType.Focus();
+            if (GlobalCls.UserPass.Equals(password.Text.Trim()))
+            {
+                MainPanel.Visible = true;
+                pnllogin.Visible = false;
+                pnllogin.SendToBack();
+            }
+            else
+            {
+                MessageBox.Show("Password is Wrong", "LOGIN ERROR", MessageBoxButtons.OK, MessageBoxIcon.Hand);
+                password.Focus();
+                return;
+            }
+            cmbUserType.Focus();
         }
 
         private void btnclose_Click(object sender, EventArgs e)
@@ -198,7 +197,6 @@ namespace DiamondPro.MASTER
         }
 
 #endregion
-
 
         #region Check All
 
@@ -259,58 +257,46 @@ namespace DiamondPro.MASTER
         {
             try
             {
-                //if (this.WindowState != FormWindowState.Maximized)
-                //{
-                //    this.WindowState = FormWindowState.Maximized;
-                //}
+                try
+                {
+                    objUserRight.FillCombo(cmbUserType, "id", "usertype", "tblusertype");
+                }
+                catch (Exception Ex)
+                {
+                    MessageBox.Show(Ex.Message, "DiamondPro");
+                }
                 
-                //SQLServerDB objdb = new SQLServerDB();
-                //try
-                //{
+                /////
 
-                //    objdb.fillComboBoxNoWhere(cmbUserType, "id", "usertype", "tblusertype");
-                //}
-                //catch (Exception Ex)
-                //{
-                //    MessageBox.Show(Ex.Message, IISMessage.ErrorMessageTitle);
-                //}
-                //finally
-                //{
-                //    objdb.releaseObjects();
-                //}
+                DataTable dtright = new DataTable();
+                dtright = Operation.dtCmpRights;
+                foreach (DataRow dr in dtright.Rows)
+                {
+                    foreach (DataColumn col in dtright.Columns)
+                    {
+                        if (col.ColumnName == "formnametext" && col.DataType == typeof(System.String))
+                        {
+                            dr[col] = dr[col].ToString().Trim();
+                        }
+                    }
+                }
+                var chk = dtright.Select("formnametext='" + this.Text + "'");
 
-                ///////
-                
-                //DataTable dtright = new DataTable();
-                //dtright = SQLServerDB.dtCmpRights;
-                //foreach (DataRow dr in dtright.Rows)
-                //{
-                //    foreach (DataColumn col in dtright.Columns)
-                //    {
-                //        if (col.ColumnName == "formnametext" && col.DataType == typeof(System.String))
-                //        {
-                //            dr[col] = dr[col].ToString().Trim();
-                //        }
-                //    }
+                if (chk.Length == 1)
+                {
+                    isallow = 1;
+                    btnSave.Visible = Val.ToBoolean(chk[0].ItemArray[4].ToString());
+                }
+                //////
 
-                //}
-                //var chk = dtright.Select("formnametext='" + this.Text + "'");
 
-                //if (chk.Length == 1)
-                //{
-                //   isallow = 1;
-                //   btnSave.Visible = Val.ToBoolean(chk[0].ItemArray[4].ToString());                   
-                //}
-                ////////
-
-                 
-                //pnllogin.BringToFront();
-                //MainPanel.Visible = false;
-                //pnllogin.Enabled = true;
-                //password.Focus();
-                //cmbUserType.SelectedIndex = 0;
-                //btnShow.Focus();
-                //btnShow_Click(sender,e);
+                pnllogin.BringToFront();
+                MainPanel.Visible = false;
+                pnllogin.Enabled = true;
+                password.Focus();
+                cmbUserType.SelectedIndex = 0;
+                btnShow.Focus();
+                btnShow_Click(sender, e);
             }
             catch (Exception ex)
             {

@@ -5,7 +5,7 @@ using System.Windows.Forms;
 using DevExpress.UserSkins;
 using DevExpress.Skins;
 using DevExpress.LookAndFeel;
-using InterviewDemo.DLL;
+using DiamondPro.DLL;
 using System.Configuration;
 
 namespace DiamondPro

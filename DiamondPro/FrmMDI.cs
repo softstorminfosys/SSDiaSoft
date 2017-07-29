@@ -15,7 +15,6 @@ using DiamondPro.TRANSACTION;
 using DiamondPro.BLL.Function_Class;
 using DiamondPro.MASTER;
 using DiamondPro.DLL;
-using InterviewDemo.DLL;
 
 namespace DiamondPro
 {
@@ -153,6 +152,33 @@ namespace DiamondPro
             frm.MdiParent = this;
             imageSlider1.Visible = false;
             frm.Show();
+        }
+
+        private void UserTypeToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            FrmUserType frm = new FrmUserType();
+            frm.MdiParent = this;
+            imageSlider1.Visible = false;
+            frm.Show();
+        }
+
+        private void UserMasterToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+           
+        }
+
+        private void UserRightsToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            FrmUsersRights frm = new FrmUsersRights();
+            frm.MdiParent = this;
+            imageSlider1.Visible = false;
+            frm.Show();
+        }
+
+
+        private void imageSlider1_Click(object sender, EventArgs e)
+        {
+            
         }
         #endregion
 
@@ -327,5 +353,10 @@ namespace DiamondPro
             return dt;
 
         }
+
+        
+       
+
+        
     }
 }
